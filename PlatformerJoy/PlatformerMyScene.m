@@ -14,7 +14,7 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor colorWithRed:0.09 green:0.09 blue:0.8 alpha:0.8];
+        self.backgroundColor = [SKColor colorWithRed:0.09 green:0.3 blue:0.8 alpha:0.8];
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
@@ -22,7 +22,7 @@
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
-        
+        //help me
         [self addChild:myLabel];
     }
     return self;
@@ -41,7 +41,7 @@
         SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
         
         [sprite runAction:[SKAction repeatActionForever:action]];
-        
+        // this is non existent
         [self addChild:sprite];
     }
 }
