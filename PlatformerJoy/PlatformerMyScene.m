@@ -43,7 +43,6 @@
         [sprite runAction:[SKAction repeatActionForever:action]];
         
         [self addChild:sprite];
-        [self addChild: sprite];
     }
 }
 
