@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D83F90841843C73D004D94CF /* God.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90831843C73D004D94CF /* God.m */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
 		D8D8F368183BE201005BB475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F367183BE201005BB475 /* CoreGraphics.framework */; };
 		D8D8F36A183BE201005BB475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F369183BE201005BB475 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D83F90821843C73D004D94CF /* God.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = God.h; sourceTree = "<group>"; };
+		D83F90831843C73D004D94CF /* God.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = God.m; sourceTree = "<group>"; };
 		D8D8F362183BE201005BB475 /* PlatformerJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformerJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8F365183BE201005BB475 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8D8F367183BE201005BB475 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D83F90851843C7E5004D94CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D83F90821843C73D004D94CF /* God.h */,
+				D83F90831843C73D004D94CF /* God.m */,
+				D83F90861843C838004D94CF /* Tile Map */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D83F90861843C838004D94CF /* Tile Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Tile Map";
+			sourceTree = "<group>";
+		};
 		D8D8F359183BE1FE005BB475 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +150,7 @@
 				D8D8F380183BE201005BB475 /* PlatformerMyScene.m */,
 				D8D8F382183BE201005BB475 /* Spaceship.png */,
 				D8D8F384183BE201005BB475 /* Images.xcassets */,
+				D83F90851843C7E5004D94CF /* Model */,
 				D8D8F36E183BE201005BB475 /* Supporting Files */,
 			);
 			path = PlatformerJoy;
@@ -263,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83F90841843C73D004D94CF /* God.m in Sources */,
 				D8D8F378183BE201005BB475 /* PlatformerAppDelegate.m in Sources */,
 				D8D8F374183BE201005BB475 /* main.m in Sources */,
 				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
@@ -477,6 +499,7 @@
 				D8D8F39D183BE203005BB475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D8F39E183BE203005BB475 /* Build configuration list for PBXNativeTarget "PlatformerJoyTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +508,7 @@
 				D8D8F3A0183BE203005BB475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
