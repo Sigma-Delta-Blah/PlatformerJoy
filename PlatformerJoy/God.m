@@ -7,6 +7,7 @@
 //
 
 #import "God.h"
+#import "TileMap.h"
 
 @implementation God
 

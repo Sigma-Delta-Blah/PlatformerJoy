@@ -20,8 +20,11 @@
         
         myLabel.text = @"Welcome!";
         myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
+        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        
+        _bob = [[TileMap alloc] init];
+        
+        [_bob setMapofWidth: 2 andHeight: 2];
         
         [self addChild:myLabel];
     }
@@ -41,9 +44,17 @@
         SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
         
         [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-        [self addChild: sprite];
+
+        for (int number = 0; number < 2; number++) {
+            for (int number2 = 0; number2 < 2; number2++) {
+                if([_bob getTileAtX:number andY:number2]) {
+                    NSLog([NSString stringWithFormat:@"Phillium %d, %d is good to go!", number, number2]);
+                } else {
+                    NSLog([NSString stringWithFormat:@"Phillium %d, %d is having problems!  WE ARE GOING DOWN!!!  AAAAARRRRGGGGHHHHNJ#KRWJEGFNTBHGTKLRWFMFNTOKJENVG!!!!!!!!!!!!!!!!!!!!!", number, number2]);
+                }
+                [self addChild:[_bob getTileAtX:number andY:number2]];
+            }
+        }
     }
 }
 
