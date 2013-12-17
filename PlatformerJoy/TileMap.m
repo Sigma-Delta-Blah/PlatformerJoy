@@ -20,12 +20,12 @@ int ySize;
     xSize = xValue;
     ySize = yValue;
     
-    SKSpriteNode *sprites[xValue*yValue];
+    Tile *sprites[xValue*yValue];
     
     for (int number = 0; number < xValue*yValue; number++) {
-        sprites[number] = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        float A = (number%yValue)*100;
-        float B = ((number-number%yValue)/xValue)*100;
+        sprites[number] = [Tile spriteNodeWithImageNamed:@"GroundRed.png"];
+        float A = (number%yValue)*200;
+        float B = ((number-number%yValue)/xValue)*200;
         sprites[number].position = CGPointMake(A, B);
         [_tiles addObject:sprites[number]];
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12C4E4D185F88E500E6AA39 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = C12C4E4B185F88E500E6AA39 /* Ground.png */; };
+		C12C4E4E185F88E500E6AA39 /* GroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = C12C4E4C185F88E500E6AA39 /* GroundRed.png */; };
+		C199F1AF185B9943008DD368 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = C199F1AE185B9943008DD368 /* Tile.m */; };
 		D83F90841843C73D004D94CF /* God.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90831843C73D004D94CF /* God.m */; };
 		D83F90891843D0CE004D94CF /* TileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90881843D0CE004D94CF /* TileMap.m */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
@@ -39,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C12C4E4B185F88E500E6AA39 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ground.png; path = ../../../Ground.png; sourceTree = "<group>"; };
+		C12C4E4C185F88E500E6AA39 /* GroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GroundRed.png; path = ../../../GroundRed.png; sourceTree = "<group>"; };
+		C199F1AD185B9943008DD368 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		C199F1AE185B9943008DD368 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		D83F90821843C73D004D94CF /* God.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = God.h; sourceTree = "<group>"; };
 		D83F90831843C73D004D94CF /* God.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = God.m; sourceTree = "<group>"; };
 		D83F90871843D0CE004D94CF /* TileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMap.h; sourceTree = "<group>"; };
@@ -108,6 +115,10 @@
 			children = (
 				D83F90871843D0CE004D94CF /* TileMap.h */,
 				D83F90881843D0CE004D94CF /* TileMap.m */,
+				C199F1AD185B9943008DD368 /* Tile.h */,
+				C199F1AE185B9943008DD368 /* Tile.m */,
+				C12C4E4B185F88E500E6AA39 /* Ground.png */,
+				C12C4E4C185F88E500E6AA39 /* GroundRed.png */,
 			);
 			name = "Tile Map";
 			sourceTree = "<group>";
@@ -267,9 +278,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12C4E4E185F88E500E6AA39 /* GroundRed.png in Resources */,
 				D8D8F372183BE201005BB475 /* InfoPlist.strings in Resources */,
 				D8D8F385183BE201005BB475 /* Images.xcassets in Resources */,
 				D8D8F383183BE201005BB475 /* Spaceship.png in Resources */,
+				C12C4E4D185F88E500E6AA39 /* Ground.png in Resources */,
 				D8D8F37B183BE201005BB475 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +307,7 @@
 				D8D8F378183BE201005BB475 /* PlatformerAppDelegate.m in Sources */,
 				D8D8F374183BE201005BB475 /* main.m in Sources */,
 				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
+				C199F1AF185B9943008DD368 /* Tile.m in Sources */,
 				D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
