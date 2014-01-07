@@ -1,5 +1,7 @@
 PlatformerJoy
 =============
+Link to assets folder (on dropbox): https://www.dropbox.com/sh/reyzpc4sps7ahct/e9ELkp--Bn
+=============
 BLAAHHh U LET ME INTO uR HaUs.  Thx
 
 ...Plebian :octocat: 
