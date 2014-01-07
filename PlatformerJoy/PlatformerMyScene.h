@@ -7,7 +7,10 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "TileMap.h"
 
 @interface PlatformerMyScene : SKScene
+
+@property (strong, nonatomic) TileMap *bob;
 
 @end
