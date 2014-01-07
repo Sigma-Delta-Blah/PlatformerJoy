@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>82821E07-2A62-42DE-94E5-0A1B83B20DB4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PlatformerJoy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>50607946-5554-4BE1-A514-1EE58719519B</key>
+		<string>https://github.com/Sigma-Delta-Blah/PlatformerJoy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PlatformerJoy.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>50607946-5554-4BE1-A514-1EE58719519B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Sigma-Delta-Blah/PlatformerJoy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>50607946-5554-4BE1-A514-1EE58719519B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>50607946-5554-4BE1-A514-1EE58719519B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PlatformerJoy</string>
+		</dict>
+	</array>
+</dict>
+</plist>

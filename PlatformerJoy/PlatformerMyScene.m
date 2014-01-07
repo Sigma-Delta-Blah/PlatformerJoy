@@ -14,7 +14,7 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor colorWithRed:0.09 green:0.09 blue:0.8 alpha:0.8];
+        self.backgroundColor = [SKColor colorWithRed:0.2 green:0.458 blue:0.658 alpha:0];
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
@@ -43,7 +43,6 @@
         [sprite runAction:[SKAction repeatActionForever:action]];
         
         [self addChild:sprite];
-        [self addChild: sprite];
     }
 }
 
