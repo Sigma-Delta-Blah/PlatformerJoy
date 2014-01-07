@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C112CDF21843C85100B46EE8 /* MapOneX.plist in Resources */ = {isa = PBXBuildFile; fileRef = C112CDF11843C85100B46EE8 /* MapOneX.plist */; };
-		C112CDF41843C8F700B46EE8 /* MapOneY.plist in Resources */ = {isa = PBXBuildFile; fileRef = C112CDF31843C8F700B46EE8 /* MapOneY.plist */; };
 		C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4A2A1185B91C900A641AA /* PhysicsController.m */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
 		D8D8F368183BE201005BB475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F367183BE201005BB475 /* CoreGraphics.framework */; };
@@ -40,8 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C112CDF11843C85100B46EE8 /* MapOneX.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapOneX.plist; sourceTree = "<group>"; };
-		C112CDF31843C8F700B46EE8 /* MapOneY.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapOneY.plist; sourceTree = "<group>"; };
 		C1A4A2A0185B91C900A641AA /* PhysicsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsController.h; sourceTree = "<group>"; };
 		C1A4A2A1185B91C900A641AA /* PhysicsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsController.m; sourceTree = "<group>"; };
 		D8D8F362183BE201005BB475 /* PlatformerJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformerJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +133,6 @@
 				D8D8F380183BE201005BB475 /* PlatformerMyScene.m */,
 				C1A4A2A0185B91C900A641AA /* PhysicsController.h */,
 				C1A4A2A1185B91C900A641AA /* PhysicsController.m */,
-				C112CDF31843C8F700B46EE8 /* MapOneY.plist */,
-				C112CDF11843C85100B46EE8 /* MapOneX.plist */,
 				D8D8F382183BE201005BB475 /* Spaceship.png */,
 				D8D8F384183BE201005BB475 /* Images.xcassets */,
 				D8D8F36E183BE201005BB475 /* Supporting Files */,
@@ -252,12 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C112CDF41843C8F700B46EE8 /* MapOneY.plist in Resources */,
 				D8D8F372183BE201005BB475 /* InfoPlist.strings in Resources */,
 				D8D8F385183BE201005BB475 /* Images.xcassets in Resources */,
 				D8D8F383183BE201005BB475 /* Spaceship.png in Resources */,
 				D8D8F37B183BE201005BB475 /* Main.storyboard in Resources */,
-				C112CDF21843C85100B46EE8 /* MapOneX.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
