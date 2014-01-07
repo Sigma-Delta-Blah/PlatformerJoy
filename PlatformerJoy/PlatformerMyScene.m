@@ -24,7 +24,7 @@
         
         _bob = [[TileMap alloc] init];
         
-        [_bob setMapofWidth: 2 andHeight: 2];
+        [_bob setMapofWidth: 14 andHeight: 20];
         
         [self addChild:myLabel];
     }
@@ -45,8 +45,8 @@
         
         [sprite runAction:[SKAction repeatActionForever:action]];
 
-        for (int number = 0; number < 2; number++) {
-            for (int number2 = 0; number2 < 2; number2++) {
+        for (int number = 0; number < 14; number++) {
+            for (int number2 = 0; number2 < 20; number2++) {
                 if([_bob getTileAtX:number andY:number2]) {
                     NSLog([NSString stringWithFormat:@"Phillium %d, %d is good to go!", number, number2]);
                 } else {
