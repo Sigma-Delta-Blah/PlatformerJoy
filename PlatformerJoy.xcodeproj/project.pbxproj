@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D83F90841843C73D004D94CF /* God.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90831843C73D004D94CF /* God.m */; };
 		D83F90891843D0CE004D94CF /* TileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90881843D0CE004D94CF /* TileMap.m */; };
+		D8825FF51860C83D0067184F /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = D8825FF41860C83D0067184F /* PlayerStats.m */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
 		D8D8F368183BE201005BB475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F367183BE201005BB475 /* CoreGraphics.framework */; };
 		D8D8F36A183BE201005BB475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F369183BE201005BB475 /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 		D83F90831843C73D004D94CF /* God.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = God.m; sourceTree = "<group>"; };
 		D83F90871843D0CE004D94CF /* TileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMap.h; sourceTree = "<group>"; };
 		D83F90881843D0CE004D94CF /* TileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileMap.m; sourceTree = "<group>"; };
+		D8825FF31860C83D0067184F /* PlayerStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStats.h; sourceTree = "<group>"; };
+		D8825FF41860C83D0067184F /* PlayerStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStats.m; sourceTree = "<group>"; };
 		D8D8F362183BE201005BB475 /* PlatformerJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformerJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8F365183BE201005BB475 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8D8F367183BE201005BB475 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,7 @@
 			children = (
 				D83F90821843C73D004D94CF /* God.h */,
 				D83F90831843C73D004D94CF /* God.m */,
+				D8825FEF1860C7AB0067184F /* Player Data */,
 				D83F90861843C838004D94CF /* Tile Map */,
 			);
 			name = Model;
@@ -110,6 +114,15 @@
 				D83F90881843D0CE004D94CF /* TileMap.m */,
 			);
 			name = "Tile Map";
+			sourceTree = "<group>";
+		};
+		D8825FEF1860C7AB0067184F /* Player Data */ = {
+			isa = PBXGroup;
+			children = (
+				D8825FF31860C83D0067184F /* PlayerStats.h */,
+				D8825FF41860C83D0067184F /* PlayerStats.m */,
+			);
+			name = "Player Data";
 			sourceTree = "<group>";
 		};
 		D8D8F359183BE1FE005BB475 = {
@@ -290,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D83F90891843D0CE004D94CF /* TileMap.m in Sources */,
+				D8825FF51860C83D0067184F /* PlayerStats.m in Sources */,
 				D83F90841843C73D004D94CF /* God.m in Sources */,
 				D8D8F378183BE201005BB475 /* PlatformerAppDelegate.m in Sources */,
 				D8D8F374183BE201005BB475 /* main.m in Sources */,

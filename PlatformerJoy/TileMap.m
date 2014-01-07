@@ -24,8 +24,8 @@ int ySize;
     
     for (int number = 0; number < xValue*yValue; number++) {
         sprites[number] = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        float A = (number%yValue)*100;
-        float B = ((number-number%yValue)/xValue)*100;
+        float A = (number%yValue)*394+(394/2);
+        float B = ((number-number%yValue)/xValue)*347+133+(347/2);
         sprites[number].position = CGPointMake(A, B);
         [_tiles addObject:sprites[number]];
     }

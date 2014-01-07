@@ -14,6 +14,8 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        self.anchorPoint = CGPointMake(0, 0);
+        
         self.backgroundColor = [SKColor colorWithRed:0.09 green:0.09 blue:0.8 alpha:0.8];
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
