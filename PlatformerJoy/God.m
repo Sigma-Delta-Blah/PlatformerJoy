@@ -10,5 +10,4 @@
 #import "TileMap.h"
 
 @implementation God
-
 @end
