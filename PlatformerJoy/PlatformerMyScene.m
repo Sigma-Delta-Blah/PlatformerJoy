@@ -29,6 +29,13 @@
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
+<<<<<<< HEAD
+        
+        self.anchorPoint = CGPointMake(0, 0);
+        
+        self.backgroundColor = [SKColor colorWithRed:0.09 green:0.09 blue:0.8 alpha:0.8];
+        
+=======
         // coords of lower left corner are (0, 133)
 
         self.jumping = FALSE;
@@ -39,6 +46,7 @@
         [physics playerPhysics:self.objSprite];
         [self addChild:self.objSprite];
         self.backgroundColor = [SKColor colorWithRed:0.2 green:0.458 blue:0.658 alpha:0];
+>>>>>>> master
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         myLabel.text = @"Welcome!";
         myLabel.fontSize = 30;
