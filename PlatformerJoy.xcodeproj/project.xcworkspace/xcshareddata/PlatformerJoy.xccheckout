@@ -5,29 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>82821E07-2A62-42DE-94E5-0A1B83B20DB4</string>
-=======
-	<string>07D17C7A-919A-4417-81F9-BDA6FEC02882</string>
->>>>>>> fed57cf121b613abd97b51b30f7222bb8bec9bec
+	<string>B1BA2BF3-5589-4A1F-B077-E4665F5AE15B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PlatformerJoy</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>50607946-5554-4BE1-A514-1EE58719519B</key>
+		<key>F20B0A65-34E3-4618-8EEA-3A38078CCDF6</key>
 		<string>https://github.com/Sigma-Delta-Blah/PlatformerJoy.git</string>
-=======
-		<key>2AF7B8DE-1685-48E3-B887-0C5273DC9326</key>
-		<string>https://github.com/jackalopeking/PlatformerJoy.git</string>
->>>>>>> fed57cf121b613abd97b51b30f7222bb8bec9bec
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PlatformerJoy.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>50607946-5554-4BE1-A514-1EE58719519B</key>
+		<key>F20B0A65-34E3-4618-8EEA-3A38078CCDF6</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -35,29 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>50607946-5554-4BE1-A514-1EE58719519B</string>
-=======
-		<key>2AF7B8DE-1685-48E3-B887-0C5273DC9326</key>
-		<string>../..</string>
-	</dict>
-	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/jackalopeking/PlatformerJoy.git</string>
-	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
-	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2AF7B8DE-1685-48E3-B887-0C5273DC9326</string>
->>>>>>> fed57cf121b613abd97b51b30f7222bb8bec9bec
+	<string>F20B0A65-34E3-4618-8EEA-3A38078CCDF6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-<<<<<<< HEAD
-			<string>50607946-5554-4BE1-A514-1EE58719519B</string>
-=======
-			<string>2AF7B8DE-1685-48E3-B887-0C5273DC9326</string>
->>>>>>> fed57cf121b613abd97b51b30f7222bb8bec9bec
+			<string>F20B0A65-34E3-4618-8EEA-3A38078CCDF6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>PlatformerJoy</string>
 		</dict>

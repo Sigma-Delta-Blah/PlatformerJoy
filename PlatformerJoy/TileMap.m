@@ -25,7 +25,7 @@ int ySize;
     for (int number = 0; number < xValue*yValue; number++) {
         sprites[number] = [Tile spriteNodeWithImageNamed:@"GroundRed.png"];
         float A = (number%yValue)*16+(16/2);
-        float B = ((number-number%yValue)/yValue)*16+133+(16/2);
+        float B = ((number-number%yValue)/yValue)*16+194+(16/2);
         NSLog([NSString stringWithFormat:@"%f, %f", A, B]);
         sprites[number].position = CGPointMake(A, B);
         [_tiles addObject:sprites[number]];
