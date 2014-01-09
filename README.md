@@ -2,6 +2,9 @@ PlatformerJoy
 =============
 Link to assets folder (on dropbox): https://www.dropbox.com/sh/reyzpc4sps7ahct/e9ELkp--Bn
 =============
+NEVER NEVER NEVER NEVER NEVER EVER MERGE THE MASTER INTO ANYTHING
+if you need a new copy, delete your old branch and make a new one off the master 
+
 BLAAHHh U LET ME INTO uR HaUs.  Thx
 
 ...Plebian :octocat: 
