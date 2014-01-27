@@ -123,8 +123,6 @@
 				D83F90881843D0CE004D94CF /* TileMap.m */,
 				C199F1AD185B9943008DD368 /* Tile.h */,
 				C199F1AE185B9943008DD368 /* Tile.m */,
-				D86E7DC6187F264C003F05B8 /* Ground.png */,
-				D86E7DC8187F2658003F05B8 /* GroundRed.png */,
 			);
 			name = "Tile Map";
 			sourceTree = "<group>";
@@ -163,7 +161,6 @@
 		D8D8F36D183BE201005BB475 /* PlatformerJoy */ = {
 			isa = PBXGroup;
 			children = (
-				D8D984091886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 */,
 				D8D8F376183BE201005BB475 /* PlatformerAppDelegate.h */,
 				D8D8F377183BE201005BB475 /* PlatformerAppDelegate.m */,
 				D8D8F379183BE201005BB475 /* Main.storyboard */,
@@ -182,6 +179,9 @@
 		D8D8F36E183BE201005BB475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D86E7DC6187F264C003F05B8 /* Ground.png */,
+				D86E7DC8187F2658003F05B8 /* GroundRed.png */,
+				D8D984091886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 */,
 				D8D8F36F183BE201005BB475 /* PlatformerJoy-Info.plist */,
 				D8D8F370183BE201005BB475 /* InfoPlist.strings */,
 				D8D8F373183BE201005BB475 /* main.m */,
