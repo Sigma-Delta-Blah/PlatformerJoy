@@ -18,4 +18,4 @@ We dedicate this line to our first casualty of code; the Joe branch.  It shall f
 Nice try you fiend! My necromancy and resurection stats have been maxed out already (and are clearly over 9000)!  Through the sheer power of will, I have broken this universe's code, producing unprecedentedly high levels that you can never hope to match!
 
 Twidles thumbs in a corner slowly plotting the overthrow of his superiors *cough* *cough* Joe.. *cough* *cough* 
-      and maybe Matther *cough* *cough*
+      and maybe Matthew *cough* *cough*
