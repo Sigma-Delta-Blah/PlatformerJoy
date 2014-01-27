@@ -7,6 +7,7 @@
 //
 
 #import "TileMap.h"
+#import "PhysicsController.h"
 
 @implementation TileMap
 
@@ -21,12 +22,19 @@ int ySize;
     ySize = yValue;
     
     Tile *sprites[xValue*yValue];
+    PhysicsController *physics[xValue*yValue];
     
     for (int number = 0; number < xValue*yValue; number++) {
-        sprites[number] = [Tile spriteNodeWithImageNamed:@"GroundRed.png"];
-        float A = (number%yValue)*16+(16/2);
-        float B = ((number-number%yValue)/yValue)*16+194+(16/2);
+        float A = (number%xValue)*16+(16/2);
+        float B = ((number-number%xValue)/xValue)*16+194+(16/2);
         NSLog([NSString stringWithFormat:@"%f, %f", A, B]);
+        if (B > 202) {
+            sprites[number] = [Tile spriteNodeWithImageNamed:@"GroundRed.png"];
+        } else {
+            sprites[number] = [Tile spriteNodeWithImageNamed:@"Ground.png"];
+            physics[number] = [[PhysicsController alloc] init];
+            [physics[number] tilePhysics:sprites[number]];
+        }
         sprites[number].position = CGPointMake(A, B);
         [_tiles addObject:sprites[number]];
     }
