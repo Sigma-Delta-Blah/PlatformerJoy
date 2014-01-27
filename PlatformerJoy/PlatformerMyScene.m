@@ -16,7 +16,7 @@
 @property (strong, nonatomic)UIDynamicAnimator *animator;
 @property (strong, nonatomic)UIDynamicItemBehavior *behavior;
 @property (strong, nonatomic)SKAction *action;
-
+@property (strong, nonatomic) SKAction *music;
 @property ( nonatomic)BOOL jumping;
 @property (nonatomic) float groundYPos;
 @property (strong, nonatomic)SKSpriteNode *objSprite;
@@ -31,25 +31,16 @@
         /* Setup your scene here */
         // coords of lower left corner are (0, 133)
 
-        self.jumping = FALSE;
-        _groundYPos = 0;//place holder
-        PhysicsController *physics = [[PhysicsController alloc] init];
-        self.physicsWorld.gravity = CGVectorMake(0, -1);
-        self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size:CGSizeMake(25,25)];
-        [physics playerPhysics:self.objSprite];
-        [self addChild:self.objSprite];
         self.backgroundColor = [SKColor colorWithRed:0.2 green:0.458 blue:0.658 alpha:0];
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        myLabel.text = @"Welcome!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        self.music = [SKAction playSoundFileNamed: @"06 Bamboo Forest of the Full Moon.mp3" waitForCompletion:true];
+        [self runAction: _music];
+        
         
         _bob = [[TileMap alloc] init];
+        [_bob setMapofWidth: 20 andHeight: 12];
         
-        [_bob setMapofWidth: 12 andHeight: 20];
-        
-        for (int number = 0; number < 12; number++) {
-            for (int number2 = 0; number2 < 20; number2++) {
+        for (int number = 0; number < 20; number++) {
+            for (int number2 = 0; number2 < 12; number2++) {
                 if([_bob getTileAtX:number andY:number2]) {
                     NSLog([NSString stringWithFormat:@"Phillium %d, %d is good to go!", number, number2]);
                 } else {
@@ -58,7 +49,22 @@
                 [self addChild:[_bob getTileAtX:number andY:number2]];
             }
         }
-
+        
+        
+        self.jumping = FALSE;
+        _groundYPos = 0;//place holder
+        PhysicsController *physics = [[PhysicsController alloc] init];
+        self.physicsWorld.gravity = CGVectorMake(0, -1);
+        self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor purpleColor] size:CGSizeMake(25,25)];
+        [physics playerPhysics:self.objSprite];
+        self.objSprite.position = CGPointMake(200, 400);
+        [self addChild:self.objSprite];
+        
+        
+        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        myLabel.text = @"PlatformerJoy!";
+        myLabel.fontSize = 30;
+        myLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
         [self addChild:myLabel];
@@ -72,11 +78,11 @@
      for (UITouch *touch in touches) {
             CGPoint location = [touch locationInNode:self];
          if (location.y >= self.objSprite.position.y + 60 && self.jumping == FALSE){
-             _groundYPos = self.objSprite.position.y + .8;
-             self.objSprite.position = CGPointMake(self.objSprite.position.x, self.objSprite.position.y + 1);
-                 self.action = [SKAction moveBy:CGVectorMake(0, 100 ) duration:1];
-                 [self.objSprite runAction:self.action];
              self.jumping = TRUE;
+             self.objSprite.position = CGPointMake(self.objSprite.position.x, self.objSprite.position.y + 1);
+             self.action = [SKAction moveBy:CGVectorMake(0, 225 ) duration:1.5];
+             [self.objSprite runAction:self.action];
+             _groundYPos = self.objSprite.position.y - .2;
          } else {
              self.setTouch = touch;
          }
@@ -97,12 +103,13 @@
     }
     if (self.setTouch){
             CGPoint location = [self.setTouch locationInNode:self];
+        NSLog([NSString stringWithFormat:@"X Location is %f; Y Location is %f", location.x, location.y]);
         if (self.objSprite.position.x - location.x > 0){
-            self.action = [SKAction moveBy: CGVectorMake( -1 /* <- the smaller that number is, the faster the player moves */, 0) duration:.01];
+            self.action = [SKAction moveBy: CGVectorMake( -2 /* <- the larger that number is, the faster the player moves */, 0) duration:.01];
             [self.objSprite runAction:self.action];
         }
         if (self.objSprite.position.x - location.x < 0){
-            self.action = [SKAction moveBy: CGVectorMake( 1 /* <- the smaller that number is, the faster the player moves */, 0) duration:.01];
+            self.action = [SKAction moveBy: CGVectorMake( 2 /* <- the larger that number is, the faster the player moves */, 0) duration:.01];
             [self.objSprite runAction:self.action];
         }
     }

@@ -30,6 +30,7 @@
 		D8D8F38E183BE202005BB475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F369183BE201005BB475 /* UIKit.framework */; };
 		D8D8F396183BE202005BB475 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8D8F394183BE202005BB475 /* InfoPlist.strings */; };
 		D8D8F398183BE202005BB475 /* PlatformerJoyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F397183BE202005BB475 /* PlatformerJoyTests.m */; };
+		D8D9840A1886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8D984091886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		D8D8F393183BE202005BB475 /* PlatformerJoyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlatformerJoyTests-Info.plist"; sourceTree = "<group>"; };
 		D8D8F395183BE202005BB475 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8D8F397183BE202005BB475 /* PlatformerJoyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformerJoyTests.m; sourceTree = "<group>"; };
+		D8D984091886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "06 Bamboo Forest of the Full Moon.mp3"; path = "../../../../Music/iTunes/iTunes Media/Music/ZUN/Touhou Kishinjou ~ Double Dealing Character/06 Bamboo Forest of the Full Moon.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				D83F90821843C73D004D94CF /* God.h */,
 				D83F90831843C73D004D94CF /* God.m */,
+				D8D984081886555A00B695C6 /* Physics */,
 				D83F90861843C838004D94CF /* Tile Map */,
 			);
 			name = Model;
@@ -160,6 +163,7 @@
 		D8D8F36D183BE201005BB475 /* PlatformerJoy */ = {
 			isa = PBXGroup;
 			children = (
+				D8D984091886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 */,
 				D8D8F376183BE201005BB475 /* PlatformerAppDelegate.h */,
 				D8D8F377183BE201005BB475 /* PlatformerAppDelegate.m */,
 				D8D8F379183BE201005BB475 /* Main.storyboard */,
@@ -167,8 +171,6 @@
 				D8D8F37D183BE201005BB475 /* PlatformerViewController.m */,
 				D8D8F37F183BE201005BB475 /* PlatformerMyScene.h */,
 				D8D8F380183BE201005BB475 /* PlatformerMyScene.m */,
-				C1A4A2A0185B91C900A641AA /* PhysicsController.h */,
-				C1A4A2A1185B91C900A641AA /* PhysicsController.m */,
 				D8D8F382183BE201005BB475 /* Spaceship.png */,
 				D8D8F384183BE201005BB475 /* Images.xcassets */,
 				D83F90851843C7E5004D94CF /* Model */,
@@ -204,6 +206,15 @@
 				D8D8F394183BE202005BB475 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8D984081886555A00B695C6 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4A2A0185B91C900A641AA /* PhysicsController.h */,
+				C1A4A2A1185B91C900A641AA /* PhysicsController.m */,
+			);
+			name = Physics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D8F372183BE201005BB475 /* InfoPlist.strings in Resources */,
+				D8D9840A1886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */,
 				D8D8F385183BE201005BB475 /* Images.xcassets in Resources */,
 				D8D8F383183BE201005BB475 /* Spaceship.png in Resources */,
 				D8D8F37B183BE201005BB475 /* Main.storyboard in Resources */,
