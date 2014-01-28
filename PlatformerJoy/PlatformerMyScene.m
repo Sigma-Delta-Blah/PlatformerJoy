@@ -10,6 +10,7 @@
 
 #import "PlatformerMyScene.h"
 #import "PhysicsController.h"
+
 @interface PlatformerMyScene()
 
 @property (strong, nonatomic)UIGravityBehavior *gravity;
@@ -36,20 +37,8 @@
         [self runAction: _music];
         
         
-        _bob = [[TileMap alloc] init];
-        [_bob setMapofWidth: 20 andHeight: 12];
-        
-        for (int number = 0; number < 20; number++) {
-            for (int number2 = 0; number2 < 12; number2++) {
-                if([_bob getTileAtX:number andY:number2]) {
-                    NSLog([NSString stringWithFormat:@"Phillium %d, %d is good to go!", number, number2]);
-                } else {
-                    NSLog([NSString stringWithFormat:@"Phillium %d, %d is having problems!  WE ARE GOING DOWN!!!  AAAAARRRRGGGGHHHHNJ#KRWJEGFNTBHGTKLRWFMFNTOKJENVG!!!!!!!!!!!!!!!!!!!!!", number, number2]);
-                }
-                [self addChild:[_bob getTileAtX:number andY:number2]];
-            }
-        }
-        
+        _billy = [[MapData alloc] init];
+        [_billy createLevelOne: self];
         
         self.jumping = FALSE;
         _groundYPos = 0;//place holder

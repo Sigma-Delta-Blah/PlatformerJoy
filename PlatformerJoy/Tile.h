@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import "PhysicsController.h"
 
 @interface Tile : SKSpriteNode
 
-@property(nonatomic) NSInteger *function; //What the tile does (what type of tile it is)
+@property (nonatomic) PhysicsController *physics;
 
-- (void)setFunction: (NSInteger *)type;
-- (NSInteger)getFunction;
+- (void)setFunction: (int)type;
 
 @end
