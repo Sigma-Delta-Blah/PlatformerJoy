@@ -69,7 +69,7 @@
          if (location.y >= self.objSprite.position.y + 60 && self.jumping == FALSE){
              self.jumping = TRUE;
              self.objSprite.position = CGPointMake(self.objSprite.position.x, self.objSprite.position.y + 1);
-             self.objSprite.physicsBody.velocity = CGVectorMake(0, 75);
+             self.objSprite.physicsBody.velocity = CGVectorMake(0, 150);
              _groundYPos = self.objSprite.position.y - .2;
          } else {
              self.setTouch = touch;
