@@ -26,3 +26,5 @@ joe.physicsBody.velocity = CGVectorMake(100, 10000);
 
 *joe flys away at near the speed of sound*
 BWA HA HA I have rid us of that monstrosity
+
+It's "flies" not "flys" you ninny!

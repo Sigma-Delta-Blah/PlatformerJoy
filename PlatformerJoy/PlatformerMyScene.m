@@ -43,7 +43,7 @@
         self.jumping = FALSE;
         _groundYPos = 0;//place holder
         PhysicsController *physics = [[PhysicsController alloc] init];
-        self.physicsWorld.gravity = CGVectorMake(0, -1);
+        self.physicsWorld.gravity = CGVectorMake(0, -.8);
         self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor purpleColor] size:CGSizeMake(25,25)];
         [physics playerPhysics:self.objSprite];
         self.objSprite.position = CGPointMake(200, 400);
@@ -69,8 +69,7 @@
          if (location.y >= self.objSprite.position.y + 60 && self.jumping == FALSE){
              self.jumping = TRUE;
              self.objSprite.position = CGPointMake(self.objSprite.position.x, self.objSprite.position.y + 1);
-             self.action = [SKAction moveBy:CGVectorMake(0, 225 ) duration:1.5];
-             [self.objSprite runAction:self.action];
+             self.objSprite.physicsBody.velocity = CGVectorMake(0, 75);
              _groundYPos = self.objSprite.position.y - .2;
          } else {
              self.setTouch = touch;
@@ -86,7 +85,7 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    if (self.jumping == TRUE && self.objSprite.position.y <= _groundYPos){
+    if (self.jumping == TRUE && self.objSprite.physicsBody.velocity.dy ==0){
         NSLog(@"ground of jump is %f", _groundYPos);
         self.jumping = FALSE;
     }
