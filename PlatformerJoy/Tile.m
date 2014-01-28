@@ -12,14 +12,6 @@
 
 - (void)setFunction: (int)type
 {
-<<<<<<< HEAD
-    if (type == 1) {
-        self.physics = [[PhysicsController alloc] init];
-        [self.physics tilePhysics:self];
-        self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
-    } else {
-        self.texture = [SKTexture textureWithImageNamed:@"GroundRed.png"];
-=======
     switch (type) {
         case 0:
             self.texture = [SKTexture textureWithImageNamed:@"GroundRed.png"];
@@ -30,7 +22,6 @@
             [self.physics tilePhysics:self];
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
->>>>>>> master
     }
 }
 
