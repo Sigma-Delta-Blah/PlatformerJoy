@@ -16,6 +16,6 @@
 
 -(void) setMapofWidth:(int) xValue andHeight:(int) yValue;
 
--(SKSpriteNode *) getTileAtX:(int) xValue andY:(int) yValue;
+-(Tile *) getTileAtX:(int) xValue andY:(int) yValue;
 
 @end
