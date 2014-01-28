@@ -31,7 +31,7 @@ It's "flies" not "flys" you ninny!
 
 But I survived.  We may have to punish you for this.  You shall perish in flames!!! :fire:
 
-:fire: is no match for my :droplet:
+:fire: is no match for my :droplet: YOU CHANGED THE DOCUMENT!!!!!  HOW DARE YOU?!?!?!?!  THIS IS HERESY!!!!!!!!!
 
 Failure. :thumbsup:
 
