@@ -19,3 +19,4 @@ Nice try you fiend! My necromancy and resurection stats have been maxed out alre
 
 Twidles thumbs in a corner slowly plotting the overthrow of his superiors *cough* *cough* Joe.. *cough* *cough* 
       and maybe Matthew *cough* *cough*
+      and he slowly peices together his stargate portal in order to conquer new lands for himself...
