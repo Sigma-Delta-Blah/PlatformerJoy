@@ -21,3 +21,7 @@ Twidles thumbs in a corner slowly plotting the overthrow of his superiors *cough
       and maybe Matthew *cough* *cough*
      
 and he slowly peices together his stargate portal in order to conquer new lands for himself...
+
+joe.physicsBody.velocity = CGVectorMake(100, 10000);
+*joe flys away at near the speed of sound*
+BWA HA HA I have rid us of that monstrosity
