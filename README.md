@@ -28,3 +28,13 @@ joe.physicsBody.velocity = CGVectorMake(100, 10000);
 BWA HA HA I have rid us of that monstrosity
 
 It's "flies" not "flys" you ninny!
+
+But I survived.  We may have to punish you for this.  You shall perish in flames!!! :fire:
+
+:fire: is no match for my :droplet: YOU CHANGED THE DOCUMENT!!!!!  HOW DARE YOU?!?!?!?!  THIS IS HERESY!!!!!!!!!
+
+Failure. :thumbsup:
+
+the :cake: is a lie :trollface:
+
+the :tomato: will :boom: and go :sparkles:
