@@ -15,8 +15,8 @@
 
 @property (strong, nonatomic) TileMap *bob;
 
--(void) blankMap: (TileMap *) tileMap;
+-(void) blankMap: (SKNode *) scene;
 
--(void) createLevelOne: (SKScene *) scene;
+-(void) createLevelOne: (SKNode *) scene;
 
 @end
