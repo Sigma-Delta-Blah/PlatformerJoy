@@ -10,7 +10,7 @@
 
 @implementation MapData
 
--(void) blankMap: (SKScene *) scene {
+-(void) blankMap: (SKNode *) scene {
     
     if (!_bob) {
         _bob = [[TileMap alloc] init];
@@ -24,7 +24,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
--(void) createLevelOne: (SKScene *) scene{
+-(void) createLevelOne: (SKNode *) scene{
     
     if (!_bob) {
         _bob = [[TileMap alloc] init];

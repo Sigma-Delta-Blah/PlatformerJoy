@@ -14,7 +14,7 @@
 {
     switch (type) {
         case 0:
-            self.texture = [SKTexture textureWithImageNamed:@"GroundRed.png"];
+            self.texture = NULL;
             break;
             
         case 1:
