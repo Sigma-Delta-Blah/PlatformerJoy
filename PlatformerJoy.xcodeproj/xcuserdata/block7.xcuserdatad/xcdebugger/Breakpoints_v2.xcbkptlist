@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
             endingLineNumber = "12"
-            landmarkName = "+incrementHp:"
-            landmarkType = "4">
+            landmarkName = "@interface PlayerStats"
+            landmarkType = "2">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "+getHp"
+            landmarkName = "+incrementHp:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
