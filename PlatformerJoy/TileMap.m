@@ -7,6 +7,7 @@
 //
 
 #import "TileMap.h"
+#import "PhysicsController.h"
 
 @implementation TileMap
 
@@ -15,6 +16,7 @@ int ySize;
 
 -(void) setMapofWidth:(int) xValue andHeight:(int) yValue {
     
+    [self.tiles removeAllObjects];
     self.tiles = [[NSMutableArray alloc] init];
     
     xSize = xValue;
@@ -23,17 +25,16 @@ int ySize;
     Tile *sprites[xValue*yValue];
     
     for (int number = 0; number < xValue*yValue; number++) {
-        sprites[number] = [Tile spriteNodeWithImageNamed:@"GroundRed.png"];
-        float A = (number%yValue)*16+(16/2);
-        float B = ((number-number%yValue)/yValue)*16+194+(16/2);
-        NSLog([NSString stringWithFormat:@"%f, %f", A, B]);
+        float A = (number%xValue)*16+(16/2);
+        float B = ((number-number%xValue)/xValue)*16+194+(16/2);
+        sprites[number] = [Tile spriteNodeWithImageNamed:@"Ground.png"];
         sprites[number].position = CGPointMake(A, B);
         [_tiles addObject:sprites[number]];
     }
 
 }
 
--(SKSpriteNode *) getTileAtX:(int) xValue andY:(int) yValue {
+-(Tile *) getTileAtX:(int) xValue andY:(int) yValue {
     return [_tiles objectAtIndex:(int)(yValue*xSize+xValue)];
 }
 

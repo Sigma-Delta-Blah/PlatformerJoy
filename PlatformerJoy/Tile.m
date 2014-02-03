@@ -10,24 +10,19 @@
 
 @implementation Tile
 
-- (id) initWithFunction: (NSInteger)functionSet
+- (void)setFunction: (int)type
 {
-    self = [super init];
-    if (self) {
-        self.function = &(functionSet);
-        //self = [self initWithImageNamed:@"GroundRed.png"];
+    switch (type) {
+        case 0:
+            self.texture = NULL;
+            break;
+            
+        case 1:
+            self.physics = [[PhysicsController alloc] init];
+            [self.physics tilePhysics:self];
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
+            break;
     }
-    return self;
-}
-
-- (void)setFunction: (NSInteger*)type
-{
-    self.function = type;
-}
-
-- (NSInteger)getFunction
-{
-    return *(self.function);
 }
 
 @end

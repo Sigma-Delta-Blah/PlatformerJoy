@@ -11,11 +11,9 @@
 @implementation PhysicsController
 
 
--(void)tilePhysics:(SKSpriteNode *) sprite :(int) x{
+-(void)tilePhysics:(SKSpriteNode *) sprite{
     
-    CGPoint location = CGPointMake(4*x, 150 );
-    sprite.position = location;
-    sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(4, 4)];
+    sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(16, 16)];
     sprite.physicsBody.affectedByGravity = NO;
     sprite.physicsBody.dynamic = NO;
     sprite.physicsBody.restitution = 0.0;

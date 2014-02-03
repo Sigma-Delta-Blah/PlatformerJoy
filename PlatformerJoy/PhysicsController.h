@@ -12,7 +12,7 @@
 @interface PhysicsController : NSObject
 
 
--(void)tilePhysics:(SKSpriteNode *) sprite : (int) x;
+-(void)tilePhysics:(SKSpriteNode *) sprite;
 -(void)playerPhysics:(SKSpriteNode *) sprite;
 
 @end
