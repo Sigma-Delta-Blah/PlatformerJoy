@@ -14,6 +14,8 @@
 		D83F90891843D0CE004D94CF /* TileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90881843D0CE004D94CF /* TileMap.m */; };
 		D86E7DC7187F264C003F05B8 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E7DC6187F264C003F05B8 /* Ground.png */; };
 		D86E7DC9187F2658003F05B8 /* GroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E7DC8187F2658003F05B8 /* GroundRed.png */; };
+		D871C89C18A960F7000E958B /* SampleMapFunction.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D871C89A18A960F7000E958B /* SampleMapFunction.rtf */; };
+		D871C89D18A960F7000E958B /* SampleMapTexture.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D871C89B18A960F7000E958B /* SampleMapTexture.rtf */; };
 		D8AE69C41896EB02008D5C4E /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AE69C31896EB02008D5C4E /* MapData.m */; };
 		D8B5105018982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
@@ -58,6 +60,8 @@
 		D83F90881843D0CE004D94CF /* TileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileMap.m; sourceTree = "<group>"; };
 		D86E7DC6187F264C003F05B8 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
 		D86E7DC8187F2658003F05B8 /* GroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroundRed.png; sourceTree = "<group>"; };
+		D871C89A18A960F7000E958B /* SampleMapFunction.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = SampleMapFunction.rtf; sourceTree = "<group>"; };
+		D871C89B18A960F7000E958B /* SampleMapTexture.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = SampleMapTexture.rtf; sourceTree = "<group>"; };
 		D8AE69C21896EB02008D5C4E /* MapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapData.h; sourceTree = "<group>"; };
 		D8AE69C31896EB02008D5C4E /* MapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapData.m; sourceTree = "<group>"; };
 		D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06 Bamboo Forest of the Full Moon.mp3"; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 		D8D8F36E183BE201005BB475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D871C89A18A960F7000E958B /* SampleMapFunction.rtf */,
+				D871C89B18A960F7000E958B /* SampleMapTexture.rtf */,
 				D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */,
 				D86E7DC6187F264C003F05B8 /* Ground.png */,
 				D86E7DC8187F2658003F05B8 /* GroundRed.png */,
@@ -317,6 +323,8 @@
 				D8D8F385183BE201005BB475 /* Images.xcassets in Resources */,
 				D8D8F383183BE201005BB475 /* Spaceship.png in Resources */,
 				D8D8F37B183BE201005BB475 /* Main.storyboard in Resources */,
+				D871C89C18A960F7000E958B /* SampleMapFunction.rtf in Resources */,
+				D871C89D18A960F7000E958B /* SampleMapTexture.rtf in Resources */,
 				D86E7DC7187F264C003F05B8 /* Ground.png in Resources */,
 				D86E7DC9187F2658003F05B8 /* GroundRed.png in Resources */,
 			);
