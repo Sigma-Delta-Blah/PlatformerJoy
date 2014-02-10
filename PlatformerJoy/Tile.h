@@ -14,6 +14,6 @@
 
 @property (nonatomic) PhysicsController *physics;
 
+- (void)setFunction: (int)type: (int)texture;
 - (void)setFunction: (int)type;
-
 @end

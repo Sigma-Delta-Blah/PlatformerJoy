@@ -115,9 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				D83F90821843C73D004D94CF /* God.h */,
+				D83F90831843C73D004D94CF /* God.m */,
 				C1CB05CE18A00E92009983CF /* PlayerStats.h */,
 				C1CB05CF18A00E92009983CF /* PlayerStats.m */,
-				D83F90831843C73D004D94CF /* God.m */,
 				D8D984081886555A00B695C6 /* Physics */,
 				D83F90861843C838004D94CF /* Tile Map */,
 			);
