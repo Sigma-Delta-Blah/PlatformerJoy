@@ -19,6 +19,7 @@
 @property (strong, nonatomic)SKAction *action;
 @property (strong, nonatomic) SKAction *music;
 @property ( nonatomic)BOOL jumping;
+@property ( nonatomic)BOOL moving;
 @property (nonatomic) float groundYPos;
 @property (strong, nonatomic)SKSpriteNode *objSprite;
 @property (strong, nonatomic)SKNode *world;
@@ -49,7 +50,7 @@
         _groundYPos = 0;//place holder
         PhysicsController *physics = [[PhysicsController alloc] init];
         self.physicsWorld.gravity = CGVectorMake(0, -.8);
-        self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor purpleColor] size:CGSizeMake(25,25)];
+        self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor purpleColor] size:CGSizeMake(16,32)];
         [physics playerPhysics:self.objSprite];
         self.objSprite.position = CGPointMake(200, 400);
         self.objSprite.name = @"camera";
@@ -81,15 +82,12 @@
     /* Called when a touch begins */
     
      for (UITouch *touch in touches) {
+         self.moving = true;
             CGPoint location = [touch locationInNode:self];
-<<<<<<< HEAD
-         if (location.y >= self.objSprite.position.y + 30 && self.jumping == FALSE){
-=======
          if (location.y >= CGRectGetMidY(self.frame) + 38 && self.jumping == FALSE && fabs(self.objSprite.physicsBody.velocity.dy) <1){
->>>>>>> master
              self.jumping = TRUE;
              self.objSprite.position = CGPointMake(self.objSprite.position.x, self.objSprite.position.y + 1);
-             self.objSprite.physicsBody.velocity = CGVectorMake(0, 150);
+             self.objSprite.physicsBody.velocity = CGVectorMake(self.objSprite.physicsBody.velocity.dx, 150);
              _groundYPos = self.objSprite.position.y - .2;
          } else {
              self.setTouch = touch;
@@ -98,6 +96,7 @@
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    self.moving = FALSE;
     if (self.setTouch){
         self.setTouch = nil;
         NSLog(@"touch removed");
@@ -110,16 +109,23 @@
         NSLog(@"ground of jump is %f", _groundYPos);
         self.jumping = FALSE;
     }
+    if (self.moving == FALSE && (self.objSprite.physicsBody.velocity.dx)*(self.objSprite.physicsBody.velocity.dx) > 9){
+        self.objSprite.physicsBody.velocity = CGVectorMake(self.objSprite.physicsBody.velocity.dx*.75, self.objSprite.physicsBody.velocity.dy);
+    }
+    if (self.moving == FALSE && (self.objSprite.physicsBody.velocity.dx)*(self.objSprite.physicsBody.velocity.dx) <= 9){
+        self.objSprite.physicsBody.velocity = CGVectorMake(0, self.objSprite.physicsBody.velocity.dy);
+    }
     if (self.setTouch){
             CGPoint location = [self.setTouch locationInNode:self];
-        NSLog([NSString stringWithFormat:@"X Location is %f; Y Location is %f", location.x, location.y]);
         if ((CGRectGetMidX(self.frame) - location.x > 0)){
-            self.action = [SKAction moveBy: CGVectorMake( -2 /* <- the larger that number is, the faster the player moves */, 0) duration:.01];
-            [self.objSprite runAction:self.action];
+            self.objSprite.physicsBody.velocity = CGVectorMake(-100, self.objSprite.physicsBody.velocity.dy);
+            //self.action = [SKAction moveBy: CGVectorMake( -2 /* <- the larger that number is, the faster the player moves */, 0) duration:.01];
+            //[self.objSprite runAction:self.action];
         }
         if ((CGRectGetMidX(self.frame) - location.x < 0)){
-            self.action = [SKAction moveBy: CGVectorMake( 2 /* <- the larger that number is, the faster the player moves */, 0) duration:.01];
-            [self.objSprite runAction:self.action];
+            self.objSprite.physicsBody.velocity = CGVectorMake(100, self.objSprite.physicsBody.velocity.dy);
+            //self.action = [SKAction moveBy: CGVectorMake( 2 /* <- the larger that number is, the faster the player moves */, 0) duration:.01];
+            //[self.objSprite runAction:self.action];
         }
     }
     /* Called before each frame is rendered */
