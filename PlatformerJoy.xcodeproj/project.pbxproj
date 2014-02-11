@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		C199F1AF185B9943008DD368 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = C199F1AE185B9943008DD368 /* Tile.m */; };
 		C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4A2A1185B91C900A641AA /* PhysicsController.m */; };
+		C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CB05CF18A00E92009983CF /* PlayerStats.m */; };
 		D83F90841843C73D004D94CF /* God.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90831843C73D004D94CF /* God.m */; };
 		D83F90891843D0CE004D94CF /* TileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90881843D0CE004D94CF /* TileMap.m */; };
 		D86E7DC7187F264C003F05B8 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E7DC6187F264C003F05B8 /* Ground.png */; };
 		D86E7DC9187F2658003F05B8 /* GroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E7DC8187F2658003F05B8 /* GroundRed.png */; };
+		D8AE69C41896EB02008D5C4E /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AE69C31896EB02008D5C4E /* MapData.m */; };
+		D8B5105018982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
 		D8D8F368183BE201005BB475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F367183BE201005BB475 /* CoreGraphics.framework */; };
 		D8D8F36A183BE201005BB475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F369183BE201005BB475 /* UIKit.framework */; };
@@ -30,7 +33,6 @@
 		D8D8F38E183BE202005BB475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F369183BE201005BB475 /* UIKit.framework */; };
 		D8D8F396183BE202005BB475 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8D8F394183BE202005BB475 /* InfoPlist.strings */; };
 		D8D8F398183BE202005BB475 /* PlatformerJoyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F397183BE202005BB475 /* PlatformerJoyTests.m */; };
-		D8D9840A1886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8D984091886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,12 +50,17 @@
 		C199F1AE185B9943008DD368 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		C1A4A2A0185B91C900A641AA /* PhysicsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsController.h; sourceTree = "<group>"; };
 		C1A4A2A1185B91C900A641AA /* PhysicsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsController.m; sourceTree = "<group>"; };
+		C1CB05CE18A00E92009983CF /* PlayerStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStats.h; sourceTree = "<group>"; };
+		C1CB05CF18A00E92009983CF /* PlayerStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStats.m; sourceTree = "<group>"; };
 		D83F90821843C73D004D94CF /* God.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = God.h; sourceTree = "<group>"; };
 		D83F90831843C73D004D94CF /* God.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = God.m; sourceTree = "<group>"; };
 		D83F90871843D0CE004D94CF /* TileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMap.h; sourceTree = "<group>"; };
 		D83F90881843D0CE004D94CF /* TileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileMap.m; sourceTree = "<group>"; };
 		D86E7DC6187F264C003F05B8 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
 		D86E7DC8187F2658003F05B8 /* GroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroundRed.png; sourceTree = "<group>"; };
+		D8AE69C21896EB02008D5C4E /* MapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapData.h; sourceTree = "<group>"; };
+		D8AE69C31896EB02008D5C4E /* MapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapData.m; sourceTree = "<group>"; };
+		D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06 Bamboo Forest of the Full Moon.mp3"; sourceTree = "<group>"; };
 		D8D8F362183BE201005BB475 /* PlatformerJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformerJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8F365183BE201005BB475 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8D8F367183BE201005BB475 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,7 +84,6 @@
 		D8D8F393183BE202005BB475 /* PlatformerJoyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlatformerJoyTests-Info.plist"; sourceTree = "<group>"; };
 		D8D8F395183BE202005BB475 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8D8F397183BE202005BB475 /* PlatformerJoyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformerJoyTests.m; sourceTree = "<group>"; };
-		D8D984091886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "06 Bamboo Forest of the Full Moon.mp3"; path = "../../../../Music/iTunes/iTunes Media/Music/ZUN/Touhou Kishinjou ~ Double Dealing Character/06 Bamboo Forest of the Full Moon.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,8 @@
 			children = (
 				D83F90821843C73D004D94CF /* God.h */,
 				D83F90831843C73D004D94CF /* God.m */,
+				C1CB05CE18A00E92009983CF /* PlayerStats.h */,
+				C1CB05CF18A00E92009983CF /* PlayerStats.m */,
 				D8D984081886555A00B695C6 /* Physics */,
 				D83F90861843C838004D94CF /* Tile Map */,
 			);
@@ -123,10 +131,18 @@
 				D83F90881843D0CE004D94CF /* TileMap.m */,
 				C199F1AD185B9943008DD368 /* Tile.h */,
 				C199F1AE185B9943008DD368 /* Tile.m */,
-				D86E7DC6187F264C003F05B8 /* Ground.png */,
-				D86E7DC8187F2658003F05B8 /* GroundRed.png */,
+				D8AE69C11896EABE008D5C4E /* Map Data */,
 			);
 			name = "Tile Map";
+			sourceTree = "<group>";
+		};
+		D8AE69C11896EABE008D5C4E /* Map Data */ = {
+			isa = PBXGroup;
+			children = (
+				D8AE69C21896EB02008D5C4E /* MapData.h */,
+				D8AE69C31896EB02008D5C4E /* MapData.m */,
+			);
+			name = "Map Data";
 			sourceTree = "<group>";
 		};
 		D8D8F359183BE1FE005BB475 = {
@@ -163,7 +179,6 @@
 		D8D8F36D183BE201005BB475 /* PlatformerJoy */ = {
 			isa = PBXGroup;
 			children = (
-				D8D984091886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 */,
 				D8D8F376183BE201005BB475 /* PlatformerAppDelegate.h */,
 				D8D8F377183BE201005BB475 /* PlatformerAppDelegate.m */,
 				D8D8F379183BE201005BB475 /* Main.storyboard */,
@@ -182,6 +197,9 @@
 		D8D8F36E183BE201005BB475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */,
+				D86E7DC6187F264C003F05B8 /* Ground.png */,
+				D86E7DC8187F2658003F05B8 /* GroundRed.png */,
 				D8D8F36F183BE201005BB475 /* PlatformerJoy-Info.plist */,
 				D8D8F370183BE201005BB475 /* InfoPlist.strings */,
 				D8D8F373183BE201005BB475 /* main.m */,
@@ -295,7 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D8F372183BE201005BB475 /* InfoPlist.strings in Resources */,
-				D8D9840A1886D79000B695C6 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */,
+				D8B5105018982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */,
 				D8D8F385183BE201005BB475 /* Images.xcassets in Resources */,
 				D8D8F383183BE201005BB475 /* Spaceship.png in Resources */,
 				D8D8F37B183BE201005BB475 /* Main.storyboard in Resources */,
@@ -326,6 +344,8 @@
 				D8D8F374183BE201005BB475 /* main.m in Sources */,
 				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
 				C199F1AF185B9943008DD368 /* Tile.m in Sources */,
+				D8AE69C41896EB02008D5C4E /* MapData.m in Sources */,
+				C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */,
 				D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

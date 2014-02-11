@@ -10,26 +10,79 @@
 
 @implementation Tile
 
-- (id) initWithFunction: (NSInteger)functionSet
+- (void)setFunction: (int)type: (int)texture
 {
-    self = [super init];
-    if (self) {
-        self.function = &(functionSet);
-        //Implement physics body and stuff here as well using cases; we haven't figured this out yet entirely, and have been trying multiple ideas.
-        //self = [self initWithImageNamed:@"GroundRed.png"]; This isn't working, so we will need a different method, but images will also go in cases based on the function of the block
+    switch (type) {
+        case 0: //make air block
+            self.texture = NULL;
+            break;
+            
+        case 1: //make basic ground block
+            self.physics = [[PhysicsController alloc] init];
+            [self.physics tilePhysics:self];
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
+            break;
+            
+        case 2: //make block that collapses upon contact
+            self.physics = [[PhysicsController alloc] init];
+            [self.physics tilePhysics:self];
+            self.physicsBody.dynamic = YES;
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
+            break;
+
+        case 3: //bounce tiles
+            self.physics = [[PhysicsController alloc] init];
+            [self.physics tilePhysics:self];
+            self.physicsBody.restitution = 0.98;
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
+            break;
+        default: //default to making an air block
+            self.texture = NULL;
+            break;
     }
-    return self;
+    switch (texture) {
+        case 0:
+            self.texture = NULL;
+            break;
+        case 1:
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
+            break;
+        default: //default texture if none is specified
+            self.texture = [SKTexture textureWithCGImage:@"Ground.png"];
+            break;
+    }
 }
 
-- (void)setFunction: (NSInteger*)type
+- (void)setFunction: (int)type
 {
-    self.function = type;
-    //Can be used to change function for, say, self-destructing blocks or other things that could change mid-game; the physics and image would also need to change then too
-}
-
-- (NSInteger)getFunction
-{
-    return *(self.function);
+    switch (type) {
+        case 0: //make air block
+            self.texture = NULL;
+            break;
+            
+        case 1: //make basic ground block
+            self.physics = [[PhysicsController alloc] init];
+            [self.physics tilePhysics:self];
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
+            break;
+            
+        case 2: //make block that collapses upon contact
+            self.physics = [[PhysicsController alloc] init];
+            [self.physics tilePhysics:self];
+            self.physicsBody.dynamic = YES;
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
+            break;
+            
+        case 3: //bounce tiles
+            self.physics = [[PhysicsController alloc] init];
+            [self.physics tilePhysics:self];
+            self.physicsBody.restitution = 0.98;
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
+            break;
+        default: //default to making an air block
+            self.texture = NULL;
+            break;
+    }
 }
 
 @end
