@@ -7,7 +7,6 @@ in any particular order
 anyone may edit this (but only to add goals)
 1. fix the wierd deadzone on the touchscreen?
 2. Have TileMapData be able to read from a text file
-3.Fix wall clinging
 
 It's far to early for any of these things
 3.start designing art for game and implementing it
