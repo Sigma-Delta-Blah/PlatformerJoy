@@ -44,4 +44,4 @@ the :tomato: will :boom: and go :sparkles:
 
 nobody has posted in this for a while. just thought id say hi :scream:
 
-/play trololo
+/play trololo :shipit:
