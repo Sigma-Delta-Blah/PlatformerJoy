@@ -36,7 +36,7 @@
 
         self.anchorPoint = CGPointMake (0.5,0.5);
         
-        self.backgroundColor = [SKColor colorWithRed:0.2 green:0.458 blue:0.658 alpha:0];
+        self.backgroundColor = [SKColor colorWithRed:1.0 green:0.0 blue:0.5 alpha:0];
         self.music = [SKAction playSoundFileNamed: @"06 Bamboo Forest of the Full Moon.mp3" waitForCompletion:true];
         [self runAction: _music];
         
@@ -50,9 +50,9 @@
         _groundYPos = 0;//place holder
         PhysicsController *physics = [[PhysicsController alloc] init];
         self.physicsWorld.gravity = CGVectorMake(0, -.8);
-        self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor purpleColor] size:CGSizeMake(16,32)];
+        self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor blueColor] size:CGSizeMake(16,32)];
         [physics playerPhysics:self.objSprite];
-        self.objSprite.position = CGPointMake(200, 400);
+        self.objSprite.position = CGPointMake(32, 32);
         self.objSprite.name = @"camera";
         [self.world addChild:self.objSprite];
         
@@ -99,14 +99,12 @@
     self.moving = FALSE;
     if (self.setTouch){
         self.setTouch = nil;
-        NSLog(@"touch removed");
     }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
     if (self.jumping == TRUE && self.objSprite.physicsBody.velocity.dy ==0){
-        NSLog(@"ground of jump is %f", _groundYPos);
         self.jumping = FALSE;
     }
     if (self.moving == FALSE && (self.objSprite.physicsBody.velocity.dx)*(self.objSprite.physicsBody.velocity.dx) > 9){

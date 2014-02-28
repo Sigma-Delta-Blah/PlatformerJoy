@@ -10,7 +10,7 @@
 
 @implementation Tile
 
-- (void)setFunction: (int)type: (int)texture
+- (void)setFunction: (int)type withTexture:(int)texture
 {
     switch (type) {
         case 0: //make air block
@@ -48,7 +48,7 @@
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
         default: //default texture if none is specified
-            self.texture = [SKTexture textureWithCGImage:@"Ground.png"];
+            self.texture = NULL;
             break;
     }
 }

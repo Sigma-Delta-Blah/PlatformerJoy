@@ -17,6 +17,8 @@
 
 -(void) blankMap: (SKNode *) scene;
 
+-(void) createLevel: (SKNode *) scene withFunction: (NSString *) functionTxt withTexture: (NSString *) textureTxt;
+
 -(void) createLevelOne: (SKNode *) scene;
 
 @end

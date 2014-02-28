@@ -22,59 +22,45 @@
     
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
--(void) createLevelOne: (SKNode *) scene{
+-(void) createLevel: (SKNode *) scene withFunction:(NSString *)functionTxt withTexture:(NSString *)textureTxt{
+    
+    NSString *contentFunction = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource: functionTxt ofType: @"txt"]];
+    NSString *contentTexture = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource: textureTxt ofType: @"txt"]];
+    
+    NSArray *arrayFunction = [contentFunction componentsSeparatedByString:@"\n"];
+    NSArray *arrayTexture = [contentTexture componentsSeparatedByString:@"\n"];
+    
+    int xValue = contentFunction.length/[arrayFunction count];
+    int yValue = [arrayFunction count];
     
     if (!_bob) {
         _bob = [[TileMap alloc] init];
     }
+    [_bob setMapofWidth: xValue andHeight: yValue];
     
-    [_bob setMapofWidth: 100 andHeight: 30];
-    
-    for (int number_x = 0; number_x < 1; number_x++) {
-        for (int number_y = 0; number_y < 30; number_y++) {
-            [[_bob getTileAtX:number_x andY:number_y] setFunction: 1];
-        }
-    }
-    for (int number_x = 1; number_x < 99; number_x++) {
-        for (int number_y = 6; number_y < 30; number_y++) {
-            [[_bob getTileAtX:number_x andY:number_y] setFunction: 0:0];
-        }
-    }
-    for (int number_x = 1; number_x < 10; number_x++) {
-        for (int number_y = 5; number_y < 6; number_y++) {
-            [[_bob getTileAtX:number_x andY:number_y] setFunction: 1:1];
-        }
-    }
-    for (int number_x = 10; number_x < 99; number_x++) {
-        for (int number_y = 5; number_y < 6; number_y++) {
-            [[_bob getTileAtX:number_x andY:number_y] setFunction: 0:0];
-        }
-    }
-    for (int number_x = 1; number_x < 99; number_x++) {
-        for (int number_y = 1; number_y < 5; number_y++) {
-            [[_bob getTileAtX:number_x andY:number_y] setFunction: 0:0];
-        }
-    }
-    for (int number_x = 1; number_x < 99; number_x++) {
-        for (int number_y = 0; number_y < 1; number_y++) {
-            [[_bob getTileAtX:number_x andY:number_y] setFunction: 1:1];
-        }
-    }
-    for (int number_x = 99; number_x < 100; number_x++) {
-        for (int number_y = 0; number_y < 30; number_y++) {
-            [[_bob getTileAtX:number_x andY:number_y] setFunction: 1:1];
+    for (int n1 = 0; n1 < xValue; n1++) {
+        for (int n2 = 0; n2 < yValue; n2++) {
+            [[_bob getTileAtX:n1 andY:n2] setFunction: [[NSString stringWithFormat: @"%c", [arrayFunction[yValue-n2-1] characterAtIndex:n1]] intValue] withTexture: [[NSString stringWithFormat: @"%c", [arrayTexture[yValue-n2-1] characterAtIndex:n1]] intValue]];
         }
     }
     
     //[scene removeAllChildren];
     
-    for (int number_x = 0; number_x < 100; number_x++) {
-        for (int number_y = 0; number_y < 30; number_y++) {
+    for (int number_x = 0; number_x < xValue; number_x++) {
+        for (int number_y = 0; number_y < yValue; number_y++) {
             [scene addChild:[_bob getTileAtX:number_x andY:number_y]];
         }
     }
+    
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+-(void) createLevelOne: (SKNode *) scene{
+    
+    [self createLevel:scene withFunction:@"SampleMapFunction" withTexture:@"SampleMapTexture"];
     
 }
 
