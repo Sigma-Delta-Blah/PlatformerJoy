@@ -16,6 +16,7 @@
 		D86E7DC9187F2658003F05B8 /* GroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E7DC8187F2658003F05B8 /* GroundRed.png */; };
 		D86EA10218BFB6B5009C0A9F /* SampleMapFunction.txt in Resources */ = {isa = PBXBuildFile; fileRef = D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */; };
 		D86EA10318BFB6B5009C0A9F /* SampleMapTexture.txt in Resources */ = {isa = PBXBuildFile; fileRef = D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */; };
+		D8783DB018C117E400490CFC /* PlayerData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8783DAF18C117E400490CFC /* PlayerData.m */; };
 		D8AE69C41896EB02008D5C4E /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AE69C31896EB02008D5C4E /* MapData.m */; };
 		D8B5105018982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
@@ -62,6 +63,8 @@
 		D86E7DC8187F2658003F05B8 /* GroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroundRed.png; sourceTree = "<group>"; };
 		D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapFunction.txt; sourceTree = "<group>"; };
 		D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapTexture.txt; sourceTree = "<group>"; };
+		D8783DAE18C117E400490CFC /* PlayerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerData.h; sourceTree = "<group>"; };
+		D8783DAF18C117E400490CFC /* PlayerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerData.m; sourceTree = "<group>"; };
 		D8AE69C21896EB02008D5C4E /* MapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapData.h; sourceTree = "<group>"; };
 		D8AE69C31896EB02008D5C4E /* MapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapData.m; sourceTree = "<group>"; };
 		D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06 Bamboo Forest of the Full Moon.mp3"; sourceTree = "<group>"; };
@@ -120,10 +123,10 @@
 			children = (
 				D83F90821843C73D004D94CF /* God.h */,
 				D83F90831843C73D004D94CF /* God.m */,
-				C1CB05CE18A00E92009983CF /* PlayerStats.h */,
-				C1CB05CF18A00E92009983CF /* PlayerStats.m */,
 				D8D984081886555A00B695C6 /* Physics */,
+				D8783DAD18C1175E00490CFC /* Player */,
 				D83F90861843C838004D94CF /* Tile Map */,
+				D8AE69C11896EABE008D5C4E /* Map Data */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -135,9 +138,19 @@
 				D83F90881843D0CE004D94CF /* TileMap.m */,
 				C199F1AD185B9943008DD368 /* Tile.h */,
 				C199F1AE185B9943008DD368 /* Tile.m */,
-				D8AE69C11896EABE008D5C4E /* Map Data */,
 			);
 			name = "Tile Map";
+			sourceTree = "<group>";
+		};
+		D8783DAD18C1175E00490CFC /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				D8783DAE18C117E400490CFC /* PlayerData.h */,
+				D8783DAF18C117E400490CFC /* PlayerData.m */,
+				C1CB05CE18A00E92009983CF /* PlayerStats.h */,
+				C1CB05CF18A00E92009983CF /* PlayerStats.m */,
+			);
+			name = Player;
 			sourceTree = "<group>";
 		};
 		D8AE69C11896EABE008D5C4E /* Map Data */ = {
@@ -145,6 +158,8 @@
 			children = (
 				D8AE69C21896EB02008D5C4E /* MapData.h */,
 				D8AE69C31896EB02008D5C4E /* MapData.m */,
+				D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */,
+				D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */,
 			);
 			name = "Map Data";
 			sourceTree = "<group>";
@@ -201,8 +216,6 @@
 		D8D8F36E183BE201005BB475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */,
-				D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */,
 				D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */,
 				D86E7DC6187F264C003F05B8 /* Ground.png */,
 				D86E7DC8187F2658003F05B8 /* GroundRed.png */,
@@ -353,6 +366,7 @@
 				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
 				C199F1AF185B9943008DD368 /* Tile.m in Sources */,
 				D8AE69C41896EB02008D5C4E /* MapData.m in Sources */,
+				D8783DB018C117E400490CFC /* PlayerData.m in Sources */,
 				C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */,
 				D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */,
 			);
