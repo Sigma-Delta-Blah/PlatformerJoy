@@ -7,13 +7,11 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "TileMap.h"
-#import "MapData.h"
-#import "PlayerData.h"
+#import "God.h"
 
 @interface PlatformerMyScene : SKScene
 
-@property (strong, nonatomic) MapData *billy;
-@property (strong, nonatomic) PlayerData *chazzet;
+@property (strong, nonatomic) God *jackelope;
+@property (strong, nonatomic) SKNode *world;
 
 @end

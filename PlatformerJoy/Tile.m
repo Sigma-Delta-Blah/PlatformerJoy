@@ -10,29 +10,25 @@
 
 @implementation Tile
 
-- (void)setFunction: (int)type withTexture:(int)texture
-{
+- (void)setFunction: (int)type withTexture:(int)texture withPhysicsController: (PhysicsController *) physics {
     switch (type) {
         case 0: //make air block
             self.texture = NULL;
             break;
             
         case 1: //make basic ground block
-            self.physics = [[PhysicsController alloc] init];
-            [self.physics tilePhysics:self];
+            [physics tilePhysics:self];
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
             
         case 2: //make block that collapses upon contact
-            self.physics = [[PhysicsController alloc] init];
-            [self.physics tilePhysics:self];
+            [physics tilePhysics:self];
             self.physicsBody.dynamic = YES;
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
 
         case 3: //bounce tiles
-            self.physics = [[PhysicsController alloc] init];
-            [self.physics tilePhysics:self];
+            [physics tilePhysics:self];
             self.physicsBody.restitution = 0.98;
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
@@ -53,29 +49,25 @@
     }
 }
 
-- (void)setFunction: (int)type
-{
+- (void)setFunction: (int)type withPhysicsController: (PhysicsController *) physics {
     switch (type) {
         case 0: //make air block
             self.texture = NULL;
             break;
             
         case 1: //make basic ground block
-            self.physics = [[PhysicsController alloc] init];
-            [self.physics tilePhysics:self];
+            [physics tilePhysics:self];
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
             
         case 2: //make block that collapses upon contact
-            self.physics = [[PhysicsController alloc] init];
-            [self.physics tilePhysics:self];
+            [physics tilePhysics:self];
             self.physicsBody.dynamic = YES;
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
             
         case 3: //bounce tiles
-            self.physics = [[PhysicsController alloc] init];
-            [self.physics tilePhysics:self];
+            [physics tilePhysics:self];
             self.physicsBody.restitution = 0.98;
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;

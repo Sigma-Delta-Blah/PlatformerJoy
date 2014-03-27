@@ -10,18 +10,15 @@
 
 @implementation PlayerData
 
--(void) createPlayer:(SKNode *) world {
+-(void) createPlayer:(SKNode *) world withPhysics:(PhysicsController *) physics {
     
     self.jumping = FALSE;
+    self.moving = FALSE;
     _groundYPos = 0;
-    
-    if (!_physics) {
-    _physics = [[PhysicsController alloc] init];
-    }
     
     self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor blueColor] size:CGSizeMake(16,32)];
     
-    [_physics playerPhysics:self.objSprite];
+    [physics playerPhysics:self.objSprite];
     
     self.objSprite.position = CGPointMake(32, 32);
     
@@ -53,7 +50,7 @@
 -(void) movementPlayerEnd: (NSSet *) touches inScene: (SKNode *) scene {
     
     self.moving = FALSE;
-    if (self.setTouch){
+    if (self.setTouch) {
         self.setTouch = nil;
     }
     
@@ -63,20 +60,25 @@
     
     if (self.jumping == TRUE && self.objSprite.physicsBody.velocity.dy ==0){
         self.jumping = FALSE;
+        NSLog(@"1");
     }
     if (self.moving == FALSE && (self.objSprite.physicsBody.velocity.dx)*(self.objSprite.physicsBody.velocity.dx) > 9){
         self.objSprite.physicsBody.velocity = CGVectorMake(self.objSprite.physicsBody.velocity.dx*.75, self.objSprite.physicsBody.velocity.dy);
+        NSLog(@"2");
     }
     if (self.moving == FALSE && (self.objSprite.physicsBody.velocity.dx)*(self.objSprite.physicsBody.velocity.dx) <= 9){
         self.objSprite.physicsBody.velocity = CGVectorMake(0, self.objSprite.physicsBody.velocity.dy);
+        NSLog(@"3");
     }
     if (self.setTouch){
         CGPoint location = [self.setTouch locationInNode:scene];
         if ((CGRectGetMidX(scene.frame) - location.x > 0)){
             self.objSprite.physicsBody.velocity = CGVectorMake(-100, self.objSprite.physicsBody.velocity.dy);
+            NSLog(@"4");
         }
         if ((CGRectGetMidX(scene.frame) - location.x < 0)){
             self.objSprite.physicsBody.velocity = CGVectorMake(100, self.objSprite.physicsBody.velocity.dy);
+            NSLog(@"5");
         }
     }
     
