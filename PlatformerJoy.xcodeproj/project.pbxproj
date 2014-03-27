@@ -10,6 +10,7 @@
 		C199F1AF185B9943008DD368 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = C199F1AE185B9943008DD368 /* Tile.m */; };
 		C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4A2A1185B91C900A641AA /* PhysicsController.m */; };
 		C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CB05CF18A00E92009983CF /* PlayerStats.m */; };
+		D82675FF18CA403200C6E550 /* EnemyMapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D82675FE18CA403200C6E550 /* EnemyMapData.m */; };
 		D83F90841843C73D004D94CF /* God.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90831843C73D004D94CF /* God.m */; };
 		D83F90891843D0CE004D94CF /* TileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90881843D0CE004D94CF /* TileMap.m */; };
 		D86E7DC7187F264C003F05B8 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E7DC6187F264C003F05B8 /* Ground.png */; };
@@ -55,6 +56,8 @@
 		C1A4A2A1185B91C900A641AA /* PhysicsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsController.m; sourceTree = "<group>"; };
 		C1CB05CE18A00E92009983CF /* PlayerStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStats.h; sourceTree = "<group>"; };
 		C1CB05CF18A00E92009983CF /* PlayerStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStats.m; sourceTree = "<group>"; };
+		D82675FD18CA403200C6E550 /* EnemyMapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyMapData.h; sourceTree = "<group>"; };
+		D82675FE18CA403200C6E550 /* EnemyMapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyMapData.m; sourceTree = "<group>"; };
 		D83F90821843C73D004D94CF /* God.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = God.h; sourceTree = "<group>"; };
 		D83F90831843C73D004D94CF /* God.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = God.m; sourceTree = "<group>"; };
 		D83F90871843D0CE004D94CF /* TileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMap.h; sourceTree = "<group>"; };
@@ -118,15 +121,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D80709CD18C9020400825D06 /* Enemy Data */ = {
+			isa = PBXGroup;
+			children = (
+				D82675FD18CA403200C6E550 /* EnemyMapData.h */,
+				D82675FE18CA403200C6E550 /* EnemyMapData.m */,
+			);
+			name = "Enemy Data";
+			sourceTree = "<group>";
+		};
+		D80709CE18C9022100825D06 /* Level Data */ = {
+			isa = PBXGroup;
+			children = (
+				D8AE69C11896EABE008D5C4E /* Map Data */,
+				D80709CD18C9020400825D06 /* Enemy Data */,
+			);
+			name = "Level Data";
+			sourceTree = "<group>";
+		};
+		D80709CF18C9024E00825D06 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				D8783DAD18C1175E00490CFC /* Player */,
+				D8D984081886555A00B695C6 /* Physics */,
+				D83F90861843C838004D94CF /* Tile Map */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		D83F90851843C7E5004D94CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D83F90821843C73D004D94CF /* God.h */,
 				D83F90831843C73D004D94CF /* God.m */,
-				D8D984081886555A00B695C6 /* Physics */,
-				D8783DAD18C1175E00490CFC /* Player */,
-				D83F90861843C838004D94CF /* Tile Map */,
-				D8AE69C11896EABE008D5C4E /* Map Data */,
+				D80709CF18C9024E00825D06 /* Framework */,
+				D80709CE18C9022100825D06 /* Level Data */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -363,6 +392,7 @@
 				D8D8F378183BE201005BB475 /* PlatformerAppDelegate.m in Sources */,
 				C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */,
 				D8D8F374183BE201005BB475 /* main.m in Sources */,
+				D82675FF18CA403200C6E550 /* EnemyMapData.m in Sources */,
 				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
 				C199F1AF185B9943008DD368 /* Tile.m in Sources */,
 				D8AE69C41896EB02008D5C4E /* MapData.m in Sources */,

@@ -13,13 +13,12 @@
 @interface PlayerData : NSObject
 
 @property (strong, nonatomic)SKSpriteNode *objSprite;
-@property (strong, nonatomic)PhysicsController * physics;
 @property (strong, nonatomic)UITouch *setTouch;
 @property (nonatomic) float groundYPos;
 @property (nonatomic)BOOL jumping;
 @property (nonatomic)BOOL moving;
 
--(void) createPlayer: (SKNode *) world;
+-(void) createPlayer: (SKNode *) world withPhysics: (PhysicsController *) physics;
 
 -(void) movementPlayerBegin: (NSSet *) touches inScene: (SKNode *) scene;
 
