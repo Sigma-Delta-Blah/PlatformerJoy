@@ -16,8 +16,11 @@ int ySize;
 
 -(void) setMapofWidth:(int) xValue andHeight:(int) yValue {
     
+    if (!self.tiles) {
+        self.tiles = [[NSMutableArray alloc] init];
+    }
+    
     [self.tiles removeAllObjects];
-    self.tiles = [[NSMutableArray alloc] init];
     
     xSize = xValue;
     ySize = yValue;
@@ -26,7 +29,7 @@ int ySize;
     
     for (int number = 0; number < xValue*yValue; number++) {
         float A = (number%xValue)*16+(16/2);
-        float B = ((number-number%xValue)/xValue)*16+194+(16/2);
+        float B = ((number-number%xValue)/xValue)*16+(16/2);
         sprites[number] = [Tile spriteNodeWithImageNamed:@"Ground.png"];
         sprites[number].position = CGPointMake(A, B);
         [_tiles addObject:sprites[number]];

@@ -1,9 +1,12 @@
 PlatformerJoy
 =============
 Link to assets folder (on dropbox): https://www.dropbox.com/sh/reyzpc4sps7ahct/e9ELkp--Bn
+
+
+GUESS WAT, FRIENDLY ART COMPETITION!!!! CREATE SOME ARTS FOR TILES AND THE PLAYER< PUT THEM IN THE DROP BOX AND WELL DECIDE WHICH TO USE AT A LATER DATE.
 =============
 NEVER NEVER NEVER NEVER NEVER EVER MERGE THE MASTER INTO ANYTHING
-if you need a new copy, delete your old branch and make a new one off the master 
+if you need a new copy, delete your old branch and make a new one off the master  <- This is not longer true; merging from the master is now both fine and necesary for the project to continue.  It has been for a while, it is just that I didn't realize this warning was still here until now.
 
 BLAAHHh U LET ME INTO uR HaUs.  Thx
 
@@ -38,3 +41,9 @@ Failure. :thumbsup:
 the :cake: is a lie :trollface:
 
 the :tomato: will :boom: and go :sparkles:
+
+nobody has posted in this for a while. just thought id say hi :scream:
+
+:/play trololo: :shipit:
+MOAR NECROMANCY. Keith has returned
+
