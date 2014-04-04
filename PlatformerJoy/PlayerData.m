@@ -16,7 +16,7 @@
     self.moving = FALSE;
     _groundYPos = 0;
     
-    self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor blueColor] size:CGSizeMake(16,32)];
+    self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor blueColor] size:CGSizeMake(16,31)];
     
     [physics playerPhysics:self.objSprite];
     

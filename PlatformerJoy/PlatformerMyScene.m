@@ -58,6 +58,7 @@
     
     [_jackelope beginMovement: touches inScene:self];
     
+    
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -69,7 +70,8 @@
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
 
-    [_jackelope updateMovement: self];
+    [_jackelope updateScene: self];
+    
 }
 
 @end

@@ -12,21 +12,33 @@
 
 - (void) initializePeople {
 
+    //Player
     if (!_phillium) {
         _phillium = [[PlayerData alloc] init];
     }
     if (!_bobbette) {
         _bobbette = [[PlayerStats alloc] init];
     }
+    if (!_chazzette) {
+        _chazzette = [[HpBar alloc] init];
+    }
     
+    //Enemy
+    if (!_takimoto) {
+        _takimoto = [[EnemyData alloc] init];
+    }
+    
+    //Physics
     if (!_billyphina) {
         _billyphina = [[PhysicsController alloc] init];
     }
     
+    //Tile Map
     if (!_bob) {
         _bob = [[TileMap alloc] init];
     }
     
+    //Level Data
     if (!_ronald) {
         _ronald = [[MapData alloc] init];
     }
@@ -36,22 +48,41 @@
     
 }
 
-- (void) initializeWorld: (SKNode *) world {
+- (void) initializeWorld: (SKNode *) world inScene: (SKScene *) scene {
     
     [_ronald createLevelOne: world withPhysics:_billyphina inMap: _bob];
     
     [_phillium createPlayer: world withPhysics:_billyphina];
     
+    [_takimoto addEnemiesToWorld: 2 inNose: world withPhysics: _billyphina];
+    
+    [_bobbette setTotalHp:32];
+    [_bobbette setHp:32];
+    
+    [_chazzette createHpBar: scene];
+    
 }
 
-- (void) beginMovement: (NSSet *) touches inScene: (SKNode *) scene {
-    [_phillium movementPlayerBegin: touches inScene: scene];
-}
-- (void) endMovement: (NSSet *) touches inScene: (SKNode *) scene {
-    [_phillium movementPlayerEnd: touches inScene: scene];
-}
-- (void) updateMovement: (SKNode *) scene {
+- (void) updateScene: (SKScene *) scene {
+    
     [_phillium movementPlayerUpdate: scene];
+    
+    [_takimoto updateTheAI: _phillium.objSprite];
+    
+    [_chazzette changeHp: [_bobbette getHp] outOf: [_bobbette getTotalHp]];
+    
+}
+
+- (void) beginMovement: (NSSet *) touches inScene: (SKScene *) scene {
+    
+    [_phillium movementPlayerBegin: touches inScene: scene];
+    
+}
+
+- (void) endMovement: (NSSet *) touches inScene: (SKScene *) scene {
+    
+    [_phillium movementPlayerEnd: touches inScene: scene];
+    
 }
 
 @end
