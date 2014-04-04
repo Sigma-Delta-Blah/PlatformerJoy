@@ -38,7 +38,7 @@
     scene.jackelope = _jackelope;
     
     [_jackelope initializePeople];
-    [_jackelope initializeWorld: scene.world];
+    [_jackelope initializeWorld: scene.world inScene: scene];
     
     // Present the scene.
     [skView presentScene:scene];
