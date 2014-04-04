@@ -14,6 +14,4 @@
 
 - (void)setFunction: (int)type withTexture: (int)texture withPhysicsController: (PhysicsController *) physics;
 
-- (void)setFunction: (int)type withPhysicsController: (PhysicsController *) physics;
-
 @end

@@ -1,4 +1,5 @@
 //
+//
 //  PlayerStats.m
 //  PlatformerJoy
 //
@@ -14,71 +15,94 @@ int level = 0;
 int xp = 0;
 
 int hp = 0;
+int totalHp = 0;
 int atk = 0;
 int def = 0;
 
-+(void)incrementHp:(int)value {
-    hp += value;
-    NSLog(@"The hp value is: %d", hp);
+-(void)setTotalHp:(int)value {
+    totalHp = value;
+    NSLog(@"The total hp is: %d", totalHp);
 }
-+(void)setHp:(int)value {
+-(void)incrementTotalHp:(int)value {
+    totalHp += value;
+    NSLog(@"The total hp is: %d", totalHp);
+}
+-(int)getTotalHp {
+    return totalHp;
+}
+
+-(void)incrementHp:(int)value {
+    if(hp+value<0) {
+        NSLog(@"The hp value cannot go below zero!");
+    }
+    else if(hp+value <= totalHp) {
+        hp += value;
+        NSLog(@"The hp value is: %d", hp);
+    }
+    else {
+        NSLog(@"The hp value cannot exceed the hp cap! The current HP cap is %d", totalHp);
+    }
+    
+}
+-(void)setHp:(int)value {
     hp = value;
     NSLog(@"The hp value is: %d", hp);
 }
-+(int) getHp {
+-(int) getHp {
     return hp;
     NSLog(@"The hp value is: %d", hp);
 }
 
-+(void)incrementAtk:(int)value {
+-(void)incrementAtk:(int)value {
     atk += value;
-    NSLog(@"The hp value is: %d", atk);
+    NSLog(@"The atk value is: %d", atk);
 }
-+(void)setAtk:(int)value {
+-(void)setAtk:(int)value {
     atk = value;
-    NSLog(@"The hp value is: %d", atk);
+    NSLog(@"The atk value is: %d", atk);
 }
-+(int) getAtk {
+-(int) getAtk {
     return atk;
-    NSLog(@"The hp value is: %d", atk);
+    NSLog(@"The atk value is: %d", atk);
 }
 
-+(void)incrementDef:(int)value {
+-(void)incrementDef:(int)value {
     def += value;
-  NSLog(@"The hp value is: %d", def);
+    NSLog(@"The def value is: %d", def);
 }
-+(void)setDef:(int)value {
+-(void)setDef:(int)value {
     def = value;
-    NSLog(@"The hp value is: %d", def);
+    NSLog(@"The def value is: %d", def);
 }
-+(int)getDef {
+-(int)getDef {
     return def;
-    NSLog(@"The hp value is: %d", def);
+    NSLog(@"The def value is: %d", def);
 }
 
-+(void)incrementLv:(int)value {
+-(void)incrementLv:(int)value {
     level += value;
-    NSLog(@"The hp value is: %d", level);
+    NSLog(@"The lv value is: %d", level);
 }
-+(void)setLv:(int)value {
+-(void)setLv:(int)value {
     level = value;
-    NSLog(@"The hp value is: %d", level);
+    NSLog(@"The lv value is: %d", level);
 }
-+(int)getLv {
+-(int)getLv {
     return level;
-    NSLog(@"The hp value is: %d", level);
+    NSLog(@"The lv value is: %d", level);
 }
 
-+(void)incrementXp:(int)value {
+-(void)incrementXp:(int)value {
     xp += value;
-    NSLog(@"The hp value is: %d", xp);
+    NSLog(@"The xp value is: %d", xp);
 }
-+(void)setXp:(int)value {
+-(void)setXp:(int)value {
     xp = value;
-    NSLog(@"The hp value is: %d", xp);
+    NSLog(@"The xp value is: %d", xp);
 }
-+(int)getXp {
+-(int)getXp {
     return xp;
-    NSLog(@"The hp value is: %d", xp);
+    NSLog(@"The xp value is: %d", xp);
 }
+
 @end

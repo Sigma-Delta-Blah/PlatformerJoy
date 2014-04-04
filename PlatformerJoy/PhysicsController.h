@@ -14,5 +14,6 @@
 
 -(void)tilePhysics:(SKSpriteNode *) sprite;
 -(void)playerPhysics:(SKSpriteNode *) sprite;
+-(void)enemyPhysics: (SKSpriteNode *) sprite;
 
 @end
