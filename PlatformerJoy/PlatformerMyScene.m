@@ -43,6 +43,13 @@
     return self;
 }
 
+- (void)didMoveToView:(SKView *)view{
+    UISwipeGestureRecognizer *upSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleUpSwipe:)];
+    upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
+    [[self view] addGestureRecognizer:upSwipe];
+    upSwipe.cancelsTouchesInView = FALSE;
+}
+
 - (void)didSimulatePhysics
 {
     [self centerOnNode: [_world childNodeWithName: @"camera"]];
@@ -69,9 +76,13 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
-
     [_jackelope updateScene: self];
     
+}
+
+-(void)handleUpSwipe: (UIGestureRecognizer*)recognizer {
+    NSLog(@"Swipe Recognized!");
+    [_jackelope playerJump];
 }
 
 @end
