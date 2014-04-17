@@ -69,7 +69,6 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
-
     [_jackelope updateScene: self];
     
 }

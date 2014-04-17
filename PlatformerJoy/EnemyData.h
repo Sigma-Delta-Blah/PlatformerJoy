@@ -15,7 +15,7 @@
 @interface EnemyData : NSObject
 @property (strong, nonatomic) NSMutableArray *enemyList;
 
--(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world withPhysics: (PhysicsController *) physics;
+-(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world withPhysics:(PhysicsController *)physics atX: (int[]) xPos atY: (int[]) yPos;
 -(void)updateTheAI: (SKSpriteNode *) player;
 
 

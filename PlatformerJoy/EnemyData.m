@@ -10,18 +10,21 @@
 
 @implementation EnemyData
 
--(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world withPhysics:(PhysicsController *)physics{
+-(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world withPhysics:(PhysicsController *)physics atX: (int[]) xPos atY: (int[]) yPos{
     if(!self.enemyList){
         self.enemyList = [[NSMutableArray alloc] init];
     }
     
+    for (int i = 0; i < numberToCreate; i++) {
+        NSLog(@"%d, %d, %d", i, xPos[i], yPos[i]);
+    }
+    
     BasicEnemy *tempList[numberToCreate];
-    [_enemyList removeAllObjects];
+    //[_enemyList removeAllObjects];
     for (int i = 0; i < numberToCreate; i++){
         tempList[i] = [BasicEnemy spriteNodeWithImageNamed:@"Ground.png"];
         [_enemyList addObject:tempList[i]];
-        [_enemyList[i] createWithLocationAndImage:@"Ground.png" x:i*32+32 y:32 inScene:world withType:0 withPhysics:physics];
-        
+        [_enemyList[i] createWithLocationAndImage:@"Ground.png" x: xPos[i] y: yPos[i] inScene:world withType:0 withPhysics:physics];
     }
     
 }
