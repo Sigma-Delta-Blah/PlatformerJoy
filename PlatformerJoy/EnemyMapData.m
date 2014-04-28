@@ -23,7 +23,7 @@
     
     for (int n1 = 0; n1 < xValue; n1++) {
         for (int n2 = 0; n2 < yValue; n2++) {
-            if ([[NSString stringWithFormat: @"%c", [arrayEnemy[yValue-n2-1] characterAtIndex:n1]] intValue] != 0 /*&& ![tileM getTileAtX:n1 andY:(yValue-n2-1)] && ![tileM getTileAtX:n1 andY:(yValue-n2-1)+1]*/) {
+            if ([[NSString stringWithFormat: @"%c", [arrayEnemy[yValue-n2-1] characterAtIndex:n1]] intValue] != 0) {
                 //Enemy stuff goes here; set type of enemy, position of enemy, etc
                 enemyNumber += 1;
             }
@@ -37,7 +37,7 @@
     
     for (int n1 = 0; n1 < xValue; n1++) {
         for (int n2 = 0; n2 < yValue; n2++) {
-            if ([[NSString stringWithFormat: @"%c", [arrayEnemy[yValue-n2-1] characterAtIndex:n1]] intValue] != 0 /*&& ![tileM getTileAtX:n1 andY:(yValue-n2-1)] && ![tileM getTileAtX:n1 andY:(yValue-n2-1)+1]*/) {
+            if ([[NSString stringWithFormat: @"%c", [arrayEnemy[yValue-n2-1] characterAtIndex:n1]] intValue] != 0) {
                 //Enemy stuff goes here; set type of enemy, position of enemy, etc
                 function[markerNumber] = [[NSString stringWithFormat: @"%c", [arrayEnemy[yValue-n2-1] characterAtIndex:n1]] intValue];
                 xPos[markerNumber] = n1*16;
