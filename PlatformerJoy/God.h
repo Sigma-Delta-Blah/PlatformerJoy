@@ -39,6 +39,7 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+-(void) playerJump;
 
 - (void) initializePeople;
 
