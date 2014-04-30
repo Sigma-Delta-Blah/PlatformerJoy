@@ -7,21 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C11566A518FD9A80008412F6 /* PlatformerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F377183BE201005BB475 /* PlatformerAppDelegate.m */; };
-		C11566A618FD9A85008412F6 /* PlatformerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F37D183BE201005BB475 /* PlatformerViewController.m */; };
-		C11566A718FD9A90008412F6 /* PlatformerMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F380183BE201005BB475 /* PlatformerMyScene.m */; };
-		C11566A818FD9A94008412F6 /* God.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90831843C73D004D94CF /* God.m */; };
-		C11566A918FD9A98008412F6 /* PlayerData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8783DAF18C117E400490CFC /* PlayerData.m */; };
-		C11566AA18FD9A9C008412F6 /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CB05CF18A00E92009983CF /* PlayerStats.m */; };
-		C11566AB18FD9AA0008412F6 /* HpBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1618EDFC6C0070888A /* HpBar.m */; };
-		C11566AC18FD9AA6008412F6 /* EnemyData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1018EDDD700070888A /* EnemyData.m */; };
-		C11566AE18FD9AAE008412F6 /* PhysicsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4A2A1185B91C900A641AA /* PhysicsController.m */; };
-		C11566AF18FD9AB2008412F6 /* TileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90881843D0CE004D94CF /* TileMap.m */; };
-		C11566B018FD9AB7008412F6 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = C199F1AE185B9943008DD368 /* Tile.m */; };
-		C11566B118FD9ABF008412F6 /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AE69C31896EB02008D5C4E /* MapData.m */; };
-		C11566B218FD9AC7008412F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F373183BE201005BB475 /* main.m */; };
-		C11566B318FD9ACD008412F6 /* EnemyMapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D82675FE18CA403200C6E550 /* EnemyMapData.m */; };
-		C11566B418FD9AF9008412F6 /* BasicEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1318EDDDB10070888A /* BasicEnemy.m */; };
+		C199F1AF185B9943008DD368 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = C199F1AE185B9943008DD368 /* Tile.m */; };
+		C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4A2A1185B91C900A641AA /* PhysicsController.m */; };
+		C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CB05CF18A00E92009983CF /* PlayerStats.m */; };
 		D8224FA218EF218B00AC107F /* GroundGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA118EF218B00AC107F /* GroundGreen.png */; };
 		D8224FB418EF228100AC107F /* hp0.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA318EF228100AC107F /* hp0.png */; };
 		D8224FB518EF228100AC107F /* hp1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA418EF228100AC107F /* hp1.png */; };
@@ -40,26 +28,30 @@
 		D8224FC218EF228100AC107F /* hp14.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FB118EF228100AC107F /* hp14.png */; };
 		D8224FC318EF228100AC107F /* hp15.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FB218EF228100AC107F /* hp15.png */; };
 		D8224FC418EF228100AC107F /* hpfull.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FB318EF228100AC107F /* hpfull.png */; };
+		D82675FF18CA403200C6E550 /* EnemyMapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D82675FE18CA403200C6E550 /* EnemyMapData.m */; };
+		D83F90841843C73D004D94CF /* God.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90831843C73D004D94CF /* God.m */; };
+		D83F90891843D0CE004D94CF /* TileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F90881843D0CE004D94CF /* TileMap.m */; };
 		D86E7DC7187F264C003F05B8 /* Ground.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E7DC6187F264C003F05B8 /* Ground.png */; };
 		D86E7DC9187F2658003F05B8 /* GroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E7DC8187F2658003F05B8 /* GroundRed.png */; };
 		D86EA10218BFB6B5009C0A9F /* SampleMapFunction.txt in Resources */ = {isa = PBXBuildFile; fileRef = D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */; };
 		D86EA10318BFB6B5009C0A9F /* SampleMapTexture.txt in Resources */ = {isa = PBXBuildFile; fileRef = D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */; };
-<<<<<<< HEAD
 		D8783DB018C117E400490CFC /* PlayerData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8783DAF18C117E400490CFC /* PlayerData.m */; };
 		D8A3604518F3120A00F90F0A /* SampleMapEnemies.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8A3604418F3120A00F90F0A /* SampleMapEnemies.txt */; };
 		D8A9DC1118EDDD700070888A /* EnemyData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1018EDDD700070888A /* EnemyData.m */; };
 		D8A9DC1418EDDDB10070888A /* BasicEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1318EDDDB10070888A /* BasicEnemy.m */; };
 		D8A9DC1718EDFC6C0070888A /* HpBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1618EDFC6C0070888A /* HpBar.m */; };
 		D8AE69C41896EB02008D5C4E /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AE69C31896EB02008D5C4E /* MapData.m */; };
-=======
->>>>>>> FETCH_HEAD
 		D8B5105018982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
 		D8D8F368183BE201005BB475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F367183BE201005BB475 /* CoreGraphics.framework */; };
 		D8D8F36A183BE201005BB475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F369183BE201005BB475 /* UIKit.framework */; };
 		D8D8F36C183BE201005BB475 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F36B183BE201005BB475 /* SpriteKit.framework */; };
 		D8D8F372183BE201005BB475 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8D8F370183BE201005BB475 /* InfoPlist.strings */; };
+		D8D8F374183BE201005BB475 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F373183BE201005BB475 /* main.m */; };
+		D8D8F378183BE201005BB475 /* PlatformerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F377183BE201005BB475 /* PlatformerAppDelegate.m */; };
 		D8D8F37B183BE201005BB475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D8F379183BE201005BB475 /* Main.storyboard */; };
+		D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F37D183BE201005BB475 /* PlatformerViewController.m */; };
+		D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8F380183BE201005BB475 /* PlatformerMyScene.m */; };
 		D8D8F383183BE201005BB475 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = D8D8F382183BE201005BB475 /* Spaceship.png */; };
 		D8D8F385183BE201005BB475 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D8F384183BE201005BB475 /* Images.xcassets */; };
 		D8D8F38C183BE202005BB475 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F38B183BE202005BB475 /* XCTest.framework */; };
@@ -433,7 +425,7 @@
 			attributes = {
 				CLASSPREFIX = Platformer;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = WOE23;
+				ORGANIZATIONNAME = WOE;
 				TargetAttributes = {
 					D8D8F389183BE202005BB475 = {
 						TestTargetID = D8D8F361183BE200005BB475;
@@ -510,21 +502,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11566B418FD9AF9008412F6 /* BasicEnemy.m in Sources */,
-				C11566B318FD9ACD008412F6 /* EnemyMapData.m in Sources */,
-				C11566B218FD9AC7008412F6 /* main.m in Sources */,
-				C11566B118FD9ABF008412F6 /* MapData.m in Sources */,
-				C11566B018FD9AB7008412F6 /* Tile.m in Sources */,
-				C11566AF18FD9AB2008412F6 /* TileMap.m in Sources */,
-				C11566AE18FD9AAE008412F6 /* PhysicsController.m in Sources */,
-				C11566AC18FD9AA6008412F6 /* EnemyData.m in Sources */,
-				C11566AB18FD9AA0008412F6 /* HpBar.m in Sources */,
-				C11566AA18FD9A9C008412F6 /* PlayerStats.m in Sources */,
-				C11566A918FD9A98008412F6 /* PlayerData.m in Sources */,
-				C11566A818FD9A94008412F6 /* God.m in Sources */,
-				C11566A718FD9A90008412F6 /* PlatformerMyScene.m in Sources */,
-				C11566A618FD9A85008412F6 /* PlatformerViewController.m in Sources */,
-				C11566A518FD9A80008412F6 /* PlatformerAppDelegate.m in Sources */,
+				D83F90891843D0CE004D94CF /* TileMap.m in Sources */,
+				D83F90841843C73D004D94CF /* God.m in Sources */,
+				D8D8F378183BE201005BB475 /* PlatformerAppDelegate.m in Sources */,
+				D8A9DC1418EDDDB10070888A /* BasicEnemy.m in Sources */,
+				C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */,
+				D8D8F374183BE201005BB475 /* main.m in Sources */,
+				D82675FF18CA403200C6E550 /* EnemyMapData.m in Sources */,
+				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
+				C199F1AF185B9943008DD368 /* Tile.m in Sources */,
+				D8A9DC1718EDFC6C0070888A /* HpBar.m in Sources */,
+				D8AE69C41896EB02008D5C4E /* MapData.m in Sources */,
+				D8A9DC1118EDDD700070888A /* EnemyData.m in Sources */,
+				D8783DB018C117E400490CFC /* PlayerData.m in Sources */,
+				C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */,
+				D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

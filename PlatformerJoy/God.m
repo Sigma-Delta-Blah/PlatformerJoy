@@ -85,8 +85,4 @@
     
 }
 
--(void) playerJump {
-    [_phillium jump];
-}
-    
 @end
