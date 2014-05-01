@@ -54,7 +54,7 @@
     
     [_phillium createPlayer: world withPhysics:_billyphina];
     
-    [_takimoto addEnemiesToWorld: 2 inNose: world withPhysics: _billyphina];
+    [_alphonsette createLevelOne:world inTileMap:_bob withPhysics:_billyphina withEnemyData:_takimoto inNode:world];
     
     [_bobbette setTotalHp:32];
     [_bobbette setHp:32];
@@ -85,4 +85,8 @@
     
 }
 
+-(void) playerJump {
+    [_phillium jump];
+}
+    
 @end

@@ -17,4 +17,23 @@
 >>>>>>> FETCH_HEAD
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player;
+
++(void)setTotalHp:(int)value;
++(void)incrementTotalHp:(int)value;
++(int)getTotalHp;
++(void)incrementHp:(int)value;
++(void)setHp:(int)value;
++(int) getHp;
++(void)incrementAtk:(int)value;
++(void)setAtk:(int)value;
++(int) getAtk;
++(void)incrementDef:(int)value;
++(void)setDef:(int)value;
++(int)getDef;
++(void)incrementLv:(int)value;
++(void)setLv:(int)value;
++(int)getLv;
++(void)incrementXp:(int)value;
++(void)setXp:(int)value;
++(int)getXp;
 @end

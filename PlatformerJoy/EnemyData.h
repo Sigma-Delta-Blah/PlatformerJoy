@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSMutableArray *enemyList;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 -(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world;
 -(void)updateTheAI: (SKSpriteNode *) player;
 
@@ -23,6 +24,9 @@
 @end
 =======
 -(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world withPhysics: (PhysicsController *) physics;
+=======
+-(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world withPhysics:(PhysicsController *)physics atX: (int[]) xPos atY: (int[]) yPos;
+>>>>>>> master
 -(void)updateTheAI: (SKSpriteNode *) player;
 
 
