@@ -10,7 +10,11 @@
 #import "PhysicsController.h"
 @interface BasicEnemy : SKSpriteNode
 
+<<<<<<< HEAD
 -(void)createWithLocationAndImage:(NSString *)fileName x:(int) x y:(int) y inScene: (SKNode *) scene withType:(int) type;
+=======
+-(void)createWithLocationAndImage:(NSString *)fileName x:(int) x y:(int) y inScene: (SKNode *) scene withType:(int) type withPhysics: (PhysicsController *) physics;
+>>>>>>> FETCH_HEAD
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player;
 @end

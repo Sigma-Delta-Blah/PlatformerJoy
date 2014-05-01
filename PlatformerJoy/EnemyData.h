@@ -15,8 +15,16 @@
 @interface EnemyData : NSObject
 @property (strong, nonatomic) NSMutableArray *enemyList;
 
+<<<<<<< HEAD
 -(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world;
 -(void)updateTheAI: (SKSpriteNode *) player;
 
 
 @end
+=======
+-(void)addEnemiesToWorld:(int) numberToCreate inNose:(SKNode *) world withPhysics: (PhysicsController *) physics;
+-(void)updateTheAI: (SKSpriteNode *) player;
+
+
+@end
+>>>>>>> FETCH_HEAD

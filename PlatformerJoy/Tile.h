@@ -12,8 +12,6 @@
 
 @interface Tile : SKSpriteNode
 
-@property (nonatomic) PhysicsController *physics;
+- (void)setFunction: (int)type withTexture: (int)texture withPhysicsController: (PhysicsController *) physics;
 
-- (void)setFunction: (int)type withTexture: (int)texture;
-- (void)setFunction: (int)type;
 @end

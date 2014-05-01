@@ -18,7 +18,6 @@
 @property (strong, nonatomic)UIDynamicItemBehavior *behavior;
 @property (strong, nonatomic)SKAction *action;
 @property (strong, nonatomic) SKAction *music;
-@property (strong, nonatomic)SKNode *world;
 
 @end
 
@@ -32,15 +31,11 @@
         self.backgroundColor = [SKColor colorWithRed:1.0 green:0.0 blue:0.5 alpha:0];
         self.music = [SKAction playSoundFileNamed: @"06 Bamboo Forest of the Full Moon.mp3" waitForCompletion:true];
         [self runAction: _music];
-        
-        self.world = [SKNode node];
-        [self addChild:self.world];
-        
-        _billy = [[MapData alloc] init];
-        [_billy createLevelOne: self.world];
-        
-        _chazzet = [[PlayerData alloc] init];
-        [_chazzet createPlayer: self.world];
+     
+        if (!_world) {
+        _world = [[SKNode alloc] init];
+        }
+        [self addChild:_world];
         
         self.physicsWorld.gravity = CGVectorMake(0, -.8);
         
@@ -50,7 +45,7 @@
 
 - (void)didSimulatePhysics
 {
-    [self centerOnNode: [self.world childNodeWithName: @"camera"]];
+    [self centerOnNode: [_world childNodeWithName: @"camera"]];
 }
 
 - (void) centerOnNode: (SKNode *) node
@@ -61,6 +56,7 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
+<<<<<<< HEAD
 <<<<<<< HEAD
      for (UITouch *touch in touches) {
             CGPoint location = [touch locationInNode:self];
@@ -83,20 +79,24 @@
     }
 =======
     [_chazzet movementPlayerBegin:touches inScene:self];
+=======
+    [_jackelope beginMovement: touches inScene:self];
+    
+>>>>>>> FETCH_HEAD
     
 >>>>>>> FETCH_HEAD
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    [_chazzet movementPlayerEnd:touches inScene:self];
+    [_jackelope endMovement: touches inScene: self];
     
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
 
-    [_chazzet movementPlayerUpdate:self];
+    [_jackelope updateScene: self];
     
 }
 

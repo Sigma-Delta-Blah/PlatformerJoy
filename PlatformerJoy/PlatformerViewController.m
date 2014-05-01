@@ -14,6 +14,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;
@@ -21,13 +23,26 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [PlatformerMyScene sceneWithSize:skView.bounds.size];
+    PlatformerMyScene *scene = [PlatformerMyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
+    //God
+    if (!_jackelope) {
+        _jackelope = [[God alloc] init];
+    }
     
+    if (!scene.jackelope) {
+        scene.jackelope = [[God alloc] init];
+    }
+    
+    scene.jackelope = _jackelope;
+    
+    [_jackelope initializePeople];
+    [_jackelope initializeWorld: scene.world inScene: scene];
     
     // Present the scene.
     [skView presentScene:scene];
+    
 }
 
 - (BOOL)shouldAutorotate

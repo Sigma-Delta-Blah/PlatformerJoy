@@ -10,15 +10,14 @@
 #import <SpriteKit/SpriteKit.h>
 #import "TileMap.h"
 #import "Tile.h"
+#import "PhysicsController.h"
 
 @interface MapData : NSObject
 
-@property (strong, nonatomic) TileMap *bob;
+-(void) blankMap: (SKNode *) scene inMap: (TileMap *) map;
 
--(void) blankMap: (SKNode *) scene;
+-(void) createLevel: (SKNode *) scene withFunction: (NSString *) functionTxt withTexture: (NSString *) textureTxt withPhysics: (PhysicsController *) physics inMap: (TileMap *) map;
 
--(void) createLevel: (SKNode *) scene withFunction: (NSString *) functionTxt withTexture: (NSString *) textureTxt;
-
--(void) createLevelOne: (SKNode *) scene;
+-(void) createLevelOne: (SKNode *) scene withPhysics: (PhysicsController *) physics inMap: (TileMap *) map;
 
 @end

@@ -10,18 +10,15 @@
 
 @implementation PlayerData
 
--(void) createPlayer:(SKNode *) world {
+-(void) createPlayer:(SKNode *) world withPhysics:(PhysicsController *) physics {
     
     self.jumping = FALSE;
+    self.moving = FALSE;
     _groundYPos = 0;
     
-    if (!_physics) {
-    _physics = [[PhysicsController alloc] init];
-    }
+    self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor blueColor] size:CGSizeMake(16,31)];
     
-    self.objSprite = [SKSpriteNode spriteNodeWithColor:[UIColor blueColor] size:CGSizeMake(16,32)];
-    
-    [_physics playerPhysics:self.objSprite];
+    [physics playerPhysics:self.objSprite];
     
     self.objSprite.position = CGPointMake(32, 32);
     
@@ -53,7 +50,7 @@
 -(void) movementPlayerEnd: (NSSet *) touches inScene: (SKNode *) scene {
     
     self.moving = FALSE;
-    if (self.setTouch){
+    if (self.setTouch) {
         self.setTouch = nil;
     }
     
