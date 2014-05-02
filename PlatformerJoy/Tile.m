@@ -32,6 +32,7 @@
             self.physicsBody.restitution = 0.98;
             self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
+        
         default: //default to making an air block
             self.texture = NULL;
             break;

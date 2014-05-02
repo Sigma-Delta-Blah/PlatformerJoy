@@ -77,11 +77,13 @@
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
     [_jackelope updateScene: self];
-    
+    if([_jackelope.bobbette getHp] <= 0) {
+        [God smite: self];
+    }
 }
 
 -(void)handleUpSwipe: (UIGestureRecognizer*)recognizer {
-    NSLog(@"Swipe Recognized!");
+    NSLog(@"Upward Swipe Recognized!");
     [_jackelope playerJump];
 }
 

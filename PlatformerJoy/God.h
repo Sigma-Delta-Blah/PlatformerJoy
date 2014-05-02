@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 #import "PlayerData.h"
 #import "PlayerStats.h"
 #import "HpBar.h"
+#import "ManaBar.h"
 #import "EnemyData.h"
 #import "PhysicsController.h"
 #import "TileMap.h"
@@ -22,6 +24,7 @@
 @property (strong, nonatomic) PlayerData *phillium;
 @property (strong, nonatomic) PlayerStats *bobbette;
 @property (strong, nonatomic) HpBar *chazzette;
+@property (strong, nonatomic) ManaBar *chazz;
 
 //Enemy
 @property (strong, nonatomic) EnemyData *takimoto;
@@ -50,5 +53,7 @@
 - (void) beginMovement: (NSSet *) touches inScene: (SKScene *) scene;
 
 - (void) endMovement: (NSSet *) touches inScene: (SKScene *) scene;
+
++(void) smite: (SKNode *) world;
 
 @end

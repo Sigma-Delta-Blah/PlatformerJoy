@@ -22,6 +22,9 @@
     if (!_chazzette) {
         _chazzette = [[HpBar alloc] init];
     }
+    if (!_chazz) {
+        _chazz = [[ManaBar alloc] init];
+    }
     
     //Enemy
     if (!_takimoto) {
@@ -59,7 +62,12 @@
     [_bobbette setTotalHp:32];
     [_bobbette setHp:32];
     
+    [_bobbette setTotalMana:32];
+    [_bobbette setMana:32];
+    
     [_chazzette createHpBar: scene];
+    
+    [_chazz createManaBar: scene];
     
 }
 
@@ -71,10 +79,10 @@
     
     [_chazzette changeHp: [_bobbette getHp] outOf: [_bobbette getTotalHp]];
     
+    [_chazz changeMana: [_bobbette getMana] outof: [_bobbette getTotalMana]];
 }
 
 - (void) beginMovement: (NSSet *) touches inScene: (SKScene *) scene {
-    
     [_phillium movementPlayerBegin: touches inScene: scene];
     
 }
@@ -88,5 +96,11 @@
 -(void) playerJump {
     [_phillium jump];
 }
-    
+
++(void) smite: (SKScene *) scene {
+    [scene removeAllChildren];
+    SKSpriteNode *gameOver = [[SKSpriteNode alloc] initWithImageNamed:@"gameover.png"];
+    [scene addChild:gameOver];
+}
+
 @end
