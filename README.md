@@ -46,3 +46,7 @@ nobody has posted in this for a while. just thought id say hi :scream:
 :/play trololo: :shipit:
 MOAR NECROMANCY. Keith has returned
 
+Keith: This used to get updated daily; what has happened recently?
+The Plebian: Nobody's got time for readmes anymore.
+
+I am disapointed in you plebian, I am disapointed in your foolish misobservations... :cries:
