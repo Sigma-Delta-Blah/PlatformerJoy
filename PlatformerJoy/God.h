@@ -50,4 +50,10 @@
 
 - (void) endMovement: (NSSet *) touches inScene: (SKScene *) scene;
 
+-(void)didBeginContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene;
+
+-(void)didEndContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene;
+
+-(void)didBeginContact:(SKPhysicsContact *) contact;
+
 @end

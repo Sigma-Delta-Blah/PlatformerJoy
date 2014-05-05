@@ -85,4 +85,20 @@
     
 }
 
+-(void)didBeginContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene{
+    
+}
+
+-(void)didEndContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene{
+    
+}
+
+-(void)didBeginContact:(SKPhysicsContact *) contact{
+    SKPhysicsBody *firstBody, *secondBody;
+    firstBody = contact.bodyA;
+    secondBody = contact.bodyB;
+    //NSLog(@"contact detected between %d and %d ",firstBody.categoryBitMask , secondBody.categoryBitMask);
+    [_billyphina player:firstBody didCollideWithEnemy:secondBody withPlayerStats:_bobbette];
+}
+
 @end

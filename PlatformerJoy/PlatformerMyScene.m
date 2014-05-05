@@ -11,7 +11,7 @@
 #import "PlatformerMyScene.h"
 #import "PhysicsController.h"
 
-@interface PlatformerMyScene()
+@interface PlatformerMyScene() <SKPhysicsContactDelegate>
 
 @property (strong, nonatomic)UIGravityBehavior *gravity;
 @property (strong, nonatomic)UIDynamicAnimator *animator;
@@ -39,6 +39,8 @@
         
         self.physicsWorld.gravity = CGVectorMake(0, -.8);
         
+        self.physicsWorld.contactDelegate = self;
+        
     }
     return self;
 }
@@ -64,6 +66,12 @@
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     
     [_jackelope endMovement: touches inScene: self];
+    
+}
+
+-(void)didBeginContact:(SKPhysicsContact *)contact{
+    
+    [_jackelope didBeginContact:contact];
     
 }
 
