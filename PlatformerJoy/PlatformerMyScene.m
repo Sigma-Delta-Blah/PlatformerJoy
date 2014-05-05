@@ -48,6 +48,16 @@
     upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
     [[self view] addGestureRecognizer:upSwipe];
     upSwipe.cancelsTouchesInView = FALSE;
+    
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipe:)];
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [[self view] addGestureRecognizer:rightSwipe];
+    rightSwipe.cancelsTouchesInView = FALSE;
+    
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipe:)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [[self view] addGestureRecognizer:leftSwipe];
+    upSwipe.cancelsTouchesInView = FALSE;
 }
 
 - (void)didSimulatePhysics
@@ -86,5 +96,10 @@
     NSLog(@"Upward Swipe Recognized!");
     [_jackelope playerJump];
 }
-
+-(void)handleLeftSwipe: (UIGestureRecognizer*)recognizer {
+    NSLog(@"Left Swipe Recognized!");
+}
+-(void)handleRightSwipe: (UIGestureRecognizer*)recognizer {
+    NSLog(@"Right Swipe Recognized!");
+}
 @end
