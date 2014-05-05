@@ -28,7 +28,8 @@
     
 }
 
--(void) movementPlayerBegin: (NSSet *) touches inScene: (SKNode *) scene {
+-(void) movementPlayerBegin: (NSSet *) touches inScene: (SKNode *)
+scene {
     
     for (UITouch *touch in touches) {
         

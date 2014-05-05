@@ -57,7 +57,7 @@
     UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipe:)];
     leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
     [[self view] addGestureRecognizer:leftSwipe];
-    upSwipe.cancelsTouchesInView = FALSE;
+    leftSwipe.cancelsTouchesInView = FALSE;
 }
 
 - (void)didSimulatePhysics
