@@ -45,6 +45,28 @@
     return self;
 }
 
+- (void)didMoveToView:(SKView *)view{
+    UISwipeGestureRecognizer *upSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleUpSwipe:)];
+    upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
+    [[self view] addGestureRecognizer:upSwipe];
+    upSwipe.cancelsTouchesInView = FALSE;
+    
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipe:)];
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [[self view] addGestureRecognizer:rightSwipe];
+    rightSwipe.cancelsTouchesInView = FALSE;
+    
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipe:)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [[self view] addGestureRecognizer:leftSwipe];
+    leftSwipe.cancelsTouchesInView = FALSE;
+    
+    UISwipeGestureRecognizer *downSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleDownSwipe:)];
+    downSwipe.direction = UISwipeGestureRecognizerDirectionDown;
+    [[self view] addGestureRecognizer:downSwipe];
+    downSwipe.cancelsTouchesInView = FALSE;
+}
+
 - (void)didSimulatePhysics
 {
     [self centerOnNode: [_world childNodeWithName: @"camera"]];
@@ -69,9 +91,34 @@
     
 }
 
--(void)didBeginContact:(SKPhysicsContact *)contact{
+-(void)didBeginContact:(SKPhysicsContact *)contact {
     
-    [_jackelope didBeginContact:contact];
+    [_jackelope didBeginContact: contact];
+    
+}
+
+-(void)handleUpSwipe: (UIGestureRecognizer*)recognizer {
+    
+    NSLog(@"Upward Swipe Recognized!");
+    [_jackelope playerJump];
+    
+}
+
+-(void)handleLeftSwipe: (UIGestureRecognizer*)recognizer {
+    
+    NSLog(@"Left Swipe Recognized!");
+    
+}
+
+-(void)handleRightSwipe: (UIGestureRecognizer*)recognizer {
+    
+    NSLog(@"Right Swipe Recognized!");
+    
+}
+
+-(void)handleDownSwipe: (UIGestureRecognizer*)recognizer {
+    
+    NSLog(@"Down Swipe Recognized!");
     
 }
 
