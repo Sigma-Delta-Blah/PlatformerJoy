@@ -15,7 +15,10 @@
 -(void)tilePhysics:(SKSpriteNode *) sprite;
 -(void)playerPhysics:(SKSpriteNode *) sprite;
 -(void)enemyPhysics: (SKSpriteNode *) sprite;
+-(void)itemPhysics: (SKSpriteNode *) sprite;
 
--(void)player:(SKNode *) player didCollideWithEnemy:(SKNode *) enemy withPlayerStats: (PlayerStats *) bobbette;
+-(void)specialTilePhysics:(SKSpriteNode *) sprite;
+
+-(void)object1:(SKPhysicsBody *) object1 didCollideWithObject2:(SKPhysicsBody *) object2 withPlayerStats:(PlayerStats *)bobbette inWorld:(SKNode *) world;
 
 @end

@@ -10,6 +10,13 @@
 		C199F1AF185B9943008DD368 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = C199F1AE185B9943008DD368 /* Tile.m */; };
 		C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4A2A1185B91C900A641AA /* PhysicsController.m */; };
 		C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CB05CF18A00E92009983CF /* PlayerStats.m */; };
+		D802859D191D46B700934034 /* mage-class1.png in Resources */ = {isa = PBXBuildFile; fileRef = D802859C191D46B700934034 /* mage-class1.png */; };
+		D802859F191DC3AE00934034 /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = D802859E191DC3AE00934034 /* gameover.png */; };
+		D80285A1191DC3BC00934034 /* mage-class2.png in Resources */ = {isa = PBXBuildFile; fileRef = D80285A0191DC3BC00934034 /* mage-class2.png */; };
+		D811EDFC19194A4B00B7B446 /* ItemMapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D811EDFB19194A4B00B7B446 /* ItemMapData.m */; };
+		D811EE0019194CF200B7B446 /* ItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = D811EDFF19194CF200B7B446 /* ItemData.m */; };
+		D811EE0319194D0600B7B446 /* BasicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D811EE0219194D0600B7B446 /* BasicItem.m */; };
+		D811EE051919513700B7B446 /* SampleMapItems.txt in Resources */ = {isa = PBXBuildFile; fileRef = D811EE041919513700B7B446 /* SampleMapItems.txt */; };
 		D8224FA218EF218B00AC107F /* GroundGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA118EF218B00AC107F /* GroundGreen.png */; };
 		D8224FB418EF228100AC107F /* hp0.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA318EF228100AC107F /* hp0.png */; };
 		D8224FB518EF228100AC107F /* hp1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA418EF228100AC107F /* hp1.png */; };
@@ -98,6 +105,16 @@
 		C1A4A2A1185B91C900A641AA /* PhysicsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsController.m; sourceTree = "<group>"; };
 		C1CB05CE18A00E92009983CF /* PlayerStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStats.h; sourceTree = "<group>"; };
 		C1CB05CF18A00E92009983CF /* PlayerStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStats.m; sourceTree = "<group>"; };
+		D802859C191D46B700934034 /* mage-class1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mage-class1.png"; sourceTree = "<group>"; };
+		D802859E191DC3AE00934034 /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover.png; sourceTree = "<group>"; };
+		D80285A0191DC3BC00934034 /* mage-class2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mage-class2.png"; sourceTree = "<group>"; };
+		D811EDFA19194A4B00B7B446 /* ItemMapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMapData.h; sourceTree = "<group>"; };
+		D811EDFB19194A4B00B7B446 /* ItemMapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemMapData.m; sourceTree = "<group>"; };
+		D811EDFE19194CF200B7B446 /* ItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemData.h; sourceTree = "<group>"; };
+		D811EDFF19194CF200B7B446 /* ItemData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemData.m; sourceTree = "<group>"; };
+		D811EE0119194D0600B7B446 /* BasicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicItem.h; sourceTree = "<group>"; };
+		D811EE0219194D0600B7B446 /* BasicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicItem.m; sourceTree = "<group>"; };
+		D811EE041919513700B7B446 /* SampleMapItems.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapItems.txt; sourceTree = "<group>"; };
 		D8224FA118EF218B00AC107F /* GroundGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroundGreen.png; sourceTree = "<group>"; };
 		D8224FA318EF228100AC107F /* hp0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp0.png; sourceTree = "<group>"; };
 		D8224FA418EF228100AC107F /* hp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp1.png; sourceTree = "<group>"; };
@@ -231,6 +248,8 @@
 				D8AE69C31896EB02008D5C4E /* MapData.m */,
 				D82675FD18CA403200C6E550 /* EnemyMapData.h */,
 				D82675FE18CA403200C6E550 /* EnemyMapData.m */,
+				D811EDFA19194A4B00B7B446 /* ItemMapData.h */,
+				D811EDFB19194A4B00B7B446 /* ItemMapData.m */,
 				D8AE69C11896EABE008D5C4E /* Level Resources */,
 			);
 			name = "Level Data";
@@ -241,15 +260,29 @@
 			children = (
 				D8783DAD18C1175E00490CFC /* Player */,
 				D80709CD18C9020400825D06 /* Enemy Data */,
+				D811EDFD19194CC100B7B446 /* Item Data */,
 				D8D984081886555A00B695C6 /* Physics */,
 				D83F90861843C838004D94CF /* Tile Map */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		D811EDFD19194CC100B7B446 /* Item Data */ = {
+			isa = PBXGroup;
+			children = (
+				D811EDFE19194CF200B7B446 /* ItemData.h */,
+				D811EDFF19194CF200B7B446 /* ItemData.m */,
+				D811EE0119194D0600B7B446 /* BasicItem.h */,
+				D811EE0219194D0600B7B446 /* BasicItem.m */,
+			);
+			name = "Item Data";
+			sourceTree = "<group>";
+		};
 		D8224F7D18EF1D3A00AC107F /* Player Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D802859C191D46B700934034 /* mage-class1.png */,
+				D80285A0191DC3BC00934034 /* mage-class2.png */,
 				D8224F7E18EF1D4C00AC107F /* Hp Bar Resources */,
 				D89EFCD31918117200D3B240 /* Mana Bar Resources */,
 			);
@@ -361,6 +394,7 @@
 				D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */,
 				D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */,
 				D8A3604418F3120A00F90F0A /* SampleMapEnemies.txt */,
+				D811EE041919513700B7B446 /* SampleMapItems.txt */,
 			);
 			name = "Level Resources";
 			sourceTree = "<group>";
@@ -417,6 +451,7 @@
 		D8D8F36E183BE201005BB475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D802859E191DC3AE00934034 /* gameover.png */,
 				D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */,
 				D8D8F36F183BE201005BB475 /* PlatformerJoy-Info.plist */,
 				D8D8F370183BE201005BB475 /* InfoPlist.strings */,
@@ -532,8 +567,10 @@
 			files = (
 				D8224FC418EF228100AC107F /* hpfull.png in Resources */,
 				D8D8F372183BE201005BB475 /* InfoPlist.strings in Resources */,
+				D802859D191D46B700934034 /* mage-class1.png in Resources */,
 				D86EA10218BFB6B5009C0A9F /* SampleMapFunction.txt in Resources */,
 				D8224FB418EF228100AC107F /* hp0.png in Resources */,
+				D802859F191DC3AE00934034 /* gameover.png in Resources */,
 				D89EFCF3191811E100D3B240 /* mana2.png in Resources */,
 				D8224FBB18EF228100AC107F /* hp7.png in Resources */,
 				D8224FB718EF228100AC107F /* hp3.png in Resources */,
@@ -553,11 +590,13 @@
 				D8D8F385183BE201005BB475 /* Images.xcassets in Resources */,
 				D89EFCEB191811E100D3B240 /* mana10.png in Resources */,
 				D8224FC318EF228100AC107F /* hp15.png in Resources */,
+				D80285A1191DC3BC00934034 /* mage-class2.png in Resources */,
 				D89EFCEC191811E100D3B240 /* mana9.png in Resources */,
 				D89EFCEE191811E100D3B240 /* mana7.png in Resources */,
 				D89EFCEF191811E100D3B240 /* mana6.png in Resources */,
 				D8224FB818EF228100AC107F /* hp4.png in Resources */,
 				D8D8F383183BE201005BB475 /* Spaceship.png in Resources */,
+				D811EE051919513700B7B446 /* SampleMapItems.txt in Resources */,
 				D89EFCE7191811E100D3B240 /* mana14.png in Resources */,
 				D89EFCF1191811E100D3B240 /* mana4.png in Resources */,
 				D89EFCEA191811E100D3B240 /* mana11.png in Resources */,
@@ -603,14 +642,17 @@
 				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
 				C199F1AF185B9943008DD368 /* Tile.m in Sources */,
 				D8A9DC1718EDFC6C0070888A /* HpBar.m in Sources */,
+				D811EE0019194CF200B7B446 /* ItemData.m in Sources */,
 				D89EFCCF191810D100D3B240 /* EnemyStats.m in Sources */,
 				D8AE69C41896EB02008D5C4E /* MapData.m in Sources */,
 				D8A9DC1118EDDD700070888A /* EnemyData.m in Sources */,
 				D89EFCCC19180B7C00D3B240 /* Thing.m in Sources */,
+				D811EDFC19194A4B00B7B446 /* ItemMapData.m in Sources */,
 				D8783DB018C117E400490CFC /* PlayerData.m in Sources */,
 				C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */,
 				D89EFCD21918112E00D3B240 /* ManaBar.m in Sources */,
 				D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */,
+				D811EE0319194D0600B7B446 /* BasicItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

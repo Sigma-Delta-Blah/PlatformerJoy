@@ -24,6 +24,8 @@
     
     self.objSprite.name = @"camera";
     
+    self.objSprite.texture = [SKTexture textureWithImageNamed:@"mage-class1.png"];
+    
     [world addChild:self.objSprite];
     
 }
@@ -61,9 +63,11 @@
     CGPoint location = [self.setTouch locationInNode:scene];
     if (self.moving == TRUE && (CGRectGetMidX(scene.frame) - location.x > 12)){
         self.objSprite.physicsBody.velocity = CGVectorMake(-100, self.objSprite.physicsBody.velocity.dy);
+        self.objSprite.texture = [SKTexture textureWithImageNamed:@"mage-class2.png"];
     }
     if (self.moving == TRUE && (CGRectGetMidX(scene.frame) - location.x < -12)){
         self.objSprite.physicsBody.velocity = CGVectorMake(100, self.objSprite.physicsBody.velocity.dy);
+        self.objSprite.texture = [SKTexture textureWithImageNamed:@"mage-class1.png"];
     }
     if (self.moving == TRUE && (CGRectGetMidX(scene.frame) - location.x > -12) && (CGRectGetMidX(scene.frame) - location.x < 12)){
         self.objSprite.physicsBody.velocity = CGVectorMake(self.objSprite.physicsBody.velocity.dx*.5, self.objSprite.physicsBody.velocity.dy);

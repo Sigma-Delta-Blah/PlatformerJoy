@@ -30,7 +30,7 @@ int enemyXp = 0;
 
 int enemyHp = 0;
 int enemyTotalHp = 0;
-int enemyAtk = 0;
+int enemyAtk = 1;
 int enemyDef = 0;
 
 -(void)createWithLocationAndImage:(NSString *)fileName x:(int)x y:(int)y inScene: (SKNode *) scene withType:(int) type withPhysics:(PhysicsController *)physics{
@@ -66,11 +66,11 @@ int enemyDef = 0;
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player{
     if (self.position.x  > player.position.x){
-        self.physicsBody.velocity = CGVectorMake(-10, 0);
+        self.physicsBody.velocity = CGVectorMake(-10, self.physicsBody.velocity.dy);
     } else if (self.position.x < player.position.x){
-        self.physicsBody.velocity =CGVectorMake(10, 0);
+        self.physicsBody.velocity =CGVectorMake(10, self.physicsBody.velocity.dy);
     } else {
-        self.physicsBody.velocity = CGVectorMake(0, 0);
+        self.physicsBody.velocity = CGVectorMake(0, self.physicsBody.velocity.dy);
     }
 }
 

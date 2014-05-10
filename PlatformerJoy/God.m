@@ -14,7 +14,7 @@
     
     //BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
     if (!_flobbyBobby) {
-        _flobbyBobby = [[PlayerData alloc] init];
+        _flobbyBobby = [[Thing alloc] init];
     }
     
     //Player
@@ -36,6 +36,11 @@
         _takimoto = [[EnemyData alloc] init];
     }
     
+    //Item
+    if (!_eggbert) {
+        _eggbert = [[ItemData alloc] init];
+    }
+    
     //Physics
     if (!_billyphina) {
         _billyphina = [[PhysicsController alloc] init];
@@ -53,6 +58,9 @@
     if (!_alphonsette) {
         _alphonsette = [[EnemyMapData alloc] init];
     }
+    if (!_jimothy) {
+        _jimothy = [[ItemMapData alloc] init];
+    }
     
 }
 
@@ -63,6 +71,7 @@
     [_phillium createPlayer: world withPhysics:_billyphina];
     
     [_alphonsette createLevelOne:world inTileMap:_bob withPhysics:_billyphina withEnemyData:_takimoto inNode:world];
+    [_jimothy createLevelOne:world inTileMap:_bob withPhysics:_billyphina withItemData:_eggbert inNode:world];
     
     [_bobbette setTotalHp:32];
     [_bobbette setHp:32];
@@ -74,7 +83,7 @@
     
 }
 
-- (void) updateScene: (SKScene *) scene {
+- (void) updateScene: (SKScene *) scene : (SKNode *)  world{
     
     [_phillium movementPlayerUpdate: scene];
     
@@ -82,6 +91,10 @@
     
     [_chazzette changeHp: [_bobbette getHp] outOf: [_bobbette getTotalHp]];
     [_chazz changeMana:[_bobbette getMana] outof:[_bobbette getTotalMana]];
+    
+    if ([_bobbette getHp] <= 0) {
+        [_flobbyBobby smite: world];
+    }
     
 }
 
@@ -105,22 +118,16 @@
     
 }
 
--(void)didBeginContact:(SKPhysicsContact *) contact{
+-(void)didBeginContact:(SKPhysicsContact *) contact inWorld: (SKNode *) world{
     SKPhysicsBody *firstBody, *secondBody;
     firstBody = contact.bodyA;
     secondBody = contact.bodyB;
     //NSLog(@"contact detected between %d and %d ",firstBody.categoryBitMask , secondBody.categoryBitMask);
-    [_billyphina player:firstBody didCollideWithEnemy:secondBody withPlayerStats:_bobbette];
+    [_billyphina object1:firstBody didCollideWithObject2:secondBody withPlayerStats:_bobbette inWorld: world];
 }
 
 -(void) playerJump {
     [_phillium jump];
-}
-
-+(void) smite: (SKScene *) scene {
-    [scene removeAllChildren];
-    SKSpriteNode *gameOver = [[SKSpriteNode alloc] initWithImageNamed:@"gameover.png"];
-    [scene addChild:gameOver];
 }
 
 @end

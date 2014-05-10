@@ -93,7 +93,7 @@
 
 -(void)didBeginContact:(SKPhysicsContact *)contact {
     
-    [_jackelope didBeginContact: contact];
+    [_jackelope didBeginContact: contact inWorld: _world];
     
 }
 
@@ -124,7 +124,7 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
-    [_jackelope updateScene: self];
+    [_jackelope updateScene: self :_world];
     
 }
 

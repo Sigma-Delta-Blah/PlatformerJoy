@@ -10,4 +10,17 @@
 
 @implementation Thing
 
+bool smitten = false;
+
+-(void) smite: (SKNode *) world {
+    
+    if (!smitten) {
+        [world removeAllChildren];
+        SKSpriteNode *gameOver = [[SKSpriteNode alloc] initWithImageNamed:@"gameover.png"];
+        [world.parent addChild:gameOver];
+        smitten = true;
+    }
+
+}
+
 @end

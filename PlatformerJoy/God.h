@@ -12,16 +12,18 @@
 #import "HpBar.h"
 #import "ManaBar.h"
 #import "EnemyData.h"
+#import "ItemData.h"
 #import "PhysicsController.h"
 #import "TileMap.h"
 #import "MapData.h"
 #import "EnemyMapData.h"
+#import "ItemMapData.h"
 #import "Thing.h"
 
 @interface God : NSObject
 
 //BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
-@property (strong, nonatomic) Thing *flobbyBobby;
+@property (strong, nonatomic) Thing *flobbyBobby; //He brings death in his wake; he spreads doom and corruption and famine across the lands...  Fear the flobbyBobby; fear him...
 
 //Player
 @property (strong, nonatomic) PlayerData *phillium;
@@ -32,6 +34,9 @@
 //Enemy
 @property (strong, nonatomic) EnemyData *takimoto;
 
+//Item
+@property (strong, nonatomic) ItemData * eggbert;
+
 //Physics
 @property (strong, nonatomic) PhysicsController *billyphina;
 
@@ -41,6 +46,7 @@
 //Level Data
 @property (strong, nonatomic) MapData *ronald;
 @property (strong, nonatomic) EnemyMapData *alphonsette;
+@property (strong, nonatomic) ItemMapData * jimothy;
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -50,7 +56,7 @@
 
 - (void) initializeWorld: (SKNode *) world inScene: (SKScene *) scene;
 
-- (void) updateScene: (SKScene *) scene;
+- (void) updateScene: (SKScene *) scene : (SKNode *) world;
 
 - (void) beginMovement: (NSSet *) touches inScene: (SKScene *) scene;
 
@@ -60,10 +66,8 @@
 
 -(void)didEndContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene;
 
--(void)didBeginContact:(SKPhysicsContact *) contact;
+-(void)didBeginContact:(SKPhysicsContact *) contact inWorld: (SKNode *) world;
 
 -(void) playerJump;
-
-+(void) smite: (SKNode *) world;
 
 @end
