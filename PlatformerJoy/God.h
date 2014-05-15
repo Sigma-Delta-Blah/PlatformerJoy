@@ -14,6 +14,7 @@
 #import "EnemyData.h"
 #import "ItemData.h"
 #import "PhysicsController.h"
+#import "CollisionsController.h"
 #import "TileMap.h"
 #import "MapData.h"
 #import "EnemyMapData.h"
@@ -39,6 +40,7 @@
 
 //Physics
 @property (strong, nonatomic) PhysicsController *billyphina;
+@property (strong, nonatomic) CollisionsController *gillibert;
 
 //Tile Map
 @property (strong, nonatomic) TileMap *bob;

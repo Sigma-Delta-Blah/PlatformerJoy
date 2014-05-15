@@ -17,6 +17,7 @@
 		D811EE0019194CF200B7B446 /* ItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = D811EDFF19194CF200B7B446 /* ItemData.m */; };
 		D811EE0319194D0600B7B446 /* BasicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D811EE0219194D0600B7B446 /* BasicItem.m */; };
 		D811EE051919513700B7B446 /* SampleMapItems.txt in Resources */ = {isa = PBXBuildFile; fileRef = D811EE041919513700B7B446 /* SampleMapItems.txt */; };
+		D81A74001925711C009B8FB7 /* CollisionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A73FF1925711C009B8FB7 /* CollisionsController.m */; };
 		D8224FA218EF218B00AC107F /* GroundGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA118EF218B00AC107F /* GroundGreen.png */; };
 		D8224FB418EF228100AC107F /* hp0.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA318EF228100AC107F /* hp0.png */; };
 		D8224FB518EF228100AC107F /* hp1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA418EF228100AC107F /* hp1.png */; };
@@ -69,6 +70,9 @@
 		D8A9DC1718EDFC6C0070888A /* HpBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1618EDFC6C0070888A /* HpBar.m */; };
 		D8AE69C41896EB02008D5C4E /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AE69C31896EB02008D5C4E /* MapData.m */; };
 		D8B5105018982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */; };
+		D8B5FD6E1923C943007915D4 /* enemy1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B5FD6D1923C943007915D4 /* enemy1.png */; };
+		D8B5FD701923C957007915D4 /* tile1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B5FD6F1923C957007915D4 /* tile1.png */; };
+		D8B5FD721923CA86007915D4 /* enemy2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B5FD711923CA86007915D4 /* enemy2.png */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
 		D8D8F368183BE201005BB475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F367183BE201005BB475 /* CoreGraphics.framework */; };
 		D8D8F36A183BE201005BB475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F369183BE201005BB475 /* UIKit.framework */; };
@@ -115,6 +119,8 @@
 		D811EE0119194D0600B7B446 /* BasicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicItem.h; sourceTree = "<group>"; };
 		D811EE0219194D0600B7B446 /* BasicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicItem.m; sourceTree = "<group>"; };
 		D811EE041919513700B7B446 /* SampleMapItems.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapItems.txt; sourceTree = "<group>"; };
+		D81A73FE1925711C009B8FB7 /* CollisionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionsController.h; sourceTree = "<group>"; };
+		D81A73FF1925711C009B8FB7 /* CollisionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionsController.m; sourceTree = "<group>"; };
 		D8224FA118EF218B00AC107F /* GroundGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroundGreen.png; sourceTree = "<group>"; };
 		D8224FA318EF228100AC107F /* hp0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp0.png; sourceTree = "<group>"; };
 		D8224FA418EF228100AC107F /* hp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp1.png; sourceTree = "<group>"; };
@@ -178,6 +184,9 @@
 		D8AE69C21896EB02008D5C4E /* MapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapData.h; sourceTree = "<group>"; };
 		D8AE69C31896EB02008D5C4E /* MapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapData.m; sourceTree = "<group>"; };
 		D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06 Bamboo Forest of the Full Moon.mp3"; sourceTree = "<group>"; };
+		D8B5FD6D1923C943007915D4 /* enemy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy1.png; sourceTree = "<group>"; };
+		D8B5FD6F1923C957007915D4 /* tile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1.png; sourceTree = "<group>"; };
+		D8B5FD711923CA86007915D4 /* enemy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy2.png; sourceTree = "<group>"; };
 		D8D8F362183BE201005BB475 /* PlatformerJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformerJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8F365183BE201005BB475 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8D8F367183BE201005BB475 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -237,6 +246,8 @@
 				D8A9DC1318EDDDB10070888A /* BasicEnemy.m */,
 				D89EFCCD191810D100D3B240 /* EnemyStats.h */,
 				D89EFCCE191810D100D3B240 /* EnemyStats.m */,
+				D8B5FD6D1923C943007915D4 /* enemy1.png */,
+				D8B5FD711923CA86007915D4 /* enemy2.png */,
 			);
 			name = "Enemy Data";
 			sourceTree = "<group>";
@@ -381,6 +392,7 @@
 		D8A9DC1818EE050F0070888A /* Tile Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8B5FD6F1923C957007915D4 /* tile1.png */,
 				D86E7DC6187F264C003F05B8 /* Ground.png */,
 				D86E7DC8187F2658003F05B8 /* GroundRed.png */,
 				D8224FA118EF218B00AC107F /* GroundGreen.png */,
@@ -484,6 +496,8 @@
 			children = (
 				C1A4A2A0185B91C900A641AA /* PhysicsController.h */,
 				C1A4A2A1185B91C900A641AA /* PhysicsController.m */,
+				D81A73FE1925711C009B8FB7 /* CollisionsController.h */,
+				D81A73FF1925711C009B8FB7 /* CollisionsController.m */,
 			);
 			name = Physics;
 			sourceTree = "<group>";
@@ -573,6 +587,7 @@
 				D802859F191DC3AE00934034 /* gameover.png in Resources */,
 				D89EFCF3191811E100D3B240 /* mana2.png in Resources */,
 				D8224FBB18EF228100AC107F /* hp7.png in Resources */,
+				D8B5FD701923C957007915D4 /* tile1.png in Resources */,
 				D8224FB718EF228100AC107F /* hp3.png in Resources */,
 				D89EFCF2191811E100D3B240 /* mana3.png in Resources */,
 				D89EFCED191811E100D3B240 /* mana8.png in Resources */,
@@ -605,12 +620,14 @@
 				D86E7DC7187F264C003F05B8 /* Ground.png in Resources */,
 				D86E7DC9187F2658003F05B8 /* GroundRed.png in Resources */,
 				D8224FBF18EF228100AC107F /* hp11.png in Resources */,
+				D8B5FD721923CA86007915D4 /* enemy2.png in Resources */,
 				D8224FBA18EF228100AC107F /* hp6.png in Resources */,
 				D8224FA218EF218B00AC107F /* GroundGreen.png in Resources */,
 				D8224FBD18EF228100AC107F /* hp9.png in Resources */,
 				D89EFCE6191811E100D3B240 /* mana15.png in Resources */,
 				D8224FBE18EF228100AC107F /* hp10.png in Resources */,
 				D8224FC118EF228100AC107F /* hp13.png in Resources */,
+				D8B5FD6E1923C943007915D4 /* enemy1.png in Resources */,
 				D89EFCE8191811E100D3B240 /* mana13.png in Resources */,
 				D89EFCF0191811E100D3B240 /* mana5.png in Resources */,
 				D89EFCE5191811E100D3B240 /* manafull.png in Resources */,
@@ -650,6 +667,7 @@
 				D811EDFC19194A4B00B7B446 /* ItemMapData.m in Sources */,
 				D8783DB018C117E400490CFC /* PlayerData.m in Sources */,
 				C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */,
+				D81A74001925711C009B8FB7 /* CollisionsController.m in Sources */,
 				D89EFCD21918112E00D3B240 /* ManaBar.m in Sources */,
 				D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */,
 				D811EE0319194D0600B7B446 /* BasicItem.m in Sources */,

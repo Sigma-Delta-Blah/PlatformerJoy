@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "PhysicsController.h"
+#import "PlayerStats.h"
 
 @interface PlayerData : NSObject
 

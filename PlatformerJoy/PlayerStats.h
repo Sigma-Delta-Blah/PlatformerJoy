@@ -44,4 +44,8 @@
 -(void)setXp:(int)value;
 -(int)getXp;
 
+-(void) beginDamage: (int) damage;
+-(void) endDamage: (int) damage;
+-(void) damagePlayerUpdate;
+
 @end

@@ -45,6 +45,9 @@
     if (!_billyphina) {
         _billyphina = [[PhysicsController alloc] init];
     }
+    if (!_gillibert) {
+        _gillibert = [[CollisionsController alloc] init];
+    }
     
     //Tile Map
     if (!_bob) {
@@ -123,7 +126,7 @@
     firstBody = contact.bodyA;
     secondBody = contact.bodyB;
     //NSLog(@"contact detected between %d and %d ",firstBody.categoryBitMask , secondBody.categoryBitMask);
-    [_billyphina object1:firstBody didCollideWithObject2:secondBody withPlayerStats:_bobbette inWorld: world];
+    [_gillibert object1:firstBody didCollideWithObject2:secondBody withPlayerStats:_bobbette withEnemy:secondBody.node inWorld: world];
 }
 
 -(void) playerJump {

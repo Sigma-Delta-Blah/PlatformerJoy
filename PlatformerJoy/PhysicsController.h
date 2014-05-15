@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
-#import "PlayerStats.h"
 
 @interface PhysicsController : NSObject
 
@@ -18,7 +17,5 @@
 -(void)itemPhysics: (SKSpriteNode *) sprite;
 
 -(void)specialTilePhysics:(SKSpriteNode *) sprite;
-
--(void)object1:(SKPhysicsBody *) object1 didCollideWithObject2:(SKPhysicsBody *) object2 withPlayerStats:(PlayerStats *)bobbette inWorld:(SKNode *) world;
 
 @end
