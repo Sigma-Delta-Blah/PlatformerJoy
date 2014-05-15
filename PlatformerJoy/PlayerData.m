@@ -24,6 +24,8 @@
     
     self.objSprite.name = @"camera";
     
+    self.objSprite.texture = [SKTexture textureWithImageNamed:@"mage-class1.png"];
+    
     [world addChild:self.objSprite];
     
 }
@@ -33,31 +35,43 @@
     for (UITouch *touch in touches) {
         
         self.moving = true;
-        CGPoint location = [touch locationInNode:scene];
-        if (location.y >= CGRectGetMidY(scene.frame) + 38 && self.jumping == FALSE && fabs(self.objSprite.physicsBody.velocity.dy) <1){
-            self.jumping = TRUE;
-            self.objSprite.position = CGPointMake(self.objSprite.position.x, self.objSprite.position.y + 1);
-            self.objSprite.physicsBody.velocity = CGVectorMake(self.objSprite.physicsBody.velocity.dx, 150);
-            _groundYPos = self.objSprite.position.y - .2;
-        } else {
-            self.setTouch = touch;
-        }
+        self.setTouch = touch;
         
     }
-
+    
 }
 
 -(void) movementPlayerEnd: (NSSet *) touches inScene: (SKNode *) scene {
     
     self.moving = FALSE;
-    if (self.setTouch) {
-        self.setTouch = nil;
-    }
+    /*if (self.setTouch) {
+     self.setTouch = nil;
+     }*/
     
 }
 
+-(void)jump {
+    if (self.jumping ==FALSE) {
+        self.jumping = TRUE;
+        self.objSprite.position = CGPointMake(self.objSprite.position.x, self.objSprite.position.y + 1);
+        self.objSprite.physicsBody.velocity = CGVectorMake(self.objSprite.physicsBody.velocity.dx, 150);
+        _groundYPos = self.objSprite.position.y - .2;
+    }
+}
+
 -(void) movementPlayerUpdate: (SKNode *) scene {
-    
+    CGPoint location = [self.setTouch locationInNode:scene];
+    if (self.moving == TRUE && (CGRectGetMidX(scene.frame) - location.x > 12)){
+        self.objSprite.physicsBody.velocity = CGVectorMake(-100, self.objSprite.physicsBody.velocity.dy);
+        self.objSprite.texture = [SKTexture textureWithImageNamed:@"mage-class2.png"];
+    }
+    if (self.moving == TRUE && (CGRectGetMidX(scene.frame) - location.x < -12)){
+        self.objSprite.physicsBody.velocity = CGVectorMake(100, self.objSprite.physicsBody.velocity.dy);
+        self.objSprite.texture = [SKTexture textureWithImageNamed:@"mage-class1.png"];
+    }
+    if (self.moving == TRUE && (CGRectGetMidX(scene.frame) - location.x > -12) && (CGRectGetMidX(scene.frame) - location.x < 12)){
+        self.objSprite.physicsBody.velocity = CGVectorMake(self.objSprite.physicsBody.velocity.dx*.5, self.objSprite.physicsBody.velocity.dy);
+    }
     if (self.jumping == TRUE && self.objSprite.physicsBody.velocity.dy ==0){
         self.jumping = FALSE;
     }
@@ -66,15 +80,6 @@
     }
     if (self.moving == FALSE && (self.objSprite.physicsBody.velocity.dx)*(self.objSprite.physicsBody.velocity.dx) <= 9){
         self.objSprite.physicsBody.velocity = CGVectorMake(0, self.objSprite.physicsBody.velocity.dy);
-    }
-    if (self.setTouch){
-        CGPoint location = [self.setTouch locationInNode:scene];
-        if ((CGRectGetMidX(scene.frame) - location.x > 0)){
-            self.objSprite.physicsBody.velocity = CGVectorMake(-100, self.objSprite.physicsBody.velocity.dy);
-        }
-        if ((CGRectGetMidX(scene.frame) - location.x < 0)){
-            self.objSprite.physicsBody.velocity = CGVectorMake(100, self.objSprite.physicsBody.velocity.dy);
-        }
     }
     
 }

@@ -1,16 +1,14 @@
 //
-//  PlayerStats.h
+//  EnemyStats.h
 //  PlatformerJoy
 //
-//  Created by block7 on 2/3/14.
+//  Created by Joseph Mooney on 5/5/14.
 //  Copyright (c) 2014 WOE. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "HpBar.h"
-#import "ManaBar.h"
 
-@interface PlayerStats : NSObject
+@interface EnemyStats : NSObject
 
 -(void)incrementTotalHp:(int)value;
 -(void)setTotalHp:(int)value;
@@ -19,14 +17,6 @@
 -(void)incrementHp:(int)value;
 -(void)setHp:(int)value;
 -(int) getHp;
-
--(void)incrementTotalMana: (int)value;
--(void)setTotalMana: (int)value;
--(int)getTotalMana;
-
--(void)incrementMana:(int)value;
--(void)setMana:(int)value;
--(int)getMana;
 
 -(void)incrementAtk:(int)value;
 -(void)setAtk:(int)value;
@@ -39,13 +29,5 @@
 -(void)incrementLv:(int)value;
 -(void)setLv:(int)value;
 -(int)getLv;
-
--(void)incrementXp:(int)value;
--(void)setXp:(int)value;
--(int)getXp;
-
--(void) beginDamage: (int) damage;
--(void) endDamage: (int) damage;
--(void) damagePlayerUpdate;
 
 @end

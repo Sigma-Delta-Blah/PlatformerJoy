@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "PhysicsController.h"
+#import "PlayerStats.h"
 
 @interface PlayerData : NSObject
 
@@ -17,6 +18,12 @@
 @property (nonatomic) float groundYPos;
 @property (nonatomic)BOOL jumping;
 @property (nonatomic)BOOL moving;
+
+-(void)jump;
+
+//- (void)didMoveToView:(SKView *)view inScene:(SKScene*) scene;
+
+//-(void)handleUpSwipe: (UIGestureRecognizer*)recognizer inScene: (SKScene *) scene;
 
 -(void) createPlayer: (SKNode *) world withPhysics: (PhysicsController *) physics;
 

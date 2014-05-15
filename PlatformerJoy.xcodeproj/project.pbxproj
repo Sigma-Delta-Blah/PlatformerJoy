@@ -10,6 +10,14 @@
 		C199F1AF185B9943008DD368 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = C199F1AE185B9943008DD368 /* Tile.m */; };
 		C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4A2A1185B91C900A641AA /* PhysicsController.m */; };
 		C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CB05CF18A00E92009983CF /* PlayerStats.m */; };
+		D802859D191D46B700934034 /* mage-class1.png in Resources */ = {isa = PBXBuildFile; fileRef = D802859C191D46B700934034 /* mage-class1.png */; };
+		D802859F191DC3AE00934034 /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = D802859E191DC3AE00934034 /* gameover.png */; };
+		D80285A1191DC3BC00934034 /* mage-class2.png in Resources */ = {isa = PBXBuildFile; fileRef = D80285A0191DC3BC00934034 /* mage-class2.png */; };
+		D811EDFC19194A4B00B7B446 /* ItemMapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D811EDFB19194A4B00B7B446 /* ItemMapData.m */; };
+		D811EE0019194CF200B7B446 /* ItemData.m in Sources */ = {isa = PBXBuildFile; fileRef = D811EDFF19194CF200B7B446 /* ItemData.m */; };
+		D811EE0319194D0600B7B446 /* BasicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D811EE0219194D0600B7B446 /* BasicItem.m */; };
+		D811EE051919513700B7B446 /* SampleMapItems.txt in Resources */ = {isa = PBXBuildFile; fileRef = D811EE041919513700B7B446 /* SampleMapItems.txt */; };
+		D81A74001925711C009B8FB7 /* CollisionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81A73FF1925711C009B8FB7 /* CollisionsController.m */; };
 		D8224FA218EF218B00AC107F /* GroundGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA118EF218B00AC107F /* GroundGreen.png */; };
 		D8224FB418EF228100AC107F /* hp0.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA318EF228100AC107F /* hp0.png */; };
 		D8224FB518EF228100AC107F /* hp1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8224FA418EF228100AC107F /* hp1.png */; };
@@ -36,12 +44,35 @@
 		D86EA10218BFB6B5009C0A9F /* SampleMapFunction.txt in Resources */ = {isa = PBXBuildFile; fileRef = D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */; };
 		D86EA10318BFB6B5009C0A9F /* SampleMapTexture.txt in Resources */ = {isa = PBXBuildFile; fileRef = D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */; };
 		D8783DB018C117E400490CFC /* PlayerData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8783DAF18C117E400490CFC /* PlayerData.m */; };
+		D89EFCCC19180B7C00D3B240 /* Thing.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EFCCB19180B7C00D3B240 /* Thing.m */; };
+		D89EFCCF191810D100D3B240 /* EnemyStats.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EFCCE191810D100D3B240 /* EnemyStats.m */; };
+		D89EFCD21918112E00D3B240 /* ManaBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EFCD11918112E00D3B240 /* ManaBar.m */; };
+		D89EFCE5191811E100D3B240 /* manafull.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCD4191811E100D3B240 /* manafull.png */; };
+		D89EFCE6191811E100D3B240 /* mana15.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCD5191811E100D3B240 /* mana15.png */; };
+		D89EFCE7191811E100D3B240 /* mana14.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCD6191811E100D3B240 /* mana14.png */; };
+		D89EFCE8191811E100D3B240 /* mana13.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCD7191811E100D3B240 /* mana13.png */; };
+		D89EFCE9191811E100D3B240 /* mana12.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCD8191811E100D3B240 /* mana12.png */; };
+		D89EFCEA191811E100D3B240 /* mana11.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCD9191811E100D3B240 /* mana11.png */; };
+		D89EFCEB191811E100D3B240 /* mana10.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCDA191811E100D3B240 /* mana10.png */; };
+		D89EFCEC191811E100D3B240 /* mana9.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCDB191811E100D3B240 /* mana9.png */; };
+		D89EFCED191811E100D3B240 /* mana8.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCDC191811E100D3B240 /* mana8.png */; };
+		D89EFCEE191811E100D3B240 /* mana7.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCDD191811E100D3B240 /* mana7.png */; };
+		D89EFCEF191811E100D3B240 /* mana6.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCDE191811E100D3B240 /* mana6.png */; };
+		D89EFCF0191811E100D3B240 /* mana5.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCDF191811E100D3B240 /* mana5.png */; };
+		D89EFCF1191811E100D3B240 /* mana4.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCE0191811E100D3B240 /* mana4.png */; };
+		D89EFCF2191811E100D3B240 /* mana3.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCE1191811E100D3B240 /* mana3.png */; };
+		D89EFCF3191811E100D3B240 /* mana2.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCE2191811E100D3B240 /* mana2.png */; };
+		D89EFCF4191811E100D3B240 /* mana1.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCE3191811E100D3B240 /* mana1.png */; };
+		D89EFCF5191811E100D3B240 /* mana0.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCE4191811E100D3B240 /* mana0.png */; };
 		D8A3604518F3120A00F90F0A /* SampleMapEnemies.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8A3604418F3120A00F90F0A /* SampleMapEnemies.txt */; };
 		D8A9DC1118EDDD700070888A /* EnemyData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1018EDDD700070888A /* EnemyData.m */; };
 		D8A9DC1418EDDDB10070888A /* BasicEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1318EDDDB10070888A /* BasicEnemy.m */; };
 		D8A9DC1718EDFC6C0070888A /* HpBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1618EDFC6C0070888A /* HpBar.m */; };
 		D8AE69C41896EB02008D5C4E /* MapData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AE69C31896EB02008D5C4E /* MapData.m */; };
 		D8B5105018982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */; };
+		D8B5FD6E1923C943007915D4 /* enemy1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B5FD6D1923C943007915D4 /* enemy1.png */; };
+		D8B5FD701923C957007915D4 /* tile1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B5FD6F1923C957007915D4 /* tile1.png */; };
+		D8B5FD721923CA86007915D4 /* enemy2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B5FD711923CA86007915D4 /* enemy2.png */; };
 		D8D8F366183BE201005BB475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F365183BE201005BB475 /* Foundation.framework */; };
 		D8D8F368183BE201005BB475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F367183BE201005BB475 /* CoreGraphics.framework */; };
 		D8D8F36A183BE201005BB475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D8F369183BE201005BB475 /* UIKit.framework */; };
@@ -78,6 +109,18 @@
 		C1A4A2A1185B91C900A641AA /* PhysicsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsController.m; sourceTree = "<group>"; };
 		C1CB05CE18A00E92009983CF /* PlayerStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStats.h; sourceTree = "<group>"; };
 		C1CB05CF18A00E92009983CF /* PlayerStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStats.m; sourceTree = "<group>"; };
+		D802859C191D46B700934034 /* mage-class1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mage-class1.png"; sourceTree = "<group>"; };
+		D802859E191DC3AE00934034 /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover.png; sourceTree = "<group>"; };
+		D80285A0191DC3BC00934034 /* mage-class2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mage-class2.png"; sourceTree = "<group>"; };
+		D811EDFA19194A4B00B7B446 /* ItemMapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMapData.h; sourceTree = "<group>"; };
+		D811EDFB19194A4B00B7B446 /* ItemMapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemMapData.m; sourceTree = "<group>"; };
+		D811EDFE19194CF200B7B446 /* ItemData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemData.h; sourceTree = "<group>"; };
+		D811EDFF19194CF200B7B446 /* ItemData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemData.m; sourceTree = "<group>"; };
+		D811EE0119194D0600B7B446 /* BasicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicItem.h; sourceTree = "<group>"; };
+		D811EE0219194D0600B7B446 /* BasicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicItem.m; sourceTree = "<group>"; };
+		D811EE041919513700B7B446 /* SampleMapItems.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapItems.txt; sourceTree = "<group>"; };
+		D81A73FE1925711C009B8FB7 /* CollisionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionsController.h; sourceTree = "<group>"; };
+		D81A73FF1925711C009B8FB7 /* CollisionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionsController.m; sourceTree = "<group>"; };
 		D8224FA118EF218B00AC107F /* GroundGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroundGreen.png; sourceTree = "<group>"; };
 		D8224FA318EF228100AC107F /* hp0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp0.png; sourceTree = "<group>"; };
 		D8224FA418EF228100AC107F /* hp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hp1.png; sourceTree = "<group>"; };
@@ -108,6 +151,29 @@
 		D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapTexture.txt; sourceTree = "<group>"; };
 		D8783DAE18C117E400490CFC /* PlayerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerData.h; sourceTree = "<group>"; };
 		D8783DAF18C117E400490CFC /* PlayerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerData.m; sourceTree = "<group>"; };
+		D89EFCCA19180B7C00D3B240 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thing.h; sourceTree = "<group>"; };
+		D89EFCCB19180B7C00D3B240 /* Thing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thing.m; sourceTree = "<group>"; };
+		D89EFCCD191810D100D3B240 /* EnemyStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyStats.h; sourceTree = "<group>"; };
+		D89EFCCE191810D100D3B240 /* EnemyStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyStats.m; sourceTree = "<group>"; };
+		D89EFCD01918112E00D3B240 /* ManaBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManaBar.h; sourceTree = "<group>"; };
+		D89EFCD11918112E00D3B240 /* ManaBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManaBar.m; sourceTree = "<group>"; };
+		D89EFCD4191811E100D3B240 /* manafull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manafull.png; sourceTree = "<group>"; };
+		D89EFCD5191811E100D3B240 /* mana15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana15.png; sourceTree = "<group>"; };
+		D89EFCD6191811E100D3B240 /* mana14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana14.png; sourceTree = "<group>"; };
+		D89EFCD7191811E100D3B240 /* mana13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana13.png; sourceTree = "<group>"; };
+		D89EFCD8191811E100D3B240 /* mana12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana12.png; sourceTree = "<group>"; };
+		D89EFCD9191811E100D3B240 /* mana11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana11.png; sourceTree = "<group>"; };
+		D89EFCDA191811E100D3B240 /* mana10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana10.png; sourceTree = "<group>"; };
+		D89EFCDB191811E100D3B240 /* mana9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana9.png; sourceTree = "<group>"; };
+		D89EFCDC191811E100D3B240 /* mana8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana8.png; sourceTree = "<group>"; };
+		D89EFCDD191811E100D3B240 /* mana7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana7.png; sourceTree = "<group>"; };
+		D89EFCDE191811E100D3B240 /* mana6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana6.png; sourceTree = "<group>"; };
+		D89EFCDF191811E100D3B240 /* mana5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana5.png; sourceTree = "<group>"; };
+		D89EFCE0191811E100D3B240 /* mana4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana4.png; sourceTree = "<group>"; };
+		D89EFCE1191811E100D3B240 /* mana3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana3.png; sourceTree = "<group>"; };
+		D89EFCE2191811E100D3B240 /* mana2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana2.png; sourceTree = "<group>"; };
+		D89EFCE3191811E100D3B240 /* mana1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana1.png; sourceTree = "<group>"; };
+		D89EFCE4191811E100D3B240 /* mana0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana0.png; sourceTree = "<group>"; };
 		D8A3604418F3120A00F90F0A /* SampleMapEnemies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapEnemies.txt; sourceTree = "<group>"; };
 		D8A9DC0F18EDDD700070888A /* EnemyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyData.h; sourceTree = "<group>"; };
 		D8A9DC1018EDDD700070888A /* EnemyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyData.m; sourceTree = "<group>"; };
@@ -118,6 +184,9 @@
 		D8AE69C21896EB02008D5C4E /* MapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapData.h; sourceTree = "<group>"; };
 		D8AE69C31896EB02008D5C4E /* MapData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapData.m; sourceTree = "<group>"; };
 		D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06 Bamboo Forest of the Full Moon.mp3"; sourceTree = "<group>"; };
+		D8B5FD6D1923C943007915D4 /* enemy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy1.png; sourceTree = "<group>"; };
+		D8B5FD6F1923C957007915D4 /* tile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile1.png; sourceTree = "<group>"; };
+		D8B5FD711923CA86007915D4 /* enemy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy2.png; sourceTree = "<group>"; };
 		D8D8F362183BE201005BB475 /* PlatformerJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatformerJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8F365183BE201005BB475 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8D8F367183BE201005BB475 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -175,6 +244,10 @@
 				D8A9DC1018EDDD700070888A /* EnemyData.m */,
 				D8A9DC1218EDDDB10070888A /* BasicEnemy.h */,
 				D8A9DC1318EDDDB10070888A /* BasicEnemy.m */,
+				D89EFCCD191810D100D3B240 /* EnemyStats.h */,
+				D89EFCCE191810D100D3B240 /* EnemyStats.m */,
+				D8B5FD6D1923C943007915D4 /* enemy1.png */,
+				D8B5FD711923CA86007915D4 /* enemy2.png */,
 			);
 			name = "Enemy Data";
 			sourceTree = "<group>";
@@ -186,6 +259,8 @@
 				D8AE69C31896EB02008D5C4E /* MapData.m */,
 				D82675FD18CA403200C6E550 /* EnemyMapData.h */,
 				D82675FE18CA403200C6E550 /* EnemyMapData.m */,
+				D811EDFA19194A4B00B7B446 /* ItemMapData.h */,
+				D811EDFB19194A4B00B7B446 /* ItemMapData.m */,
 				D8AE69C11896EABE008D5C4E /* Level Resources */,
 			);
 			name = "Level Data";
@@ -196,16 +271,31 @@
 			children = (
 				D8783DAD18C1175E00490CFC /* Player */,
 				D80709CD18C9020400825D06 /* Enemy Data */,
+				D811EDFD19194CC100B7B446 /* Item Data */,
 				D8D984081886555A00B695C6 /* Physics */,
 				D83F90861843C838004D94CF /* Tile Map */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		D811EDFD19194CC100B7B446 /* Item Data */ = {
+			isa = PBXGroup;
+			children = (
+				D811EDFE19194CF200B7B446 /* ItemData.h */,
+				D811EDFF19194CF200B7B446 /* ItemData.m */,
+				D811EE0119194D0600B7B446 /* BasicItem.h */,
+				D811EE0219194D0600B7B446 /* BasicItem.m */,
+			);
+			name = "Item Data";
+			sourceTree = "<group>";
+		};
 		D8224F7D18EF1D3A00AC107F /* Player Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D802859C191D46B700934034 /* mage-class1.png */,
+				D80285A0191DC3BC00934034 /* mage-class2.png */,
 				D8224F7E18EF1D4C00AC107F /* Hp Bar Resources */,
+				D89EFCD31918117200D3B240 /* Mana Bar Resources */,
 			);
 			name = "Player Resources";
 			sourceTree = "<group>";
@@ -239,6 +329,8 @@
 			children = (
 				D83F90821843C73D004D94CF /* God.h */,
 				D83F90831843C73D004D94CF /* God.m */,
+				D89EFCCA19180B7C00D3B240 /* Thing.h */,
+				D89EFCCB19180B7C00D3B240 /* Thing.m */,
 				D80709CF18C9024E00825D06 /* Framework */,
 				D80709CE18C9022100825D06 /* Level Data */,
 			);
@@ -266,14 +358,41 @@
 				C1CB05CF18A00E92009983CF /* PlayerStats.m */,
 				D8A9DC1518EDFC6C0070888A /* HpBar.h */,
 				D8A9DC1618EDFC6C0070888A /* HpBar.m */,
+				D89EFCD01918112E00D3B240 /* ManaBar.h */,
+				D89EFCD11918112E00D3B240 /* ManaBar.m */,
 				D8224F7D18EF1D3A00AC107F /* Player Resources */,
 			);
 			name = Player;
 			sourceTree = "<group>";
 		};
+		D89EFCD31918117200D3B240 /* Mana Bar Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D89EFCD4191811E100D3B240 /* manafull.png */,
+				D89EFCD5191811E100D3B240 /* mana15.png */,
+				D89EFCD6191811E100D3B240 /* mana14.png */,
+				D89EFCD7191811E100D3B240 /* mana13.png */,
+				D89EFCD8191811E100D3B240 /* mana12.png */,
+				D89EFCD9191811E100D3B240 /* mana11.png */,
+				D89EFCDA191811E100D3B240 /* mana10.png */,
+				D89EFCDB191811E100D3B240 /* mana9.png */,
+				D89EFCDC191811E100D3B240 /* mana8.png */,
+				D89EFCDD191811E100D3B240 /* mana7.png */,
+				D89EFCDE191811E100D3B240 /* mana6.png */,
+				D89EFCDF191811E100D3B240 /* mana5.png */,
+				D89EFCE0191811E100D3B240 /* mana4.png */,
+				D89EFCE1191811E100D3B240 /* mana3.png */,
+				D89EFCE2191811E100D3B240 /* mana2.png */,
+				D89EFCE3191811E100D3B240 /* mana1.png */,
+				D89EFCE4191811E100D3B240 /* mana0.png */,
+			);
+			name = "Mana Bar Resources";
+			sourceTree = "<group>";
+		};
 		D8A9DC1818EE050F0070888A /* Tile Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8B5FD6F1923C957007915D4 /* tile1.png */,
 				D86E7DC6187F264C003F05B8 /* Ground.png */,
 				D86E7DC8187F2658003F05B8 /* GroundRed.png */,
 				D8224FA118EF218B00AC107F /* GroundGreen.png */,
@@ -287,6 +406,7 @@
 				D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */,
 				D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */,
 				D8A3604418F3120A00F90F0A /* SampleMapEnemies.txt */,
+				D811EE041919513700B7B446 /* SampleMapItems.txt */,
 			);
 			name = "Level Resources";
 			sourceTree = "<group>";
@@ -343,6 +463,7 @@
 		D8D8F36E183BE201005BB475 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D802859E191DC3AE00934034 /* gameover.png */,
 				D8B5104F18982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 */,
 				D8D8F36F183BE201005BB475 /* PlatformerJoy-Info.plist */,
 				D8D8F370183BE201005BB475 /* InfoPlist.strings */,
@@ -375,6 +496,8 @@
 			children = (
 				C1A4A2A0185B91C900A641AA /* PhysicsController.h */,
 				C1A4A2A1185B91C900A641AA /* PhysicsController.m */,
+				D81A73FE1925711C009B8FB7 /* CollisionsController.h */,
+				D81A73FF1925711C009B8FB7 /* CollisionsController.m */,
 			);
 			name = Physics;
 			sourceTree = "<group>";
@@ -458,32 +581,56 @@
 			files = (
 				D8224FC418EF228100AC107F /* hpfull.png in Resources */,
 				D8D8F372183BE201005BB475 /* InfoPlist.strings in Resources */,
+				D802859D191D46B700934034 /* mage-class1.png in Resources */,
 				D86EA10218BFB6B5009C0A9F /* SampleMapFunction.txt in Resources */,
 				D8224FB418EF228100AC107F /* hp0.png in Resources */,
+				D802859F191DC3AE00934034 /* gameover.png in Resources */,
+				D89EFCF3191811E100D3B240 /* mana2.png in Resources */,
 				D8224FBB18EF228100AC107F /* hp7.png in Resources */,
+				D8B5FD701923C957007915D4 /* tile1.png in Resources */,
 				D8224FB718EF228100AC107F /* hp3.png in Resources */,
+				D89EFCF2191811E100D3B240 /* mana3.png in Resources */,
+				D89EFCED191811E100D3B240 /* mana8.png in Resources */,
 				D8A3604518F3120A00F90F0A /* SampleMapEnemies.txt in Resources */,
 				D8224FB618EF228100AC107F /* hp2.png in Resources */,
+				D89EFCE9191811E100D3B240 /* mana12.png in Resources */,
 				D8224FC018EF228100AC107F /* hp12.png in Resources */,
 				D8224FBC18EF228100AC107F /* hp8.png in Resources */,
+				D89EFCF4191811E100D3B240 /* mana1.png in Resources */,
 				D8224FB518EF228100AC107F /* hp1.png in Resources */,
 				D8B5105018982BDE005A8343 /* 06 Bamboo Forest of the Full Moon.mp3 in Resources */,
 				D8224FB918EF228100AC107F /* hp5.png in Resources */,
+				D89EFCF5191811E100D3B240 /* mana0.png in Resources */,
 				D86EA10318BFB6B5009C0A9F /* SampleMapTexture.txt in Resources */,
 				D8D8F385183BE201005BB475 /* Images.xcassets in Resources */,
+				D89EFCEB191811E100D3B240 /* mana10.png in Resources */,
 				D8224FC318EF228100AC107F /* hp15.png in Resources */,
+				D80285A1191DC3BC00934034 /* mage-class2.png in Resources */,
+				D89EFCEC191811E100D3B240 /* mana9.png in Resources */,
+				D89EFCEE191811E100D3B240 /* mana7.png in Resources */,
+				D89EFCEF191811E100D3B240 /* mana6.png in Resources */,
 				D8224FB818EF228100AC107F /* hp4.png in Resources */,
 				D8D8F383183BE201005BB475 /* Spaceship.png in Resources */,
+				D811EE051919513700B7B446 /* SampleMapItems.txt in Resources */,
+				D89EFCE7191811E100D3B240 /* mana14.png in Resources */,
+				D89EFCF1191811E100D3B240 /* mana4.png in Resources */,
+				D89EFCEA191811E100D3B240 /* mana11.png in Resources */,
 				D8D8F37B183BE201005BB475 /* Main.storyboard in Resources */,
 				D8224FC218EF228100AC107F /* hp14.png in Resources */,
 				D86E7DC7187F264C003F05B8 /* Ground.png in Resources */,
 				D86E7DC9187F2658003F05B8 /* GroundRed.png in Resources */,
 				D8224FBF18EF228100AC107F /* hp11.png in Resources */,
+				D8B5FD721923CA86007915D4 /* enemy2.png in Resources */,
 				D8224FBA18EF228100AC107F /* hp6.png in Resources */,
 				D8224FA218EF218B00AC107F /* GroundGreen.png in Resources */,
 				D8224FBD18EF228100AC107F /* hp9.png in Resources */,
+				D89EFCE6191811E100D3B240 /* mana15.png in Resources */,
 				D8224FBE18EF228100AC107F /* hp10.png in Resources */,
 				D8224FC118EF228100AC107F /* hp13.png in Resources */,
+				D8B5FD6E1923C943007915D4 /* enemy1.png in Resources */,
+				D89EFCE8191811E100D3B240 /* mana13.png in Resources */,
+				D89EFCF0191811E100D3B240 /* mana5.png in Resources */,
+				D89EFCE5191811E100D3B240 /* manafull.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,11 +659,18 @@
 				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
 				C199F1AF185B9943008DD368 /* Tile.m in Sources */,
 				D8A9DC1718EDFC6C0070888A /* HpBar.m in Sources */,
+				D811EE0019194CF200B7B446 /* ItemData.m in Sources */,
+				D89EFCCF191810D100D3B240 /* EnemyStats.m in Sources */,
 				D8AE69C41896EB02008D5C4E /* MapData.m in Sources */,
 				D8A9DC1118EDDD700070888A /* EnemyData.m in Sources */,
+				D89EFCCC19180B7C00D3B240 /* Thing.m in Sources */,
+				D811EDFC19194A4B00B7B446 /* ItemMapData.m in Sources */,
 				D8783DB018C117E400490CFC /* PlayerData.m in Sources */,
 				C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */,
+				D81A74001925711C009B8FB7 /* CollisionsController.m in Sources */,
+				D89EFCD21918112E00D3B240 /* ManaBar.m in Sources */,
 				D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */,
+				D811EE0319194D0600B7B446 /* BasicItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

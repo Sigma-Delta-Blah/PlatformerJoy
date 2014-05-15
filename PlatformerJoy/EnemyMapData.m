@@ -24,7 +24,6 @@
     for (int n1 = 0; n1 < xValue; n1++) {
         for (int n2 = 0; n2 < yValue; n2++) {
             if ([[NSString stringWithFormat: @"%c", [arrayEnemy[yValue-n2-1] characterAtIndex:n1]] intValue] != 0) {
-                //Enemy stuff goes here; set type of enemy, position of enemy, etc
                 enemyNumber += 1;
             }
         }

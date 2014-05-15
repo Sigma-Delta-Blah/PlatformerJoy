@@ -11,9 +11,11 @@
 
 @interface PhysicsController : NSObject
 
-
 -(void)tilePhysics:(SKSpriteNode *) sprite;
 -(void)playerPhysics:(SKSpriteNode *) sprite;
 -(void)enemyPhysics: (SKSpriteNode *) sprite;
+-(void)itemPhysics: (SKSpriteNode *) sprite;
+
+-(void)specialTilePhysics:(SKSpriteNode *) sprite;
 
 @end

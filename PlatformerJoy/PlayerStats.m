@@ -16,8 +16,12 @@ int xp = 0;
 
 int hp = 0;
 int totalHp = 0;
+int mana = 0;
+int totalMana = 0;
 int atk = 0;
 int def = 0;
+
+int damageIncrement = 0;
 
 -(void)setTotalHp:(int)value {
     totalHp = value;
@@ -51,6 +55,39 @@ int def = 0;
 -(int) getHp {
     return hp;
     NSLog(@"The hp value is: %d", hp);
+}
+
+-(void)setTotalMana:(int)value {
+    totalMana = value;
+    NSLog(@"The total mana is: %d", totalMana);
+}
+-(void)incrementTotalMana:(int)value {
+    totalHp += value;
+    NSLog(@"The total mana is: %d", totalMana);
+}
+-(int)getTotalMana {
+    return totalMana;
+}
+
+-(void)incrementMana:(int)value {
+    if(mana+value<0) {
+        NSLog(@"The mana value cannot go below zero!");
+    }
+    else if(mana+value <= totalMana) {
+        mana += value;
+        NSLog(@"The mana value is: %d", mana);
+    }
+    else {
+        NSLog(@"The hp value cannot exceed the hp cap! The current Mana cap is %d", totalMana);
+    }
+}
+-(void)setMana:(int)value {
+    mana = value;
+    NSLog(@"The mana value is: %d", mana);
+}
+-(int) getMana {
+    return mana;
+    NSLog(@"The mana value is: %d", mana);
 }
 
 -(void)incrementAtk:(int)value {
@@ -103,6 +140,27 @@ int def = 0;
 -(int)getXp {
     return xp;
     NSLog(@"The xp value is: %d", xp);
+}
+
+
+-(void) beginDamage:(int)damage {
+    if (damage - def > 1) {
+        damageIncrement += damage;
+    } else {
+        damageIncrement += 1;
+    }
+}
+-(void) endDamage:(int)damage {
+    if (damage - def > 1) {
+        damageIncrement -= damage;
+    } else {
+        damageIncrement -= 1;
+    }
+}
+-(void) damagePlayerUpdate {
+    if (damageIncrement != 0) {
+        [self incrementHp: damageIncrement];
+    }
 }
 
 @end

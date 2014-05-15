@@ -11,7 +11,12 @@
 @implementation God
 
 - (void) initializePeople {
-
+    
+    //BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
+    if (!_flobbyBobby) {
+        _flobbyBobby = [[Thing alloc] init];
+    }
+    
     //Player
     if (!_phillium) {
         _phillium = [[PlayerData alloc] init];
@@ -22,15 +27,26 @@
     if (!_chazzette) {
         _chazzette = [[HpBar alloc] init];
     }
+    if (!_chazz) {
+        _chazz = [[ManaBar alloc] init];
+    }
     
     //Enemy
     if (!_takimoto) {
         _takimoto = [[EnemyData alloc] init];
     }
     
+    //Item
+    if (!_eggbert) {
+        _eggbert = [[ItemData alloc] init];
+    }
+    
     //Physics
     if (!_billyphina) {
         _billyphina = [[PhysicsController alloc] init];
+    }
+    if (!_gillibert) {
+        _gillibert = [[CollisionsController alloc] init];
     }
     
     //Tile Map
@@ -45,6 +61,9 @@
     if (!_alphonsette) {
         _alphonsette = [[EnemyMapData alloc] init];
     }
+    if (!_jimothy) {
+        _jimothy = [[ItemMapData alloc] init];
+    }
     
 }
 
@@ -55,21 +74,30 @@
     [_phillium createPlayer: world withPhysics:_billyphina];
     
     [_alphonsette createLevelOne:world inTileMap:_bob withPhysics:_billyphina withEnemyData:_takimoto inNode:world];
+    [_jimothy createLevelOne:world inTileMap:_bob withPhysics:_billyphina withItemData:_eggbert inNode:world];
     
     [_bobbette setTotalHp:32];
     [_bobbette setHp:32];
+    [_bobbette setTotalMana:32];
+    [_bobbette setMana:32];
     
     [_chazzette createHpBar: scene];
+    [_chazz createManaBar: scene];
     
 }
 
-- (void) updateScene: (SKScene *) scene {
+- (void) updateScene: (SKScene *) scene : (SKNode *)  world{
     
     [_phillium movementPlayerUpdate: scene];
     
     [_takimoto updateTheAI: _phillium.objSprite];
     
     [_chazzette changeHp: [_bobbette getHp] outOf: [_bobbette getTotalHp]];
+    [_chazz changeMana:[_bobbette getMana] outof:[_bobbette getTotalMana]];
+    
+    if ([_bobbette getHp] <= 0) {
+        [_flobbyBobby smite: world];
+    }
     
 }
 
@@ -83,6 +111,26 @@
     
     [_phillium movementPlayerEnd: touches inScene: scene];
     
+}
+
+-(void)didBeginContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene{
+    
+}
+
+-(void)didEndContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene{
+    
+}
+
+-(void)didBeginContact:(SKPhysicsContact *) contact inWorld: (SKNode *) world{
+    SKPhysicsBody *firstBody, *secondBody;
+    firstBody = contact.bodyA;
+    secondBody = contact.bodyB;
+    //NSLog(@"contact detected between %d and %d ",firstBody.categoryBitMask , secondBody.categoryBitMask);
+    [_gillibert object1:firstBody didCollideWithObject2:secondBody withPlayerStats:_bobbette withEnemy:secondBody.node inWorld: world];
+}
+
+-(void) playerJump {
+    [_phillium jump];
 }
 
 @end
