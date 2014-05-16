@@ -21,8 +21,6 @@ int totalMana = 0;
 int atk = 0;
 int def = 0;
 
-int damageIncrement = 0;
-
 -(void)setTotalHp:(int)value {
     totalHp = value;
     NSLog(@"The total hp is: %d", totalHp);
@@ -140,27 +138,6 @@ int damageIncrement = 0;
 -(int)getXp {
     return xp;
     NSLog(@"The xp value is: %d", xp);
-}
-
-
--(void) beginDamage:(int)damage {
-    if (damage - def > 1) {
-        damageIncrement += damage;
-    } else {
-        damageIncrement += 1;
-    }
-}
--(void) endDamage:(int)damage {
-    if (damage - def > 1) {
-        damageIncrement -= damage;
-    } else {
-        damageIncrement -= 1;
-    }
-}
--(void) damagePlayerUpdate {
-    if (damageIncrement != 0) {
-        [self incrementHp: damageIncrement];
-    }
 }
 
 @end

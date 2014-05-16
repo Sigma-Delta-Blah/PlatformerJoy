@@ -17,12 +17,12 @@ int totalHpE = 0;
 int atkE = 0;
 int defE = 0;
 
--(void)incrementTotalHp:(int)value {
-    totalHpE += value;
-    NSLog(@"The total hp is: %d", totalHpE);
-}
 -(void)setTotalHp:(int)value {
     totalHpE = value;
+    NSLog(@"The total hp is: %d", totalHpE);
+}
+-(void)incrementTotalHp:(int)value {
+    totalHpE += value;
     NSLog(@"The total hp is: %d", totalHpE);
 }
 -(int)getTotalHp {

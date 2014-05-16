@@ -8,26 +8,12 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "PhysicsController.h"
-#import "EnemyStats.h"
 @interface BasicEnemy : SKSpriteNode
 
-<<<<<<< HEAD
-@property(strong, nonatomic) EnemyStats *filheim;
-
-=======
-<<<<<<< HEAD
--(void)createWithLocationAndImage:(NSString *)fileName x:(int) x y:(int) y inScene: (SKNode *) scene withType:(int) type;
-=======
->>>>>>> Keith
 -(void)createWithLocationAndImage:(NSString *)fileName x:(int) x y:(int) y inScene: (SKNode *) scene withType:(int) type withPhysics: (PhysicsController *) physics;
->>>>>>> FETCH_HEAD
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
 +(void)setTotalHp:(int)value;
 +(void)incrementTotalHp:(int)value;
 +(int)getTotalHp;
@@ -47,6 +33,4 @@
 +(void)setXp:(int)value;
 +(int)getXp;
 
->>>>>>> FETCH_HEAD
->>>>>>> Keith
 @end

@@ -7,10 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SpriteKit/SpriteKit.h>
 
 @interface Thing : NSObject
-
--(void) smite: (SKNode *) world;
 
 @end
