@@ -18,7 +18,7 @@
             
         case 1: //make basic ground block
             [physics tilePhysics:self];
-            self.texture = [SKTexture textureWithImageNamed:@"tile1.png"];
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
             
         case 2: //make block that collapses upon contact
@@ -41,7 +41,7 @@
             self.texture = NULL;
             break;
         case 1:
-            self.texture = [SKTexture textureWithImageNamed:@"tile1.png"];
+            self.texture = [SKTexture textureWithImageNamed:@"Ground.png"];
             break;
         case 2:
             self.texture = [SKTexture textureWithImageNamed:@"GroundRed.png"];
