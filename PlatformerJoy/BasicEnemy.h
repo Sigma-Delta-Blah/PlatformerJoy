@@ -13,6 +13,7 @@
 -(void)createWithLocationAndImage:(NSString *)fileName x:(int) x y:(int) y inScene: (SKNode *) scene withType:(int) type withPhysics: (PhysicsController *) physics;
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player;
+<<<<<<< HEAD
 
 +(void)setTotalHp:(int)value;
 +(void)incrementTotalHp:(int)value;
@@ -33,4 +34,6 @@
 +(void)setXp:(int)value;
 +(int)getXp;
 
+=======
+>>>>>>> parent of 7a76ec7... Merge branch 'Keith' of https://github.com/Sigma-Delta-Blah/PlatformerJoy into Keith
 @end

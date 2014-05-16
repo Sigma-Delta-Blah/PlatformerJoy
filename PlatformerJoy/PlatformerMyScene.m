@@ -11,7 +11,7 @@
 #import "PlatformerMyScene.h"
 #import "PhysicsController.h"
 
-@interface PlatformerMyScene() <SKPhysicsContactDelegate>
+@interface PlatformerMyScene()
 
 @property (strong, nonatomic)UIGravityBehavior *gravity;
 @property (strong, nonatomic)UIDynamicAnimator *animator;
@@ -39,12 +39,11 @@
         
         self.physicsWorld.gravity = CGVectorMake(0, -.8);
         
-        self.physicsWorld.contactDelegate = self;
-        
     }
     return self;
 }
 
+<<<<<<< HEAD
 - (void)didMoveToView:(SKView *)view{
     UISwipeGestureRecognizer *upSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleUpSwipe:)];
     upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
@@ -67,6 +66,8 @@
     downSwipe.cancelsTouchesInView = FALSE;
 }
 
+=======
+>>>>>>> parent of 7a76ec7... Merge branch 'Keith' of https://github.com/Sigma-Delta-Blah/PlatformerJoy into Keith
 - (void)didSimulatePhysics
 {
     [self centerOnNode: [_world childNodeWithName: @"camera"]];
@@ -91,6 +92,7 @@
     
 }
 
+<<<<<<< HEAD
 -(void)didBeginContact:(SKPhysicsContact *)contact {
     
     [_jackelope didBeginContact: contact];
@@ -124,6 +126,11 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
+=======
+-(void)update:(CFTimeInterval)currentTime {
+    [self didSimulatePhysics];
+
+>>>>>>> parent of 7a76ec7... Merge branch 'Keith' of https://github.com/Sigma-Delta-Blah/PlatformerJoy into Keith
     [_jackelope updateScene: self];
     
 }

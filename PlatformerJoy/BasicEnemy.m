@@ -4,6 +4,7 @@
 //
 //  Created by block7 on 3/6/14.
 //  Copyright (c) 2014 WOE. All rights reserved.
+<<<<<<< HEAD
 //blue to red would look good though
 // with purple in between
 //and make it deplete fromleft to right. so backwards
@@ -20,6 +21,9 @@
 //nope. bad picture
 //ive seen those for other pokemon
 //ive figured out y the gravity wont effect enemies
+=======
+//
+>>>>>>> parent of 7a76ec7... Merge branch 'Keith' of https://github.com/Sigma-Delta-Blah/PlatformerJoy into Keith
 
 #import "BasicEnemy.h"
 
@@ -44,7 +48,6 @@ int enemyDef = 0;
     enemyDef = 0;
     
     self.name = @"enemy";
-    
     switch (type) {
         case 0:
             self.position = CGPointMake(x, y);
@@ -66,11 +69,22 @@ int enemyDef = 0;
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player{
     if (self.position.x  > player.position.x){
+<<<<<<< HEAD
         self.physicsBody.velocity = CGVectorMake(-10, 0);
     } else if (self.position.x < player.position.x){
         self.physicsBody.velocity =CGVectorMake(10, 0);
     } else {
         self.physicsBody.velocity = CGVectorMake(0, 0);
+=======
+        self.physicsBody.velocity = CGVectorMake(-5, 0);
+        NSLog(@"Loop");
+    } else if (self.position.x < player.position.x){
+        self.physicsBody.velocity =CGVectorMake(5, 0);
+        NSLog(@"Boop");
+    } else {
+        self.physicsBody.velocity = CGVectorMake(0, 0);
+        NSLog(@"Koopa");
+>>>>>>> parent of 7a76ec7... Merge branch 'Keith' of https://github.com/Sigma-Delta-Blah/PlatformerJoy into Keith
     }
 }
 

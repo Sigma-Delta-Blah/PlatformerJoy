@@ -18,12 +18,15 @@
 @property (nonatomic)BOOL jumping;
 @property (nonatomic)BOOL moving;
 
+<<<<<<< HEAD
 -(void)jump;
 
 //- (void)didMoveToView:(SKView *)view inScene:(SKScene*) scene;
 
 //-(void)handleUpSwipe: (UIGestureRecognizer*)recognizer inScene: (SKScene *) scene;
 
+=======
+>>>>>>> parent of 7a76ec7... Merge branch 'Keith' of https://github.com/Sigma-Delta-Blah/PlatformerJoy into Keith
 -(void) createPlayer: (SKNode *) world withPhysics: (PhysicsController *) physics;
 
 -(void) movementPlayerBegin: (NSSet *) touches inScene: (SKNode *) scene;

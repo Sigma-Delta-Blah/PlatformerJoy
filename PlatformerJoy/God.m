@@ -11,12 +11,7 @@
 @implementation God
 
 - (void) initializePeople {
-    
-    //BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
-    if (!_flobbyBobby) {
-        _flobbyBobby = [[PlayerData alloc] init];
-    }
-    
+
     //Player
     if (!_phillium) {
         _phillium = [[PlayerData alloc] init];
@@ -26,9 +21,6 @@
     }
     if (!_chazzette) {
         _chazzette = [[HpBar alloc] init];
-    }
-    if (!_chazz) {
-        _chazz = [[ManaBar alloc] init];
     }
     
     //Enemy
@@ -66,11 +58,8 @@
     
     [_bobbette setTotalHp:32];
     [_bobbette setHp:32];
-    [_bobbette setTotalMana:32];
-    [_bobbette setMana:32];
     
     [_chazzette createHpBar: scene];
-    [_chazz createManaBar: scene];
     
 }
 
@@ -81,7 +70,6 @@
     [_takimoto updateTheAI: _phillium.objSprite];
     
     [_chazzette changeHp: [_bobbette getHp] outOf: [_bobbette getTotalHp]];
-    [_chazz changeMana:[_bobbette getMana] outof:[_bobbette getTotalMana]];
     
 }
 
@@ -97,6 +85,7 @@
     
 }
 
+<<<<<<< HEAD
 -(void)didBeginContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene{
     
 }
@@ -123,4 +112,6 @@
     [scene addChild:gameOver];
 }
 
+=======
+>>>>>>> parent of 7a76ec7... Merge branch 'Keith' of https://github.com/Sigma-Delta-Blah/PlatformerJoy into Keith
 @end

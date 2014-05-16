@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "HpBar.h"
-#import "ManaBar.h"
 
 @interface PlayerStats : NSObject
+
+@property (strong, nonatomic) HpBar *hpBar;
 
 -(void)incrementTotalHp:(int)value;
 -(void)setTotalHp:(int)value;
@@ -19,14 +20,6 @@
 -(void)incrementHp:(int)value;
 -(void)setHp:(int)value;
 -(int) getHp;
-
--(void)incrementTotalMana: (int)value;
--(void)setTotalMana: (int)value;
--(int)getTotalMana;
-
--(void)incrementMana:(int)value;
--(void)setMana:(int)value;
--(int)getMana;
 
 -(void)incrementAtk:(int)value;
 -(void)setAtk:(int)value;
