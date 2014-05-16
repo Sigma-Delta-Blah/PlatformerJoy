@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "TileMap.h"
-#import "EnemyData.h"
 
 @interface EnemyMapData : NSObject
 
--(void) createLevel: (SKNode *) scene withEnemies: (NSString *) enemyTxt inTileMap: (TileMap *) tileM withPhysics: (PhysicsController *) physics withEnemyData: (EnemyData *) eData inNode: (SKNode *) world;
+-(void) createLevel: (SKNode *) scene withEnemies: (NSString *) enemyTxt inTileMap: (TileMap *) tileM;
 
--(void) createLevelOne: (SKNode *) scene inTileMap:(TileMap *) tileM withPhysics:(PhysicsController *) physics withEnemyData:(EnemyData *) eData inNode: (SKNode *) world;
+-(void) createLevelOne: (SKNode *) scene;
 
 @end

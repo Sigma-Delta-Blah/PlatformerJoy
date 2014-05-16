@@ -10,8 +10,8 @@
 
 @interface EnemyStats : NSObject
 
--(void)setTotalHp:(int)value;
 -(void)incrementTotalHp:(int)value;
+-(void)setTotalHp:(int)value;
 -(int)getTotalHp;
 
 -(void)incrementHp:(int)value;
