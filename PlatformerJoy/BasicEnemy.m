@@ -4,6 +4,9 @@
 //
 //  Created by block7 on 3/6/14.
 //  Copyright (c) 2014 WOE. All rights reserved.
+<<<<<<< HEAD
+//
+=======
 //blue to red would look good though
 // with purple in between
 //and make it deplete fromleft to right. so backwards
@@ -20,10 +23,12 @@
 //nope. bad picture
 //ive seen those for other pokemon
 //ive figured out y the gravity wont effect enemies
+>>>>>>> FETCH_HEAD
 
 #import "BasicEnemy.h"
 
 @implementation BasicEnemy
+<<<<<<< HEAD
 
 -(void)createWithLocationAndImage:(NSString *)fileName x:(int)x y:(int)y inScene: (SKNode *) scene withType:(int) type withPhysics:(PhysicsController *)physics{
     
@@ -37,6 +42,19 @@
     [_filheim setAtk:16];
     [_filheim setDef:1];
     
+=======
+<<<<<<< HEAD
+-(void)createWithLocationAndImage:(NSString *)fileName x:(int)x y:(int)y inScene: (SKNode *) scene withType:(int) type{
+    PhysicsController *physics = [[PhysicsController alloc] init];
+    self.name = @"enemy";
+    switch (type) {
+        case 0:
+        self.position = CGPointMake(x, y);
+        self.size = CGSizeMake(16, 31);
+        self.texture = [SKTexture textureWithImageNamed:fileName];
+=======
+-(void)createWithLocationAndImage:(NSString *)fileName x:(int)x y:(int)y inScene: (SKNode *) scene withType:(int) type withPhysics:(PhysicsController *)physics{
+>>>>>>> Keith
     self.name = @"enemy";
     
     switch (type) {
@@ -44,6 +62,7 @@
             self.position = CGPointMake(x, y);
             self.size = CGSizeMake(16, 31);
             self.texture = [SKTexture textureWithImageNamed:fileName];
+>>>>>>> FETCH_HEAD
             break;
         case 1:
             break;
@@ -58,9 +77,11 @@
     [physics enemyPhysics:self];
     [scene addChild:self];
     
-}
+<<<<<<< HEAD
+   }
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player{
+<<<<<<< HEAD
     if (self.position.x  > player.position.x  && self.position.x - player.position.x <= 200 && -125 <= self.position.y - player.position.y && self.position.y - player.position.y <= 125){
         self.physicsBody.velocity = CGVectorMake(-25, self.physicsBody.velocity.dy);
         self.texture = [SKTexture textureWithImageNamed:@"enemy2.png"];
@@ -73,3 +94,39 @@
 }
 
 @end
+=======
+    if (self.position.x  > player.position.x){
+<<<<<<< HEAD
+        self.physicsBody.velocity = CGVectorMake(-5, 0);
+        NSLog(@"Loop");
+    } else if (self.position.x < player.position.x){
+        self.physicsBody.velocity =CGVectorMake(5, 0);
+        NSLog(@"Boop");
+    } else {
+        self.physicsBody.velocity = CGVectorMake(0, 0);
+        NSLog(@"Koopa");
+=======
+        self.physicsBody.velocity = CGVectorMake(-10, 0);
+    } else if (self.position.x < player.position.x){
+        self.physicsBody.velocity =CGVectorMake(10, 0);
+    } else {
+        self.physicsBody.velocity = CGVectorMake(0, 0);
+>>>>>>> FETCH_HEAD
+    }
+}
+@end
+=======
+}
+
+-(void) runAIWithPlayer: (SKSpriteNode *) player{
+    if (self.position.x  > player.position.x){
+        self.physicsBody.velocity = CGVectorMake(-10, 0);
+    } else if (self.position.x < player.position.x){
+        self.physicsBody.velocity =CGVectorMake(10, 0);
+    } else {
+        self.physicsBody.velocity = CGVectorMake(0, 0);
+    }
+}
+@end
+>>>>>>> FETCH_HEAD
+>>>>>>> Keith

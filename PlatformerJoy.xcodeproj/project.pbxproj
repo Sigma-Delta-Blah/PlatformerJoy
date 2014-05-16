@@ -44,6 +44,8 @@
 		D86EA10218BFB6B5009C0A9F /* SampleMapFunction.txt in Resources */ = {isa = PBXBuildFile; fileRef = D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */; };
 		D86EA10318BFB6B5009C0A9F /* SampleMapTexture.txt in Resources */ = {isa = PBXBuildFile; fileRef = D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */; };
 		D8783DB018C117E400490CFC /* PlayerData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8783DAF18C117E400490CFC /* PlayerData.m */; };
+<<<<<<< HEAD
+=======
 		D89EFCCC19180B7C00D3B240 /* Thing.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EFCCB19180B7C00D3B240 /* Thing.m */; };
 		D89EFCCF191810D100D3B240 /* EnemyStats.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EFCCE191810D100D3B240 /* EnemyStats.m */; };
 		D89EFCD21918112E00D3B240 /* ManaBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D89EFCD11918112E00D3B240 /* ManaBar.m */; };
@@ -65,6 +67,7 @@
 		D89EFCF4191811E100D3B240 /* mana1.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCE3191811E100D3B240 /* mana1.png */; };
 		D89EFCF5191811E100D3B240 /* mana0.png in Resources */ = {isa = PBXBuildFile; fileRef = D89EFCE4191811E100D3B240 /* mana0.png */; };
 		D8A3604518F3120A00F90F0A /* SampleMapEnemies.txt in Resources */ = {isa = PBXBuildFile; fileRef = D8A3604418F3120A00F90F0A /* SampleMapEnemies.txt */; };
+>>>>>>> FETCH_HEAD
 		D8A9DC1118EDDD700070888A /* EnemyData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1018EDDD700070888A /* EnemyData.m */; };
 		D8A9DC1418EDDDB10070888A /* BasicEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1318EDDDB10070888A /* BasicEnemy.m */; };
 		D8A9DC1718EDFC6C0070888A /* HpBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A9DC1618EDFC6C0070888A /* HpBar.m */; };
@@ -147,10 +150,12 @@
 		D83F90881843D0CE004D94CF /* TileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileMap.m; sourceTree = "<group>"; };
 		D86E7DC6187F264C003F05B8 /* Ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ground.png; sourceTree = "<group>"; };
 		D86E7DC8187F2658003F05B8 /* GroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GroundRed.png; sourceTree = "<group>"; };
-		D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapFunction.txt; sourceTree = "<group>"; wrapsLines = 1; };
+		D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapFunction.txt; sourceTree = "<group>"; };
 		D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapTexture.txt; sourceTree = "<group>"; };
 		D8783DAE18C117E400490CFC /* PlayerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerData.h; sourceTree = "<group>"; };
 		D8783DAF18C117E400490CFC /* PlayerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerData.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
 		D89EFCCA19180B7C00D3B240 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thing.h; sourceTree = "<group>"; };
 		D89EFCCB19180B7C00D3B240 /* Thing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thing.m; sourceTree = "<group>"; };
 		D89EFCCD191810D100D3B240 /* EnemyStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyStats.h; sourceTree = "<group>"; };
@@ -175,6 +180,7 @@
 		D89EFCE3191811E100D3B240 /* mana1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana1.png; sourceTree = "<group>"; };
 		D89EFCE4191811E100D3B240 /* mana0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mana0.png; sourceTree = "<group>"; };
 		D8A3604418F3120A00F90F0A /* SampleMapEnemies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleMapEnemies.txt; sourceTree = "<group>"; };
+>>>>>>> FETCH_HEAD
 		D8A9DC0F18EDDD700070888A /* EnemyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyData.h; sourceTree = "<group>"; };
 		D8A9DC1018EDDD700070888A /* EnemyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyData.m; sourceTree = "<group>"; };
 		D8A9DC1218EDDDB10070888A /* BasicEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicEnemy.h; sourceTree = "<group>"; };
@@ -405,8 +411,11 @@
 			children = (
 				D86EA10018BFB6B5009C0A9F /* SampleMapFunction.txt */,
 				D86EA10118BFB6B5009C0A9F /* SampleMapTexture.txt */,
+<<<<<<< HEAD
 				D8A3604418F3120A00F90F0A /* SampleMapEnemies.txt */,
 				D811EE041919513700B7B446 /* SampleMapItems.txt */,
+=======
+>>>>>>> Keith
 			);
 			name = "Level Resources";
 			sourceTree = "<group>";
@@ -589,9 +598,12 @@
 				D8224FBB18EF228100AC107F /* hp7.png in Resources */,
 				D8B5FD701923C957007915D4 /* tile1.png in Resources */,
 				D8224FB718EF228100AC107F /* hp3.png in Resources */,
+<<<<<<< HEAD
+=======
 				D89EFCF2191811E100D3B240 /* mana3.png in Resources */,
 				D89EFCED191811E100D3B240 /* mana8.png in Resources */,
 				D8A3604518F3120A00F90F0A /* SampleMapEnemies.txt in Resources */,
+>>>>>>> FETCH_HEAD
 				D8224FB618EF228100AC107F /* hp2.png in Resources */,
 				D89EFCE9191811E100D3B240 /* mana12.png in Resources */,
 				D8224FC018EF228100AC107F /* hp12.png in Resources */,
@@ -659,7 +671,16 @@
 				D8D8F381183BE201005BB475 /* PlatformerMyScene.m in Sources */,
 				C199F1AF185B9943008DD368 /* Tile.m in Sources */,
 				D8A9DC1718EDFC6C0070888A /* HpBar.m in Sources */,
+<<<<<<< HEAD
 				D811EE0019194CF200B7B446 /* ItemData.m in Sources */,
+=======
+<<<<<<< HEAD
+				D8AE69C41896EB02008D5C4E /* MapData.m in Sources */,
+				D8A9DC1118EDDD700070888A /* EnemyData.m in Sources */,
+				D8783DB018C117E400490CFC /* PlayerData.m in Sources */,
+				C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */,
+=======
+>>>>>>> Keith
 				D89EFCCF191810D100D3B240 /* EnemyStats.m in Sources */,
 				D8AE69C41896EB02008D5C4E /* MapData.m in Sources */,
 				D8A9DC1118EDDD700070888A /* EnemyData.m in Sources */,
@@ -669,6 +690,7 @@
 				C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */,
 				D81A74001925711C009B8FB7 /* CollisionsController.m in Sources */,
 				D89EFCD21918112E00D3B240 /* ManaBar.m in Sources */,
+>>>>>>> FETCH_HEAD
 				D8D8F37E183BE201005BB475 /* PlatformerViewController.m in Sources */,
 				D811EE0319194D0600B7B446 /* BasicItem.m in Sources */,
 			);

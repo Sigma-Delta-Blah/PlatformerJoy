@@ -73,8 +73,12 @@
     
     [_phillium createPlayer: world withPhysics:_billyphina];
     
+<<<<<<< HEAD
     [_alphonsette createLevelOne:world inTileMap:_bob withPhysics:_billyphina withEnemyData:_takimoto inNode:world];
     [_jimothy createLevelOne:world inTileMap:_bob withPhysics:_billyphina withItemData:_eggbert inNode:world];
+=======
+    [_takimoto addEnemiesToWorld: 2 inNose: world withPhysics: _billyphina];
+>>>>>>> Keith
     
     [_bobbette setTotalHp:32];
     [_bobbette setHp:32];
@@ -113,6 +117,8 @@
     
 }
 
+<<<<<<< HEAD
+=======
 -(void)didBeginContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene{
     
 }
@@ -133,4 +139,14 @@
     [_phillium jump];
 }
 
+<<<<<<< HEAD
+=======
++(void) smite: (SKScene *) scene {
+    [scene removeAllChildren];
+    SKSpriteNode *gameOver = [[SKSpriteNode alloc] initWithImageNamed:@"gameover.png"];
+    [scene addChild:gameOver];
+}
+
+>>>>>>> FETCH_HEAD
+>>>>>>> Keith
 @end

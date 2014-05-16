@@ -45,6 +45,8 @@
     return self;
 }
 
+<<<<<<< HEAD
+=======
 - (void)didMoveToView:(SKView *)view{
     UISwipeGestureRecognizer *upSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleUpSwipe:)];
     upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
@@ -67,6 +69,7 @@
     downSwipe.cancelsTouchesInView = FALSE;
 }
 
+>>>>>>> FETCH_HEAD
 - (void)didSimulatePhysics
 {
     [self centerOnNode: [_world childNodeWithName: @"camera"]];
@@ -80,9 +83,35 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
+<<<<<<< HEAD
+<<<<<<< HEAD
+     for (UITouch *touch in touches) {
+            CGPoint location = [touch locationInNode:self];
+<<<<<<< HEAD
+         if (location.y >= self.objSprite.position.y + 30 && self.jumping == FALSE){
+=======
+         if (location.y >= CGRectGetMidY(self.frame) + 38 && self.jumping == FALSE && fabs(self.objSprite.physicsBody.velocity.dy) <1){
+>>>>>>> master
+             self.jumping = TRUE;
+             self.objSprite.position = CGPointMake(self.objSprite.position.x, self.objSprite.position.y + 1);
+<<<<<<< HEAD
+             self.objSprite.physicsBody.velocity = CGVectorMake(0, 75);
+=======
+             self.objSprite.physicsBody.velocity = CGVectorMake(0, 150);
+>>>>>>> master
+             _groundYPos = self.objSprite.position.y - .2;
+         } else {
+             self.setTouch = touch;
+         }
+    }
+=======
+    [_chazzet movementPlayerBegin:touches inScene:self];
+=======
     [_jackelope beginMovement: touches inScene:self];
     
+>>>>>>> FETCH_HEAD
     
+>>>>>>> FETCH_HEAD
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -91,6 +120,15 @@
     
 }
 
+<<<<<<< HEAD
+-(void)update:(CFTimeInterval)currentTime {
+    [self didSimulatePhysics];
+
+    [_jackelope updateScene: self];
+    
+}
+
+=======
 -(void)didBeginContact:(SKPhysicsContact *)contact {
     
     [_jackelope didBeginContact: contact inWorld: _world];
@@ -128,4 +166,5 @@
     
 }
 
+>>>>>>> FETCH_HEAD
 @end
