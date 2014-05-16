@@ -11,7 +11,7 @@
 #import "PlatformerMyScene.h"
 #import "PhysicsController.h"
 
-@interface PlatformerMyScene() <SKPhysicsContactDelegate>
+@interface PlatformerMyScene()
 
 @property (strong, nonatomic)UIGravityBehavior *gravity;
 @property (strong, nonatomic)UIDynamicAnimator *animator;
@@ -39,37 +39,10 @@
         
         self.physicsWorld.gravity = CGVectorMake(0, -.8);
         
-        self.physicsWorld.contactDelegate = self;
-        
     }
     return self;
 }
 
-<<<<<<< HEAD
-=======
-- (void)didMoveToView:(SKView *)view{
-    UISwipeGestureRecognizer *upSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleUpSwipe:)];
-    upSwipe.direction = UISwipeGestureRecognizerDirectionUp;
-    [[self view] addGestureRecognizer:upSwipe];
-    upSwipe.cancelsTouchesInView = FALSE;
-    
-    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipe:)];
-    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
-    [[self view] addGestureRecognizer:rightSwipe];
-    rightSwipe.cancelsTouchesInView = FALSE;
-    
-    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipe:)];
-    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
-    [[self view] addGestureRecognizer:leftSwipe];
-    leftSwipe.cancelsTouchesInView = FALSE;
-    
-    UISwipeGestureRecognizer *downSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleDownSwipe:)];
-    downSwipe.direction = UISwipeGestureRecognizerDirectionDown;
-    [[self view] addGestureRecognizer:downSwipe];
-    downSwipe.cancelsTouchesInView = FALSE;
-}
-
->>>>>>> FETCH_HEAD
 - (void)didSimulatePhysics
 {
     [self centerOnNode: [_world childNodeWithName: @"camera"]];
@@ -120,7 +93,6 @@
     
 }
 
-<<<<<<< HEAD
 -(void)update:(CFTimeInterval)currentTime {
     [self didSimulatePhysics];
 
@@ -128,43 +100,4 @@
     
 }
 
-=======
--(void)didBeginContact:(SKPhysicsContact *)contact {
-    
-    [_jackelope didBeginContact: contact];
-    
-}
-
--(void)handleUpSwipe: (UIGestureRecognizer*)recognizer {
-    
-    NSLog(@"Upward Swipe Recognized!");
-    [_jackelope playerJump];
-    
-}
-
--(void)handleLeftSwipe: (UIGestureRecognizer*)recognizer {
-    
-    NSLog(@"Left Swipe Recognized!");
-    
-}
-
--(void)handleRightSwipe: (UIGestureRecognizer*)recognizer {
-    
-    NSLog(@"Right Swipe Recognized!");
-    
-}
-
--(void)handleDownSwipe: (UIGestureRecognizer*)recognizer {
-    
-    NSLog(@"Down Swipe Recognized!");
-    
-}
-
--(void)update:(CFTimeInterval)currentTime {
-    [self didSimulatePhysics];
-    [_jackelope updateScene: self];
-    
-}
-
->>>>>>> FETCH_HEAD
 @end

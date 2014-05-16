@@ -10,24 +10,18 @@
 #import "PlayerData.h"
 #import "PlayerStats.h"
 #import "HpBar.h"
-#import "ManaBar.h"
 #import "EnemyData.h"
 #import "PhysicsController.h"
 #import "TileMap.h"
 #import "MapData.h"
 #import "EnemyMapData.h"
-#import "Thing.h"
 
 @interface God : NSObject
-
-//BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
-@property (strong, nonatomic) Thing *flobbyBobby;
 
 //Player
 @property (strong, nonatomic) PlayerData *phillium;
 @property (strong, nonatomic) PlayerStats *bobbette;
 @property (strong, nonatomic) HpBar *chazzette;
-@property (strong, nonatomic) ManaBar *chazz;
 
 //Enemy
 @property (strong, nonatomic) EnemyData *takimoto;
@@ -55,15 +49,5 @@
 - (void) beginMovement: (NSSet *) touches inScene: (SKScene *) scene;
 
 - (void) endMovement: (NSSet *) touches inScene: (SKScene *) scene;
-
--(void)didBeginContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene;
-
--(void)didEndContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene;
-
--(void)didBeginContact:(SKPhysicsContact *) contact;
-
--(void) playerJump;
-
-+(void) smite: (SKNode *) world;
 
 @end
