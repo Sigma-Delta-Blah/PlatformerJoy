@@ -19,6 +19,9 @@
 @property (nonatomic)BOOL jumping;
 @property (nonatomic)BOOL moving;
 
+@property (nonatomic)SKSpriteNode *weapon;
+@property (nonatomic)int timer;
+
 -(void)jump;
 
 //- (void)didMoveToView:(SKView *)view inScene:(SKScene*) scene;
@@ -32,5 +35,9 @@
 -(void) movementPlayerEnd: (NSSet *) touches inScene: (SKNode *) scene;
 
 -(void) movementPlayerUpdate: (SKNode *) scene;
+
+-(void)attackInScene:(SKNode *) scene  direction:(int) d withPhysics: (PhysicsController *) antioch ;
+
+-(void)updateTimer:(SKNode *)scene;
 
 @end

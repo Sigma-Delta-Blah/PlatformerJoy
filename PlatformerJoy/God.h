@@ -23,19 +23,16 @@
 
 @interface God : NSObject
 
-//BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
-@property (strong, nonatomic) Thing *flobbyBobby; //He brings death in his wake; he spreads doom and corruption and famine across the lands...  Fear the flobbyBobby; fear him...
-
 //Player
 @property (strong, nonatomic) PlayerData *phillium;
 @property (strong, nonatomic) PlayerStats *bobbette;
 @property (strong, nonatomic) HpBar *chazzette;
 @property (strong, nonatomic) ManaBar *chazz;
 
-//Enemy
+//Enemies
 @property (strong, nonatomic) EnemyData *takimoto;
 
-//Item
+//Items
 @property (strong, nonatomic) ItemData * eggbert;
 
 //Physics
@@ -49,6 +46,9 @@
 @property (strong, nonatomic) MapData *ronald;
 @property (strong, nonatomic) EnemyMapData *alphonsette;
 @property (strong, nonatomic) ItemMapData * jimothy;
+
+//BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
+@property (strong, nonatomic) Thing *flobbyBobby; //He brings death in his wake; he spreads doom and corruption and famine across the lands...  Fear the flobbyBobby; fear him...
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -64,12 +64,12 @@
 
 - (void) endMovement: (NSSet *) touches inScene: (SKScene *) scene;
 
--(void)didBeginContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene;
-
--(void)didEndContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene;
-
 -(void)didBeginContact:(SKPhysicsContact *) contact inWorld: (SKNode *) world;
 
+-(void)didEndContact:(SKPhysicsContact *)contact inWorld:(SKNode *) world;
+
 -(void) playerJump;
+
+-(void)attackWorld:(SKNode *) world direction:(int)d;
 
 @end

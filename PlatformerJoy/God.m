@@ -12,11 +12,6 @@
 
 - (void) initializePeople {
     
-    //BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
-    if (!_flobbyBobby) {
-        _flobbyBobby = [[Thing alloc] init];
-    }
-    
     //Player
     if (!_phillium) {
         _phillium = [[PlayerData alloc] init];
@@ -31,12 +26,12 @@
         _chazz = [[ManaBar alloc] init];
     }
     
-    //Enemy
+    //Enemies
     if (!_takimoto) {
         _takimoto = [[EnemyData alloc] init];
     }
     
-    //Item
+    //Items
     if (!_eggbert) {
         _eggbert = [[ItemData alloc] init];
     }
@@ -65,6 +60,11 @@
         _jimothy = [[ItemMapData alloc] init];
     }
     
+    //BO-BO-BO-BO-BO-BO!!!!!!!!!!!!!!!!
+    if (!_flobbyBobby) {
+        _flobbyBobby = [[Thing alloc] init];
+    }
+    
 }
 
 - (void) initializeWorld: (SKNode *) world inScene: (SKScene *) scene {
@@ -80,6 +80,7 @@
     [_bobbette setHp:32];
     [_bobbette setTotalMana:32];
     [_bobbette setMana:32];
+    [_bobbette setDef:32];
     
     [_chazzette createHpBar: scene];
     [_chazz createManaBar: scene];
@@ -90,7 +91,11 @@
     
     [_phillium movementPlayerUpdate: scene];
     
+    [_phillium updateTimer:world];
+    
     [_takimoto updateTheAI: _phillium.objSprite];
+    
+    [_bobbette damagePlayerUpdate];
     
     [_chazzette changeHp: [_bobbette getHp] outOf: [_bobbette getTotalHp]];
     [_chazz changeMana:[_bobbette getMana] outof:[_bobbette getTotalMana]];
@@ -113,24 +118,29 @@
     
 }
 
--(void)didBeginContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene{
-    
-}
-
--(void)didEndContact:(SKPhysicsContact *)contact inScene:(SKScene *)scene{
-    
-}
-
 -(void)didBeginContact:(SKPhysicsContact *) contact inWorld: (SKNode *) world{
     SKPhysicsBody *firstBody, *secondBody;
     firstBody = contact.bodyA;
     secondBody = contact.bodyB;
-    //NSLog(@"contact detected between %d and %d ",firstBody.categoryBitMask , secondBody.categoryBitMask);
-    [_gillibert object1:firstBody didCollideWithObject2:secondBody withPlayerStats:_bobbette withEnemy:secondBody.node inWorld: world];
+    [_gillibert object1:firstBody didCollideWithObject2:secondBody withPlayer: _phillium withPlayerStats:_bobbette inWorld: world];
+    [_gillibert object1:secondBody didCollideWithObject2:firstBody withPlayer: _phillium withPlayerStats:_bobbette inWorld: world];
+}
+
+-(void)didEndContact:(SKPhysicsContact *)contact inWorld:(SKNode *)world {
+    
+    SKPhysicsBody *firstBody, *secondBody;
+    firstBody = contact.bodyA;
+    secondBody = contact.bodyB;
+    [_gillibert object1:firstBody didEndCollideWithObject2:secondBody withPlayerStats:_bobbette inWorld: world];
+    [_gillibert object1:secondBody didEndCollideWithObject2:firstBody withPlayerStats: _bobbette inWorld: world];
 }
 
 -(void) playerJump {
     [_phillium jump];
+}
+
+-(void)attackWorld:(SKNode *) world direction:(int)d{
+    [_phillium attackInScene:world direction:d withPhysics:_billyphina];
 }
 
 @end

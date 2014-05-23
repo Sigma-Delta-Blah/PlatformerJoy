@@ -21,6 +21,8 @@ int totalMana = 0;
 int atk = 0;
 int def = 0;
 
+int timerInt = 0;
+
 int damageIncrement = 0;
 
 -(void)setTotalHp:(int)value {
@@ -38,6 +40,7 @@ int damageIncrement = 0;
 -(void)incrementHp:(int)value {
     if(hp+value<0) {
         NSLog(@"The hp value cannot go below zero!");
+        hp = 0;
     }
     else if(hp+value <= totalHp) {
         hp += value;
@@ -142,25 +145,31 @@ int damageIncrement = 0;
     NSLog(@"The xp value is: %d", xp);
 }
 
-
 -(void) beginDamage:(int)damage {
-    if (damage - def > 1) {
-        damageIncrement += damage;
-    } else {
-        damageIncrement += 1;
-    }
-}
--(void) endDamage:(int)damage {
     if (damage - def > 1) {
         damageIncrement -= damage;
     } else {
         damageIncrement -= 1;
     }
 }
+-(void) endDamage:(int)damage {
+    if (damage - def > 1) {
+        damageIncrement += damage;
+    } else {
+        damageIncrement += 1;
+    }
+}
 -(void) damagePlayerUpdate {
     if (damageIncrement != 0) {
-        [self incrementHp: damageIncrement];
+        if (timerInt < 0) {
+            timerInt = 8;
+        } else if (timerInt > 0) {
+            timerInt -= 1;
+        } else if (timerInt == 0) {
+            [self incrementHp: damageIncrement];
+        }
     }
+    
 }
 
 @end

@@ -16,6 +16,7 @@ int hpE = 0;
 int totalHpE = 0;
 int atkE = 0;
 int defE = 0;
+int spdE = 0;
 
 -(void)incrementTotalHp:(int)value {
     totalHpE += value;
@@ -75,6 +76,19 @@ int defE = 0;
 -(int)getDef {
     return defE;
     NSLog(@"The def value is: %d", defE);
+}
+
+-(void)incrementSpd:(int)value {
+    spdE += value;
+    NSLog(@"The spd value is: %d", spdE);
+}
+-(void)setSpd:(int)value {
+    spdE = value;
+    NSLog(@"The spd value is: %d", spdE);
+}
+-(int)getSpd {
+    return spdE;
+    NSLog(@"The spd value is: %d", spdE);
 }
 
 -(void)incrementLv:(int)value {

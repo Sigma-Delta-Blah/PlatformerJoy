@@ -16,7 +16,7 @@ bool smitten = false;
     
     if (!smitten) {
         [world removeAllChildren];
-        SKSpriteNode *gameOver = [[SKSpriteNode alloc] initWithImageNamed:@"gameover.png"];
+        SKSpriteNode *gameOver = [[SKSpriteNode alloc] initWithImageNamed:@"Game Over.png"];
         [world.parent addChild:gameOver];
         smitten = true;
     }

@@ -25,25 +25,29 @@
 
 @implementation BasicEnemy
 
--(void)createWithLocationAndImage:(NSString *)fileName x:(int)x y:(int)y inScene: (SKNode *) scene withType:(int) type withPhysics:(PhysicsController *)physics{
+-(void)createWithLevel: (int) level X:(int)x Y:(int)y inScene: (SKNode *) scene withType:(int) type withPhysics:(PhysicsController *)physics{
+    
+    self.timer = -1;
+    self.KBSpeed = 0;
     
     if (!_filheim) {
         _filheim = [[EnemyStats alloc] init];
     }
     
-    [_filheim setLv:1];
-    [_filheim setTotalHp:1];
-    [_filheim setHp:1];
-    [_filheim setAtk:16];
-    [_filheim setDef:1];
-    
     self.name = @"enemy";
+    
+    [_filheim setLv:level];
     
     switch (type) {
         case 0:
             self.position = CGPointMake(x, y);
             self.size = CGSizeMake(16, 31);
-            self.texture = [SKTexture textureWithImageNamed:fileName];
+            self.texture = [SKTexture textureWithImageNamed:@"Enemy - Basic_1.png"];
+            [_filheim setTotalHp:level];
+            [_filheim setHp:level];
+            [_filheim setAtk:level];
+            [_filheim setDef:level];
+            [_filheim setSpd:25];
             break;
         case 1:
             break;
@@ -53,22 +57,49 @@
             break;
     }
     
-    self.texture = [SKTexture textureWithImageNamed:@"enemy1.png"];
-    
     [physics enemyPhysics:self];
     [scene addChild:self];
     
 }
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player{
-    if (self.position.x  > player.position.x  && self.position.x - player.position.x <= 200 && -125 <= self.position.y - player.position.y && self.position.y - player.position.y <= 125){
-        self.physicsBody.velocity = CGVectorMake(-25, self.physicsBody.velocity.dy);
-        self.texture = [SKTexture textureWithImageNamed:@"enemy2.png"];
-    } else if (self.position.x < player.position.x && self.position.x - player.position.x >= -200 && -125 <= self.position.y - player.position.y && self.position.y - player.position.y <= 125){
-        self.physicsBody.velocity =CGVectorMake(25, self.physicsBody.velocity.dy);
-        self.texture = [SKTexture textureWithImageNamed:@"enemy1.png"];
+    if (self.timer < 0) {
+        if (self.position.x  > player.position.x  && self.position.x - player.position.x <= 200 && -125 <= self.position.y - player.position.y && self.position.y - player.position.y <= 125){
+            self.physicsBody.velocity = CGVectorMake(-[_filheim getSpd], self.physicsBody.velocity.dy);
+            self.texture = [SKTexture textureWithImageNamed:@"enemy2.png"];
+        } else if (self.position.x < player.position.x && self.position.x - player.position.x >= -200 && -125 <= self.position.y - player.position.y && self.position.y - player.position.y <= 125){
+            self.physicsBody.velocity =CGVectorMake([_filheim getSpd], self.physicsBody.velocity.dy);
+            self.texture = [SKTexture textureWithImageNamed:@"enemy1.png"];
+        } else {
+            self.physicsBody.velocity = CGVectorMake(0, self.physicsBody.velocity.dy);
+        }
     } else {
-        self.physicsBody.velocity = CGVectorMake(0, self.physicsBody.velocity.dy);
+        
+        self.physicsBody.velocity = CGVectorMake(self.KBSpeed, self.physicsBody.velocity.dy);
+        self.timer -= 1;
+        
+    }
+}
+
+-(void) knockbackWithPlayer:(SKSpriteNode *)player {
+    
+    if (self.position.x > player.position.x) {
+        
+        self.KBSpeed = [_filheim getSpd]*6;
+        
+    } else if (self.position.x < player.position.x) {
+        
+        self.KBSpeed = -[_filheim getSpd]*6;
+        
+    }
+    
+    self.timer = 4;
+    
+}
+
+-(void) death {
+    if ([_filheim getHp] <= 0) {
+        self.removeFromParent;
     }
 }
 

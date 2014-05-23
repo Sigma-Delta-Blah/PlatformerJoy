@@ -10,9 +10,14 @@
 #import <SpriteKit/SpriteKit.h>
 #import "PlayerStats.h"
 #import "BasicEnemy.h"
+#import "PlayerData.h"
 
 @interface CollisionsController : NSObject
 
--(void)object1:(SKPhysicsBody *) object1 didCollideWithObject2:(SKPhysicsBody *) object2 withPlayerStats:(PlayerStats *)bobbette withEnemy:(BasicEnemy *) enemy inWorld:(SKNode *) world;
+@property (strong, nonatomic) BasicEnemy *tester;
+
+-(void)object1:(SKPhysicsBody *) object1 didCollideWithObject2:(SKPhysicsBody *) object2 withPlayer: (PlayerData *) player withPlayerStats:(PlayerStats *)bobbette inWorld:(SKNode *) world;
+
+-(void)object1:(SKPhysicsBody *) object1 didEndCollideWithObject2:(SKPhysicsBody *) object2 withPlayerStats:(PlayerStats *)bobbette inWorld:(SKNode *) world;
 
 @end

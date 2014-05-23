@@ -18,7 +18,7 @@
     
 }
 
--(void) createLevel: (SKNode *) scene withFunction:(NSString *)functionTxt withTexture:(NSString *)textureTxt withPhysics: (PhysicsController *) physics inMap:(TileMap *)map {
+-(void) createLevel: (SKNode *) scene withFunction:(NSString *)functionTxt withTexture:(NSString *)textureTxt withBackground:(NSString *)backgroundTxt withPhysics: (PhysicsController *) physics inMap:(TileMap *)map {
     
     NSString *contentFunction = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource: functionTxt ofType: @"txt"]];
     NSString *contentTexture = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource: textureTxt ofType: @"txt"]];
@@ -30,6 +30,12 @@
     int yValue = [arrayFunction count];
     
     [map setMapofWidth: xValue andHeight: yValue];
+    
+    self.background = [SKSpriteNode spriteNodeWithImageNamed: backgroundTxt];
+    self.background.zPosition = -1;
+    self.background.size = CGSizeMake(568, 320);
+    self.background.position = CGPointMake(0, 0);
+    [scene.parent addChild:self.background];
     
     for (int n1 = 0; n1 < xValue; n1++) {
         for (int n2 = 0; n2 < yValue; n2++) {
@@ -53,7 +59,7 @@
 
 -(void) createLevelOne: (SKNode *) scene withPhysics: (PhysicsController *) physics inMap: (TileMap *) map {
     
-    [self createLevel:scene withFunction:@"SampleMapFunction" withTexture:@"SampleMapTexture" withPhysics: physics inMap: map];
+    [self createLevel:scene withFunction:@"SampleMapFunction" withTexture:@"SampleMapTexture" withBackground:@"Background - Pink Sky" withPhysics: physics inMap: map];
     
 }
 

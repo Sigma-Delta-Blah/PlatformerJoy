@@ -26,6 +26,10 @@
 -(void)setDef:(int)value;
 -(int)getDef;
 
+-(void)incrementSpd:(int)value;
+-(void)setSpd:(int)value;
+-(int)getSpd;
+
 -(void)incrementLv:(int)value;
 -(void)setLv:(int)value;
 -(int)getLv;

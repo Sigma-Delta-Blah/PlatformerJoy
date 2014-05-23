@@ -97,6 +97,12 @@
     
 }
 
+-(void)didEndContact:(SKPhysicsContact *)contact {
+    
+    [_jackelope didEndContact: contact inWorld: _world];
+    
+}
+
 -(void)handleUpSwipe: (UIGestureRecognizer*)recognizer {
     
     NSLog(@"Upward Swipe Recognized!");
@@ -104,15 +110,15 @@
     
 }
 
--(void)handleLeftSwipe: (UIGestureRecognizer*)recognizer {
-    
-    NSLog(@"Left Swipe Recognized!");
+-(void)handleRightSwipe: (UIGestureRecognizer*)recognizer {
+    [_jackelope attackWorld:self.world direction: 1];
+    NSLog(@"Right Swipe Recognized!");
     
 }
 
--(void)handleRightSwipe: (UIGestureRecognizer*)recognizer {
-    
-    NSLog(@"Right Swipe Recognized!");
+-(void)handleLeftSwipe: (UIGestureRecognizer*)recognizer {
+    [_jackelope attackWorld:self.world direction: 2];
+    NSLog(@"Left Swipe Recognized!");
     
 }
 

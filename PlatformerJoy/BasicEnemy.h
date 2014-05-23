@@ -9,12 +9,19 @@
 #import <SpriteKit/SpriteKit.h>
 #import "PhysicsController.h"
 #import "EnemyStats.h"
+
 @interface BasicEnemy : SKSpriteNode
 
 @property(strong, nonatomic) EnemyStats *filheim;
+@property int timer;
+@property int KBSpeed;
 
--(void)createWithLocationAndImage:(NSString *)fileName x:(int) x y:(int) y inScene: (SKNode *) scene withType:(int) type withPhysics: (PhysicsController *) physics;
+-(void)createWithLevel: (int) level X:(int) x Y:(int) y inScene: (SKNode *) scene withType:(int) type withPhysics: (PhysicsController *) physics;
 
 -(void) runAIWithPlayer: (SKSpriteNode *) player;
+
+-(void) knockbackWithPlayer: (SKSpriteNode *) player;
+
+-(void) death;
 
 @end
