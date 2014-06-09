@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C18B3E48192687DC001F9188 /* Spell.m in Sources */ = {isa = PBXBuildFile; fileRef = C18B3E47192687DC001F9188 /* Spell.m */; };
+		C18B3E4C19268B61001F9188 /* Spells.plist in Resources */ = {isa = PBXBuildFile; fileRef = C18B3E4B19268B61001F9188 /* Spells.plist */; };
 		C199F1AF185B9943008DD368 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = C199F1AE185B9943008DD368 /* Tile.m */; };
 		C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4A2A1185B91C900A641AA /* PhysicsController.m */; };
 		C1CB05D018A00E92009983CF /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CB05CF18A00E92009983CF /* PlayerStats.m */; };
@@ -92,6 +94,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C18B3E46192687DC001F9188 /* Spell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spell.h; sourceTree = "<group>"; };
+		C18B3E47192687DC001F9188 /* Spell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spell.m; sourceTree = "<group>"; };
+		C18B3E4B19268B61001F9188 /* Spells.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Spells.plist; sourceTree = "<group>"; };
 		C199F1AD185B9943008DD368 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		C199F1AE185B9943008DD368 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		C1A4A2A0185B91C900A641AA /* PhysicsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsController.h; sourceTree = "<group>"; };
@@ -399,7 +404,10 @@
 		D8D8F36D183BE201005BB475 /* PlatformerJoy */ = {
 			isa = PBXGroup;
 			children = (
+				C18B3E46192687DC001F9188 /* Spell.h */,
+				C18B3E47192687DC001F9188 /* Spell.m */,
 				D8D8F376183BE201005BB475 /* PlatformerAppDelegate.h */,
+				C18B3E4B19268B61001F9188 /* Spells.plist */,
 				D8D8F377183BE201005BB475 /* PlatformerAppDelegate.m */,
 				D8D8F379183BE201005BB475 /* Main.storyboard */,
 				D8D8F37C183BE201005BB475 /* PlatformerViewController.h */,
@@ -571,6 +579,7 @@
 				D8224FBD18EF228100AC107F /* hp9.png in Resources */,
 				D89EFCE6191811E100D3B240 /* mana15.png in Resources */,
 				D8224FBE18EF228100AC107F /* hp10.png in Resources */,
+				C18B3E4C19268B61001F9188 /* Spells.plist in Resources */,
 				D8224FC118EF228100AC107F /* hp13.png in Resources */,
 				D89EFCE8191811E100D3B240 /* mana13.png in Resources */,
 				D89EFCF0191811E100D3B240 /* mana5.png in Resources */,
@@ -596,6 +605,7 @@
 				D83F90891843D0CE004D94CF /* TileMap.m in Sources */,
 				D83F90841843C73D004D94CF /* God.m in Sources */,
 				D8D8F378183BE201005BB475 /* PlatformerAppDelegate.m in Sources */,
+				C18B3E48192687DC001F9188 /* Spell.m in Sources */,
 				D8A9DC1418EDDDB10070888A /* BasicEnemy.m in Sources */,
 				C1A4A2A2185B91C900A641AA /* PhysicsController.m in Sources */,
 				D8D8F374183BE201005BB475 /* main.m in Sources */,

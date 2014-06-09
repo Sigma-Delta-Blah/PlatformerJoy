@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Heal</key>
+	<dict>
+		<key>Name</key>
+		<string>Heal</string>
+		<key>Spell ID</key>
+		<integer>0</integer>
+		<key>Description</key>
+		<string>Restores health.  Not a lot, but it&apos;s better than nothing honestly.</string>
+		<key>Effect Description</key>
+		<string>+5 hp</string>
+		<key>Effect</key>
+		<dict>
+			<key>Health Change</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>Seppukku</key>
+	<dict>
+		<key>Name</key>
+		<string>Seppukku</string>
+		<key>Spell ID</key>
+		<integer>1</integer>
+		<key>Description</key>
+		<string>Goodbye cruel world!</string>
+		<key>Effect Description</key>
+		<string>-9001 hp: It&apos;s over 9000!</string>
+		<key>Effect</key>
+		<dict>
+			<key>Health Change</key>
+			<integer>-9001</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

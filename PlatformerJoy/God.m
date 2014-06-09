@@ -31,6 +31,10 @@
         _chazz = [[ManaBar alloc] init];
     }
     
+    if (!_Spike) {
+        _Spike = [[Spell alloc] init];
+    }
+    
     //Enemy
     if (!_takimoto) {
         _takimoto = [[EnemyData alloc] init];
@@ -86,7 +90,8 @@
 }
 
 - (void) beginMovement: (NSSet *) touches inScene: (SKScene *) scene {
-    
+    [_Spike readSpells];
+    [_Spike getSpell:[NSNumber numberWithInteger:1]];
     [_phillium movementPlayerBegin: touches inScene: scene];
     
 }

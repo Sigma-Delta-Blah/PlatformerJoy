@@ -17,6 +17,7 @@
 #import "MapData.h"
 #import "EnemyMapData.h"
 #import "Thing.h"
+#import "Spell.h"
 
 @interface God : NSObject
 
@@ -28,6 +29,7 @@
 @property (strong, nonatomic) PlayerStats *bobbette;
 @property (strong, nonatomic) HpBar *chazzette;
 @property (strong, nonatomic) ManaBar *chazz;
+@property (strong, nonatomic) Spell *Spike;
 
 //Enemy
 @property (strong, nonatomic) EnemyData *takimoto;
